@@ -1,19 +1,15 @@
-<div class="container" >
-    <div class="row">
-			<div class="col-lg-4" style="background-color: pink;">
-	        	<h1>東京の社会保障を検索</h1>
-	        	<%= form_tag do %>
-  					Form contents
-				<% end %>
-	        </div>
-
-		
-        <div class="col-lg-4">
-        	東京の社会保障を検索
-        </div>
-        <div class="col-lg-4">
-        	東京の社会保障を検索
-        </div>
+<div class="row">
+	<div class="col-lg-6 header">
+    	<h1>東京の社会保障を検索</h1>
+    	<%= form_tag do %>
+            <%= text_field_tag(:q) %>
+            <%= check_box_tag :selected_area, '世田谷区' %> '世田谷区'
+            <%= submit_tag("Search") %>
+		<% end %>
     </div>
-    
+
+	
+    <div class="col-lg-6">
+    	
+    </div>
 </div>

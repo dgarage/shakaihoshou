@@ -1,1 +1,17 @@
-HELLO!
+<div class="row">
+	<div class="col-lg-8">
+		<table class="table table-striped table-borderless">
+			<%= form_tag do %>
+	            <% @area_hash.entries.each_slice(4) do |columns|%>
+	            <tr>
+		            <% columns.each do |area|%>
+		            	<td><%= check_box_tag :area, area[0], checked = area[1] %> <%= area[0]%></td>
+		            <% end %>
+		    	</tr>        
+	            <% end %>
+	        
+	            <%= submit_tag("検索") %>
+			<% end %>
+		</table>
+	</div>
+</div>

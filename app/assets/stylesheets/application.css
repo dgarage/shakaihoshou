@@ -18,3 +18,13 @@
  	background-color: green;
  }
 */
+
+.header{
+	background-color: #F0F0F0;
+	height:100px;
+	position: fixed;
+}
+
+.footer{
+	background-color: #580000;
+}
