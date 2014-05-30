@@ -26,10 +26,7 @@ stage:
 production:
   adapter: postgresql
   encoding: utf8
-  database: de5tl0cd490crm
+  database: shakaihoshou
   pool: 5
   timeout: 5000
-  username: ufwfihrnmaacpb
-  password: P3voQhQaF8tTHaEVTQ_gZxPC_y
-  port: 5432
-  host: ec2-54-197-241-91.compute-1.amazonaws.com
+  username: halfdan-rump
