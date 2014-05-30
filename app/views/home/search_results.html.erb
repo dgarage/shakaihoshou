@@ -1,0 +1,12 @@
+
+<div class="row">
+	<table class="table">
+		<% @results.each do |row| %>
+			<tr>
+				<% row.attributes.values.each do |value| %>
+					<td><%= value %></td>
+				<% end %>
+			</tr>
+		<% end %>
+	</table>
+</div>

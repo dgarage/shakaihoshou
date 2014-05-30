@@ -1,8 +1,9 @@
 Blog::Application.routes.draw do
-
+  get '/top_search' => 'home#top_search'
+  post '/search_by_area' => 'home#search_by_area'
   root :to => 'home#index'
 
-  post '/' => 'home#top_search'
+ 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

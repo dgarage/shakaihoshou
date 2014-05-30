@@ -1,5 +1,6 @@
 development:
   adapter: postgresql
+  encoding: utf8
   database: shakaihoshou
   pool: 5
   timeout: 5000
@@ -7,6 +8,7 @@ development:
 
 test:
   adapter: postgresql
+  encoding: utf8
   database: shakaihoshou
   pool: 5
   timeout: 5000
@@ -15,6 +17,7 @@ test:
 
 stage:
   adapter: postgresql
+  encoding: utf8
   database: shakaihoshou
   pool: 5
   timeout: 5000
@@ -22,6 +25,7 @@ stage:
 
 production:
   adapter: postgresql
+  encoding: utf8
   database: shakaihoshou
   pool: 5
   timeout: 5000
