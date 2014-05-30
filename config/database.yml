@@ -29,4 +29,7 @@ production:
   database: shakaihoshou
   pool: 5
   timeout: 5000
-  username: halfdan-rump
+  username: ufwfihrnmaacpb
+  password: P3voQhQaF8tTHaEVTQ_gZxPC_y
+  port: 5432
+  host: ec2-54-197-241-91.compute-1.amazonaws.com
