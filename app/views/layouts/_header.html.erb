@@ -2,8 +2,11 @@
 	<div class="col-lg-6 header">
     	<h1>東京の社会保障を検索</h1>
     	<%= form_tag 'top_search', method:'get' do %>
-            <%= check_box_tag :selected_area, '世田谷区' %> 世田谷区
-            <%= submit_tag("Search") %>
+            
+            <%= select_tag :selected_area,  options_for_select([['中野区', 1], ['渋谷区', 2]])%> 
+            
+            <%= select_tag :selected_area,  options_for_select([['中野区', 1], ['渋谷区', 2]])%> 
+            
 		<% end %>
     </div>
 	

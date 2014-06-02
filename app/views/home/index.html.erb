@@ -1,13 +1,15 @@
+
+
 <div class="row">
 	<div class="col-lg-8">
 		
-			<%= bootstrap_form_tag url: 'search_by_area' do |f| %>
+			<%= bootstrap_form_tag url: 'search_by_area', method:'get' do |f| %>
 			<table class="table table-striped table-borderless">
 				<% @cities.each_slice(4) do |slice| %>
 					<tr>
 						<% slice.each do |city| %>
 							<td>
-								<%= check_box :selected_city, city%> <%= city %>
+								<%= check_box :selected_city, city%> <%= link_to city, action: 'search_by_area',  area: city %>
 							</td>
 						<% end %>
 					</tr>

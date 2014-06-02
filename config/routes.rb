@@ -1,6 +1,6 @@
 Blog::Application.routes.draw do
   get '/top_search' => 'home#top_search'
-  post '/search_by_area' => 'home#search_by_area'
+  get '/search_by_area' => 'home#search_by_area'
   root :to => 'home#index'
 
  

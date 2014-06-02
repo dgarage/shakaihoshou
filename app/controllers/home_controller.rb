@@ -19,6 +19,8 @@ class HomeController < ApplicationController
 	end
 
 	def search_by_area
+		p 'PARAMS'
+		p params
 		p params[:area]
 		@results = Institution.all
 		# @results = Institution.where({"都、国、市町村" => 'け'})
