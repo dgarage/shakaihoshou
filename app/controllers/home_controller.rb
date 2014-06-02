@@ -11,11 +11,15 @@ class HomeController < ApplicationController
 	end
 
 	def top_search
-		areas = ['nan', '世田谷区地域社会福祉協議会', '世田谷区', 'test1', 'test2', 'test3', 'test4', 'test5']
-		@area_hash = Hash.new
-		areas.each{|area| @area_hash[area] = false}
-		@area_hash[params[:selected_area]] = true
-		render 'refine'
+		# areas = ['nan', '世田谷区地域社会福祉協議会', '世田谷区', 'test1', 'test2', 'test3', 'test4', 'test5']
+		# @area_hash = Hash.new
+		# areas.each{|area| @area_hash[area] = false}
+		# @area_hash[params[:selected_area]] = true
+		# render 'refine'
+		p 'TOP SEARCH PARAMS'
+		p params
+		@results = Institution.all
+		render 'search_results'
 	end
 
 	def search_by_area
