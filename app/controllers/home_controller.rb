@@ -16,18 +16,22 @@ class HomeController < ApplicationController
 		# areas.each{|area| @area_hash[area] = false}
 		# @area_hash[params[:selected_area]] = true
 		# render 'refine'
-		p 'TOP SEARCH PARAMS'
-		p params
-		@results = Institution.all
-		render 'search_results'
+		
+
+		@results = Institution.where({"都、国、市町村".force_encoding("ASCII-8BIT") => ''.force_encoding('utf-8')}).to_sql
+		p 'ENCOOOOOOOOOOO'
+		p @results
+		p 'COOOEEEEEE'
+		# # p @results.first.encoding
+		# @results = Institution.all
+		# @results = Institution.all
+		render 'dummy'
 	end
 
 	def search_by_area
-		p 'PARAMS'
-		p params
-		p params[:area]
+		
 		@results = Institution.all
-		# @results = Institution.where({"都、国、市町村" => 'け'})
+		# @results = Institution.where({"都、国、市町村" => params[:area]})
 		render 'search_results'
 	end
 end

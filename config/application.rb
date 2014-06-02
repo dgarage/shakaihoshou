@@ -11,6 +11,7 @@ module Blog
     config.i18n.default_locale = :ja
     I18n.config.enforce_available_locales = true
     config.encoding = "utf-8" 
+    
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
