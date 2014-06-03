@@ -1,11 +1,11 @@
 <div class="row">
 	<div class="col-lg-8">
 		<table class="table table-striped table-borderless">
-				<tr>
-					<% @results.first.attributes.each do |attr| %>
-						<th><%= attr[0] %></th>
-						<% end %>
-				</tr>
+			<tr>
+				<% @results.first.attributes.each do |attr| %>
+					<th><%= attr[0] %></th>
+					<% end %>
+			</tr>
 			<% @results.each do |row| %>
 				<tr>
 					<% row.attributes.values.each do |value| %>

@@ -79,6 +79,8 @@ module ApplicationHelper
 			33 => "項目追加（3）"
 		}
 
+		# for i, c in enumerate(df.columns): print 'rename_column :institutions, :"%s", :"%s" '%(c.replace(' ','').replace('\n', ''), i)
+
 		return name_hash[column_code]
 	end
 end
