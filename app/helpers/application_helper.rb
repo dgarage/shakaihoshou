@@ -38,7 +38,7 @@ module ApplicationHelper
 			"項目追加（3）" => 33
 		}
 
-		return code_hash[column_name]
+		return code_hash[column_name].to_s.to_sym
 	end
 
 	def self.get_column_name(column_code)
@@ -81,6 +81,6 @@ module ApplicationHelper
 
 		# for i, c in enumerate(df.columns): print 'rename_column :institutions, :"%s", :"%s" '%(c.replace(' ','').replace('\n', ''), i)
 
-		return name_hash[column_code]
+		return name_hash[column_code.to_s.to_sym]
 	end
 end

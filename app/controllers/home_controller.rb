@@ -1,6 +1,6 @@
 # encoding: UTF-8
 class HomeController < ApplicationController
-	
+	include ApplicationHelper
 
 	def index
 		areas = ['nan', '世田谷区地域社会福祉協議会', '世田谷区', 'test1', 'test2', 'test3', 'test4', 'test5']
@@ -16,16 +16,17 @@ class HomeController < ApplicationController
 		# areas.each{|area| @area_hash[area] = false}
 		# @area_hash[params[:selected_area]] = true
 		# render 'refine'
-		
+		p params
 
-		@results = Institution.where({"都、国、市町村".force_encoding("ASCII-8BIT") => ''.force_encoding('utf-8')}).to_sql
-		p 'ENCOOOOOOOOOOO'
+		@results = Incident.where({:"0" => params[:area]})
+		# @results = Incident.all
+
 		p @results
 		p 'COOOEEEEEE'
 		# # p @results.first.encoding
 		# @results = Institution.all
 		# @results = Institution.all
-		render 'dummy'
+		render 'search_results'
 	end
 
 	def search_by_area
