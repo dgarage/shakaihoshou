@@ -1,6 +1,6 @@
 module ApplicationHelper
 
-	def self.get_column_code(column_name)
+	def get_column_code(column_name)
 		code_hash = {
 			"都、国、市町村" => 0,
 			"管理番号" => 1,
@@ -41,7 +41,7 @@ module ApplicationHelper
 		return code_hash[column_name].to_s.to_sym
 	end
 
-	def self.get_column_name(column_code)
+	def get_column_name(column_code)
 		name_hash = {
 			0 => "都、国、市町村",
 			1 => "管理番号",
@@ -81,6 +81,6 @@ module ApplicationHelper
 
 		# for i, c in enumerate(df.columns): print 'rename_column :institutions, :"%s", :"%s" '%(c.replace(' ','').replace('\n', ''), i)
 
-		return name_hash[column_code.to_s.to_sym]
+		return name_hash[column_code.to_i]
 	end
 end

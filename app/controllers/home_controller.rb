@@ -11,8 +11,18 @@ class HomeController < ApplicationController
 	end
 
 	def top_search
+
+
 		@results = Incident.where({:"0" => params[:area], :"2" => params[:shin]})
-		@results = Array.new if @results.blank?
+		
+		@column_names = Array.new
+		if @results.blank? 
+			@results = Array.new
+		else
+			@results.first.attributes.keys.each{|k|
+				@column_names.append get_column_name(k)
+			}
+		end
 		render 'search_results'
 	end
 
