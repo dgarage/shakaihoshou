@@ -54,22 +54,36 @@ class HomeController < ApplicationController
 			all_results[city] = Incident.where({:"0" => city})
 		}
 
-		p 'ASLDKASLDKJ'
-		p all_results.keys
-		p 'ASLDKASLDKJ'
-		
 		# MAKE SHARED INFO
 		@shared_info = Array.new
 		all_results[@cities[0]].each{|row|
 			shared_info_row = Hash.new
-			p row.attributes["2"]
 			shared_info_row["シーン種別(1)"] = row.attributes["2"]
 			shared_info_row["一般名称（今後増えてきたものにする）"] = row.attributes["5"]
 			shared_info_row["保障額・内容"] = row.attributes["7"]
 			@shared_info.append shared_info_row
 		}
 
-		@area_info = Hash.new
+		max_rows = (all_results.values.map{|x| x.length}).max
+		@area_info_by_rows = Array.new(max_rows){Hash.new}
+		
+		# (0...max_rows).each{|i|
+		all_results.each_entry{|city, list_of_results|
+				# city_row_hash = {"女"}
+			# city_row_hash = Hash.new
+			list_of_results.each_with_index{ |city_row, index|
+				city_row_hash = Hash.new
+				# city_row_hash["row"] = index
+				city_row_hash["女"] = city_row["12"]
+				@area_info_by_rows[index][city] = city_row_hash
+			}
+
+
+		}
+		# }
+		
+		p @area_info_by_rows
+		
 		render 'search_results'
 	end
 

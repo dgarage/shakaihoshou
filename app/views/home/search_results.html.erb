@@ -9,6 +9,9 @@
 					<th>一般名称/自治体の呼称</th>
 					<th>運営/申請窓口</th>
 					<th>保障額・内容</th>
+					<% @cities.each do |city| %>
+					<th>女</th>
+					<% end %>
 				</tr>
 			<% (0...@shared_info.length).each do |row| %>
 				<tr>
@@ -17,6 +20,9 @@
 					<td><%= @shared_info[row]["一般名称（今後増えてきたものにする）"]%></td>
 					<td>東京都/居住区の自治体</td>
 					<td><%= @shared_info[row]["保障額・内容"]%>...</td>
+					<% @cities.each do |city| %>
+					<td><%= @area_info_by_rows[row][city]["女"]%></td>
+					<% end %>
 				</tr>
 			<% end%>
 		</table>
