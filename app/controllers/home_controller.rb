@@ -36,25 +36,38 @@ class HomeController < ApplicationController
 		# else
 		# 	query_parameters = {params[:selected_city] => "1"}
 		# end
+
+		@shared_info = Array.new
+
+
 		query_parameters = params[:selected_city]
-		["病気・けが"].each{|scene|
-			query_parameters.each_entry{|city, chosen|
-				if chosen.to_i == 1
-					p "#{city}, #{chosen}"
-					@results.append Incident.where({:"0" => city, :"2" => scene})
-				end
+		# ["病気・けが"].each{|scene|
+		p 'ALFSJALSKDJLAKSJD'
+		query_parameters.each_entry{|city, chosen|
+			if chosen.to_i == 1
+				# p "#{city}, #{chosen}"
+				@results = Incident.where({:"0" => city})
+				@results.each{|row|
+					shared_info_row = Hash.new
+					p row.attributes["2"]
+					shared_info_row["シーン種別(1)"] = row.attributes["2"]
+					shared_info_row["一般名称（今後増えてきたものにする）"] = row.attributes["5"]
+					shared_info_row["保障額・内容"] = row.attributes["7"]
+					@shared_info.append shared_info_row
+				}
+			end
 
-			}
 		}
+		# }
 
-		@results.each{|query_result|
-			p query_result.length
-		}
+		# @results.each{|query_result|
+		# 	p query_result.length
+		# }
 
 		
 		# @results = Incident.where({:"0" => params[:area]})
 		# @results = Array.new if @results.blank?
-		render 'dummy'
+		render 'search_results'
 	end
 
 	def search_by_one_area
