@@ -28,7 +28,6 @@ class HomeController < ApplicationController
 	end
 
 	def search_by_area
-		@results = Array.new
 
 		# Makes sure that the query parameters are in the right format (hash with city as keys and 1/0 as values)
 		# if params[:selected_city].class = Hash
@@ -37,36 +36,40 @@ class HomeController < ApplicationController
 		# 	query_parameters = {params[:selected_city] => "1"}
 		# end
 
-		@shared_info = Array.new
-
+		
+		
 
 		query_parameters = params[:selected_city]
-		# ["病気・けが"].each{|scene|
-		p 'ALFSJALSKDJLAKSJD'
+		
+		@cities = Array.new
 		query_parameters.each_entry{|city, chosen|
 			if chosen.to_i == 1
-				# p "#{city}, #{chosen}"
-				@results = Incident.where({:"0" => city})
-				@results.each{|row|
-					shared_info_row = Hash.new
-					p row.attributes["2"]
-					shared_info_row["シーン種別(1)"] = row.attributes["2"]
-					shared_info_row["一般名称（今後増えてきたものにする）"] = row.attributes["5"]
-					shared_info_row["保障額・内容"] = row.attributes["7"]
-					@shared_info.append shared_info_row
-				}
+				@cities.append city
 			end
-
 		}
-		# }
-
-		# @results.each{|query_result|
-		# 	p query_result.length
-		# }
-
 		
-		# @results = Incident.where({:"0" => params[:area]})
-		# @results = Array.new if @results.blank?
+		# COLLECT ALL QUERIES
+		all_results = Hash.new
+		@cities.each{|city|
+			all_results[city] = Incident.where({:"0" => city})
+		}
+
+		p 'ASLDKASLDKJ'
+		p all_results.keys
+		p 'ASLDKASLDKJ'
+		
+		# MAKE SHARED INFO
+		@shared_info = Array.new
+		all_results[@cities[0]].each{|row|
+			shared_info_row = Hash.new
+			p row.attributes["2"]
+			shared_info_row["シーン種別(1)"] = row.attributes["2"]
+			shared_info_row["一般名称（今後増えてきたものにする）"] = row.attributes["5"]
+			shared_info_row["保障額・内容"] = row.attributes["7"]
+			@shared_info.append shared_info_row
+		}
+
+		@area_info = Hash.new
 		render 'search_results'
 	end
 
