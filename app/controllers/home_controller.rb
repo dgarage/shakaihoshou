@@ -27,13 +27,31 @@ class HomeController < ApplicationController
 		render 'search_results'
 	end
 
-	def search_by_several_areas
+	def search_by_area
 		@results = Array.new
-		params[:selected_city].entries{|city, chosen|
-			if chosen.to_i == 1
-				@results.append Incident.where({:"0" => city})
-			end
+
+		# Makes sure that the query parameters are in the right format (hash with city as keys and 1/0 as values)
+		# if params[:selected_city].class = Hash
+		# 	query_parameters = params[:selected_city]
+		# else
+		# 	query_parameters = {params[:selected_city] => "1"}
+		# end
+		query_parameters = params[:selected_city]
+		["病気・けが"].each{|scene|
+			query_parameters.each_entry{|city, chosen|
+				if chosen.to_i == 1
+					p "#{city}, #{chosen}"
+					@results.append Incident.where({:"0" => city, :"2" => scene})
+				end
+
+			}
 		}
+
+		@results.each{|query_result|
+			p query_result.length
+		}
+
+		
 		# @results = Incident.where({:"0" => params[:area]})
 		# @results = Array.new if @results.blank?
 		render 'dummy'
