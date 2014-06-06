@@ -1,11 +1,11 @@
 <div class="row">
 	<div class="col-lg-6 header">
     	<h1>東京の社会保障を検索</h1>
-    	<%= form_tag 'top_search', method:'get' do %>
+    	<%= form_tag 'search_by_area', method:'get' do %>
 
-            <%= select_tag :area,  options_for_select([['渋谷区', '渋谷区'], ['世田谷区', '世田谷区']])%> 
+            <%= select_tag :selected_city,  options_for_select({'渋谷区' => '渋谷区', '世田谷区' => '世田谷区'})%> 
             ×
-            <%= select_tag :shin,  options_for_select([['病気・けが', '病気・けが']])%> 
+            <%= select_tag :scene,  options_for_select([['病気・けが', '病気・けが']])%> 
             <%= submit_tag "検索", class: "btn btn-success" %>
 		<% end %>
     </div>

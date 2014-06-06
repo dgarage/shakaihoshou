@@ -10,30 +10,30 @@ class HomeController < ApplicationController
 
 	end
 
-	def top_search
-
-
-		@results = Incident.where({:"0" => params[:area], :"2" => params[:shin]})
+	# def top_search
+	# 	@results = Incident.where({:"0" => params[:area], :"2" => params[:shin]})
 		
-		@column_names = Array.new
-		if @results.blank? 
-			@results = Array.new
-		else
-			@results.first.attributes.keys.each{|k|
-				@column_names.append get_column_name(k)
-			}
-		end
-		p @column_names
-		render 'search_results'
-	end
+	# 	@column_names = Array.new
+	# 	if @results.blank? 
+	# 		@results = Array.new
+	# 	else
+	# 		@results.first.attributes.keys.each{|k|
+	# 			@column_names.append get_column_name(k)
+	# 		}
+	# 	end
+	# 	p @column_names
+	# 	render 'dummy'
+	# end
 
 
 	def search_by_area
-
-		# Makes sure that the query parameters are in the right format (hash with city as keys and 1/0 as values)
-		
 		query_parameters = params[:selected_city]
 		
+		if query_parameters.instance_of? String
+			# Makes sure that the query parameters are in the right format (hash with city as keys and 1/0 as values)
+			query_parameters = {query_parameters => "1"}
+		end
+
 		@cities = Array.new
 		query_parameters.each_entry{|city, chosen|
 			if chosen.to_i == 1
@@ -65,22 +65,16 @@ class HomeController < ApplicationController
 		max_rows = (all_results.values.map{|x| x.length}).max
 		@area_info_by_rows = Array.new(max_rows){Hash.new}
 		
-		# (0...max_rows).each{|i|
 		all_results.each_entry{|city, list_of_results|
-				# city_row_hash = {"女"}
-			# city_row_hash = Hash.new
 			list_of_results.each_with_index{ |city_row, index|
 				city_row_hash = Hash.new
-				# city_row_hash["row"] = index
+				
 				city_row_hash["女"] = city_row["12"]
 				@area_info_by_rows[index][city] = city_row_hash
 			}
 
 
 		}
-		# }
-		
-		# p @area_info_by_rows
 		
 		render 'search_results'
 	end
