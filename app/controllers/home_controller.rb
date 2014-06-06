@@ -68,8 +68,22 @@ class HomeController < ApplicationController
 		all_results.each_entry{|city, list_of_results|
 			list_of_results.each_with_index{ |city_row, index|
 				city_row_hash = Hash.new
-				
+				city_row_hash["年齢(以上)"] = city_row["9"]
+				city_row_hash["年齢(以下)"] = city_row["10"]				
 				city_row_hash["女"] = city_row["12"]
+				city_row_hash["男"] = city_row["13"]
+				city_row_hash["子供(1)乳児"] = city_row["18"]
+				city_row_hash["子供(2)就学前、保育園、幼稚園"] = city_row["19"]
+				city_row_hash["子供(3)小学生"] = city_row["20"]
+				city_row_hash["子供(4)中学生"] = city_row["21"]
+				city_row_hash["子供(5)高校生"] = city_row["22"]
+				city_row_hash["高齢者(1)前期高齢者対象"] = city_row["23"]
+				city_row_hash["高齢者(2)後期高齢者対象"] = city_row["24"]
+				city_row_hash["ひとり親"] = city_row["15"]
+				city_row_hash["妊婦(産前産後)"] = city_row["16"]
+				city_row_hash["要介護者"] = city_row["25"]
+				city_row_hash["障がい者"] = city_row["26"]
+				city_row_hash["住宅・店舗"] = city_row["27"]
 				@area_info_by_rows[index][city] = city_row_hash
 			}
 

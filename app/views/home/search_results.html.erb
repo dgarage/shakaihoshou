@@ -10,7 +10,22 @@
 				<th>運営/申請窓口</th>
 				<th>保障額・内容</th>
 				<% @cities.each do |city| %>
+				<th>年齢(以上)</th>
+				<th>年齢(以下)</th>
 				<th>女</th>
+				<th>男</th>
+				<th>子供(1)乳児"</th>
+				<th>子供(2)就学前、保育園、幼稚園</th>
+				<th>子供(3)小学生</th>
+				<th>子供(4)中学生</th>
+				<th>子供(5)高校生</th>
+				<th>高齢者(1)前期高齢者対象</th>
+				<th>高齢者(2)後期高齢者対象</th>
+				<th>ひとり親</th>
+				<th>妊婦(産前産後)</th>
+				<th>要介護者</th>
+				<th>障がい者</th>
+				<th>住宅・店舗</th>
 				<% end %>
 			</tr>
 			<% (0...@shared_info.length).each do |row| %>
@@ -24,7 +39,22 @@
 					</td>
 					<% @cities.each do |city| %>
 						<% city_data = @area_info_by_rows[row][city] %>
+						<td><%= city_data["年齢(以上)"]%></td>
+						<td><%= city_data["年齢(以下)"]%></td>
 						<td><%= city_data["女"]%></td>
+						<td><%= city_data["男"]%></td>
+						<td><%= city_data["子供(1)乳児"]%></td>
+						<td><%= city_data["子供(2)就学前、保育園、幼稚園"]%></td>
+						<td><%= city_data["子供(3)小学生"]%></td>
+						<td><%= city_data["子供(4)中学生"]%></td>
+						<td><%= city_data["子供(5)高校生"]%></td>
+						<td><%= city_data["高齢者(1)前期高齢者対象"]%></td>
+						<td><%= city_data["高齢者(2)後期高齢者対象"]%></td>
+						<td><%= city_data["ひとり親"]%></td>
+						<td><%= city_data["妊婦(産前産後)"]%></td>
+						<td><%= city_data["要介護者"]%></td>
+						<td><%= city_data["障がい者"]%></td>
+						<td><%= city_data["住宅・店舗"]%></td>
 					<% end %>
 				</tr>
 			<% end%>
