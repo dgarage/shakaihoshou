@@ -2,33 +2,37 @@
 
 <div class="row">
 	<div class="col-lg-12">
-		<table class="table table-striped table-borderless">
-			<tr>
-				<th>row</th>
-				<th>シーン</th>
-				<th>一般名称/自治体の呼称</th>
-				<th>運営/申請窓口</th>
-				<th>保障額・内容</th>
-				<% @cities.each do |city| %>
-				<th>女</th>
-				<% end %>
-			</tr>
-			<% (0...@shared_info.length).each do |row| %>
+		
+		<% @existing_scenes.each do |scene| %>
+			<%= scene %>
+			<table class="table table-striped table-borderless">
 				<tr>
-					<td><%= row %>	</td>
-					<td><%= @shared_info[row]["シーン種別(1)"] %>	</td>
-					<td><%= @shared_info[row]["一般名称（今後増えてきたものにする）"]%></td>
-					<td>東京都/居住区の自治体</td>
-					<td><%= @shared_info[row]["保障額・内容"][0,10]%>
-						<%= link_to name = '詳細', controller:"home", action:"show_details", id:@shared_info[row]["id"]%>
-					</td>
+					<th>row</th>
+					<th>シーン</th>
+					<th>一般名称/自治体の呼称</th>
+					<th>運営/申請窓口</th>
+					<th>保障額・内容</th>
 					<% @cities.each do |city| %>
-						<% city_data = @area_info_by_rows[row][city] %>
-						<td><%= city_data["女"]%></td>
+					<th>女</th>
 					<% end %>
 				</tr>
-			<% end%>
-		</table>
-		
+				<% (0...@shared_info[scene].length).each do |row| %>
+					<tr>
+						<td><%= row %>	</td>
+						<td><%= @shared_info[scene][row]["シーン種別(1)"] %>	</td>
+						<td><%= @shared_info[scene][row]["一般名称（今後増えてきたものにする）"]%></td>
+						<td>東京都/居住区の自治体</td>
+						<td><%= @shared_info[scene][row]["保障額・内容"][0,10]%>
+							<%= link_to name = '詳細', controller:"home", action:"show_details", id:@shared_info[scene][row]["id"]%>
+						</td>
+						
+						<% @cities.each do |city| %>
+							<% city_data = @area_info_by_scene[scene][row][city] %>
+							<td><%= city_data["女"] %></td>
+						<% end %>
+					</tr>
+				<% end%>
+			</table>
+		<% end %>
 	</div>
 </div>
