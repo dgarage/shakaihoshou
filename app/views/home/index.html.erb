@@ -9,7 +9,7 @@
 					<% slice.each do |city| %>
 						<td>
 							<%= check_box :selected_city, city%> 
-								<%= link_to city, action: 'search_by_area',  selected_city: city %>
+								<%= link_to city, action: 'search_by_area',  selected_city: {city => 1} %>
 						</td>
 					<% end %>
 				</tr>

@@ -27,18 +27,11 @@ class HomeController < ApplicationController
 		render 'search_results'
 	end
 
+
 	def search_by_area
 
 		# Makes sure that the query parameters are in the right format (hash with city as keys and 1/0 as values)
-		# if params[:selected_city].class = Hash
-		# 	query_parameters = params[:selected_city]
-		# else
-		# 	query_parameters = {params[:selected_city] => "1"}
-		# end
-
 		
-		
-
 		query_parameters = params[:selected_city]
 		
 		@cities = Array.new
