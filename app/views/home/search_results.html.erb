@@ -4,7 +4,7 @@
 			<%= scene %>
 			<table class="table table-striped table-borderless">
 				<tr>
-					<th>row</th>
+					
 					<th>シーン</th>
 					<th>一般名称/自治体の呼称</th>
 					<th>運営/申請窓口</th>
@@ -29,9 +29,9 @@
 					<% end %>
 				</tr>
 				<% (0...@shared_info[scene].length).each do |row| %>
+					<tr>					
 					<% @cities.each do |city| %>
-						<tr>
-							<td><%= row %>	</td>
+						
 							<td><%= @shared_info[scene][row]["シーン種別(1)"] %>	</td>
 							<td><%= @shared_info[scene][row]["一般名称（今後増えてきたものにする）"]%></td>
 							<td>東京都/居住区の自治体</td>
@@ -58,8 +58,9 @@
 								<td><%= city_data["障がい者"]%></td>
 								<td><%= city_data["住宅・店舗"]%></td>
 							<% end %>
-						</tr>
+						
 					<% end%>
+					</tr>
 				<% end%>				
 			</table>
 		<% end %>
