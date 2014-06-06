@@ -29,39 +29,34 @@
 					<% end %>
 				</tr>
 				<% (0...@shared_info[scene].length).each do |row| %>
-					<tr>					
-					<% @cities.each do |city| %>
-						
-							<td><%= @shared_info[scene][row]["シーン種別(1)"] %>	</td>
-							<td><%= @shared_info[scene][row]["一般名称（今後増えてきたものにする）"]%></td>
-							<td>東京都/居住区の自治体</td>
-							<td><%= @shared_info[scene][row]["保障額・内容"][0,10]%>
-								<%= link_to name = '詳細', controller:"home", action:"show_details", id:@shared_info[scene][row]["id"]%>
-							</td>
-							
-							<% @cities.each do |city| %>
-								<% city_data = @area_info_by_scene[scene][row][city] %>
-								<td><%= city_data["年齢(以上)"]%></td>
-								<td><%= city_data["年齢(以下)"]%></td>
-								<td><%= city_data["女"]%></td>
-								<td><%= city_data["男"]%></td>
-								<td><%= city_data["子供(1)乳児"]%></td>
-								<td><%= city_data["子供(2)就学前、保育園、幼稚園"]%></td>
-								<td><%= city_data["子供(3)小学生"]%></td>
-								<td><%= city_data["子供(4)中学生"]%></td>
-								<td><%= city_data["子供(5)高校生"]%></td>
-								<td><%= city_data["高齢者(1)前期高齢者対象"]%></td>
-								<td><%= city_data["高齢者(2)後期高齢者対象"]%></td>
-								<td><%= city_data["ひとり親"]%></td>
-								<td><%= city_data["妊婦(産前産後)"]%></td>
-								<td><%= city_data["要介護者"]%></td>
-								<td><%= city_data["障がい者"]%></td>
-								<td><%= city_data["住宅・店舗"]%></td>
-							<% end %>
-						
-					<% end%>
+					<tr>											
+						<td><%= @shared_info[scene][row]["シーン種別(1)"] %>	</td>
+						<td><%= @shared_info[scene][row]["一般名称（今後増えてきたものにする）"]%></td>
+						<td>東京都/居住区の自治体</td>
+						<td><%= @shared_info[scene][row]["保障額・内容"][0,10]%>
+							<%= link_to name = '詳細', controller:"home", action:"show_details", id:@shared_info[scene][row]["id"]%>
+						</td>
+						<% @cities.each do |city| %>
+							<% city_data = @area_info_by_scene[scene][row][city] %>
+							<td><%= city_data["年齢(以上)"]%></td>
+							<td><%= city_data["年齢(以下)"]%></td>
+							<td><%= city_data["女"]%></td>
+							<td><%= city_data["男"]%></td>
+							<td><%= city_data["子供(1)乳児"]%></td>
+							<td><%= city_data["子供(2)就学前、保育園、幼稚園"]%></td>
+							<td><%= city_data["子供(3)小学生"]%></td>
+							<td><%= city_data["子供(4)中学生"]%></td>
+							<td><%= city_data["子供(5)高校生"]%></td>
+							<td><%= city_data["高齢者(1)前期高齢者対象"]%></td>
+							<td><%= city_data["高齢者(2)後期高齢者対象"]%></td>
+							<td><%= city_data["ひとり親"]%></td>
+							<td><%= city_data["妊婦(産前産後)"]%></td>
+							<td><%= city_data["要介護者"]%></td>
+							<td><%= city_data["障がい者"]%></td>
+							<td><%= city_data["住宅・店舗"]%></td>
+						<% end %>
 					</tr>
-				<% end%>				
+				<% end%>
 			</table>
 		<% end %>
 	</div>
