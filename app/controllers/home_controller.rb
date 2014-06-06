@@ -58,9 +58,14 @@ class HomeController < ApplicationController
 		@shared_info = Array.new
 		all_results[@cities[0]].each{|row|
 			shared_info_row = Hash.new
+			shared_info_row["id"] = row[:id]
 			shared_info_row["シーン種別(1)"] = row.attributes["2"]
 			shared_info_row["一般名称（今後増えてきたものにする）"] = row.attributes["5"]
-			shared_info_row["保障額・内容"] = row.attributes["7"]
+			if row.attributes["7"]
+				shared_info_row["保障額・内容"] = row.attributes["7"]
+			else
+				shared_info_row["保障額・内容"] = ""
+			end
 			@shared_info.append shared_info_row
 		}
 
@@ -82,9 +87,14 @@ class HomeController < ApplicationController
 		}
 		# }
 		
-		p @area_info_by_rows
+		# p @area_info_by_rows
 		
 		render 'search_results'
+	end
+
+	def show_details
+		@incident = Incident.find params[:id]
+		render 'incident_details'
 	end
 
 	def search_by_one_area
