@@ -5,20 +5,20 @@
 				
 				
 
-				<!-- <tr>
+				<tr>
 					<td><strong>シーン</strong></td>
 					<td>
 						<% @scenes.each do |scene| %>
-							<%= check_box :scene, scene%>  <%= scene %>
+							<%= check_box :scene, scene %>  <%= scene %>
 						<% end %>
 					</td>
 				</tr>
- -->
+ 
 				<tr>
 					<td><strong>対象</strong></td> 
 					
 					<td>
-						<%= select_tag :gender,  options_for_select([['女', '男']])%> <br/>
+						<%= select_tag :gender,  options_for_select(['女', '男'	])%> <br/>
 						<% @targets.each do |target| %>
 							<%= check_box :target, target%>  <%= target %>
 						<% end %>
