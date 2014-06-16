@@ -7,7 +7,11 @@ class HomeController < ApplicationController
 		@area_hash = Hash.new
 		areas.each{|area| @area_hash[area] = false}
 		@cities = ['世田谷区', '渋谷区', '新宿区', '中野区']
-
+		@scenes = (Incident.all.pluck(:"2").uniq[1..-1] + Incident.all.pluck(:"3").uniq[1..-1]).uniq
+		@targets = Array.new
+		(18..24).each{|x| @targets.push get_column_name(x)}
+		@situations = Array.new
+		[15, 16, 25, 26, 27].each{|x| @situations.push get_column_name(x)}
 	end
 
 	# def top_search
@@ -24,6 +28,10 @@ class HomeController < ApplicationController
 	# 	p @column_names
 	# 	render 'dummy'
 	# end
+
+	def detailed_search
+		p params
+	end
 
 
 	def search_by_area
