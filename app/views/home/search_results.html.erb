@@ -1,4 +1,12 @@
 <div class="row">
+	<div class="col-lg-12">
+		<div style="text-align: center">
+			<h1><%= @total_count %> 検索結果があります！</h1>
+		</div>
+	</div>
+</div>
+
+<div class="row">
 	<div class="col-lg-12">		
 		<% @selected_scenes.each do |scene| %>
 			<%= scene %>

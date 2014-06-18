@@ -90,7 +90,7 @@ module ApplicationHelper
 		area_info_by_scene = Hash[existing_scenes.map{|k| [k, Array.new]}]
 		shared_info = Hash[existing_scenes.map{|k| [k, Array.new]}]
 
-
+		@total_count = 0
 		existing_scenes.each{|scene|
 			
 			
@@ -98,7 +98,9 @@ module ApplicationHelper
 				full_query = query.update({:"0" => city, :"2" => scene})
 				p 'FULLLLLLLL'
 				p full_query
-				all_results[city] = Incident.where(full_query) 
+				results = Incident.where(full_query) 
+				all_results[city] = results
+				@total_count += results.count
 			}
 			
 			all_results[cities[0]].each{|row| shared_info[scene].append convert_sharedinfo_row_to_hash(row) }

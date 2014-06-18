@@ -67,7 +67,7 @@ class HomeController < ApplicationController
 		# @existing_scenes = (Incident.all.pluck(:"2").uniq[1..-1] + Incident.all.pluck(:"3").uniq[1..-1]).uniq
 		# @existing_scenes.delete nil
 
-		@cities = ['世田谷区']
+		# @cities = ['世田谷区']
 		@area_info_by_scene, @shared_info = structure_data(@selected_scenes, @cities, query)
 
 		p 'QUERY'
@@ -76,9 +76,6 @@ class HomeController < ApplicationController
 		render 'search_results'
 	end
 
-	def header_search
-
-	end
 
 	def search_by_area
 		query_parameters = params[:selected_city]
