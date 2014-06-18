@@ -3,6 +3,9 @@ Blog::Application.routes.draw do
   get '/search_by_area' => 'home#search_by_area'
   get '/show_details' => 'home#show_details'
   get '/detailed_search' => 'home#detailed_search'
+  get 'search_by_scene' => 'home#search_by_scene'
+  get 'search_by_scene_step2' => 'home#search_by_scene_step2'
+  get 'search_by_scene_step3' => 'home#search_by_scene_step3'
   root :to => 'home#index'
 
  

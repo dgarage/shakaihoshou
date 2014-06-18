@@ -90,8 +90,6 @@ module ApplicationHelper
 		area_info_by_scene = Hash[existing_scenes.map{|k| [k, Array.new]}]
 		shared_info = Hash[existing_scenes.map{|k| [k, Array.new]}]
 
-		p 'EXISTING '
-		p existing_scenes
 
 		existing_scenes.each{|scene|
 			

@@ -95,9 +95,6 @@ class HomeController < ApplicationController
 			end
 		}
 		
-		
-		
-		
 		if params[:scene]
 			@selected_scenes = [params[:scene]]
 		else
@@ -105,7 +102,6 @@ class HomeController < ApplicationController
 			@selected_scenes.delete nil
 		end
 		
-
 		@area_info_by_scene, @shared_info = structure_data(@selected_scenes, @cities, {})
 
 		render 'search_results'
@@ -114,6 +110,41 @@ class HomeController < ApplicationController
 	def show_details
 		@incident = Incident.find params[:id]
 		render 'incident_details'
+	end
+
+	def search_by_scene
+		@selected_scene = params[:selected_scene]
+		@stuff = Incident.all.pluck(:"5").uniq[1..-1]
+		@stuffcount = Hash.new
+		@stuff.each{|x| @stuffcount[x] = Incident.where({:"2" => params[:selected_scene], :"5" => x}).count}
+		render 'scene_search_step2'
+	end
+
+	def search_by_scene_step2
+		@search_criteria = params[:search_criteria]
+		
+		all_cities = Incident.all.pluck(:"0").uniq[1..-1]
+		all_cities.delete nil
+
+		@available_cities = Array.new
+		all_cities.each{|city| 
+			query = @search_criteria.update({:"0" => city})
+			@available_cities.append(city) if Incident.where(query) != nil
+			}
+		
+		
+		render 'scene_search_step3'
+	end
+
+	def search_by_scene_step3
+		
+		@cities = [params[:search_criteria][:"0"]]
+		@selected_scenes = [params[:search_criteria][:"2"]]
+		additional_criteria = {"5" => params[:search_criteria][:"5"]}
+		
+		@area_info_by_scene, @shared_info = structure_data(@selected_scenes, @cities, additional_criteria)
+		render 'search_results'
+		# render 'dummy'
 	end
 
 end
