@@ -46,11 +46,12 @@ class HomeController < ApplicationController
 		end
 
 
-		# params[:scene].each_entry{|scene, chosen|
-		# 	if chosen.to_i == 1
-				
-		# 	end
-		# }
+		@selected_scenes = Array.new
+		params[:scene].each_entry{|scene, chosen|
+			if chosen.to_i == 1
+				@selected_scenes.append scene
+			end
+		}
 
 		params[:target].each_entry{|target, chosen|
 			if chosen.to_i == 1
@@ -63,11 +64,11 @@ class HomeController < ApplicationController
 				query[get_column_code(target)] = "○"
 			end
 		}
-		@existing_scenes = (Incident.all.pluck(:"2").uniq[1..-1] + Incident.all.pluck(:"3").uniq[1..-1]).uniq
-		@existing_scenes.delete nil
+		# @existing_scenes = (Incident.all.pluck(:"2").uniq[1..-1] + Incident.all.pluck(:"3").uniq[1..-1]).uniq
+		# @existing_scenes.delete nil
 
 		@cities = ['世田谷区']
-		@area_info_by_scene, @shared_info = structure_data(@existing_scenes, @cities, query)
+		@area_info_by_scene, @shared_info = structure_data(@selected_scenes, @cities, query)
 
 		p 'QUERY'
 		p query
@@ -75,6 +76,9 @@ class HomeController < ApplicationController
 		render 'search_results'
 	end
 
+	def header_search
+
+	end
 
 	def search_by_area
 		query_parameters = params[:selected_city]
@@ -95,13 +99,14 @@ class HomeController < ApplicationController
 		
 		
 		if params[:scene]
-			@existing_scenes = [params[:scene]]
+			@selected_scenes = [params[:scene]]
 		else
-			@existing_scenes = (Incident.all.pluck(:"2").uniq[1..-1] + Incident.all.pluck(:"3").uniq[1..-1]).uniq
-			@existing_scenes.delete nil
+			@selected_scenes = (Incident.all.pluck(:"2").uniq[1..-1] + Incident.all.pluck(:"3").uniq[1..-1]).uniq
+			@selected_scenes.delete nil
 		end
 		
-		@area_info_by_scene, @shared_info = structure_data(@existing_scenes, @cities, {})
+
+		@area_info_by_scene, @shared_info = structure_data(@selected_scenes, @cities, {})
 
 		render 'search_results'
 	end

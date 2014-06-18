@@ -43,12 +43,12 @@ module ApplicationHelper
 
 	def get_column_name(column_code)
 		name_hash = {
-			0 => "都、国、市町村",
+			0 => "都、国、市町村", # Area
 			1 => "管理番号",
 			2 => "シーン種別(1)",
 			3 => "シーン種別(2)",
 			4 => "保障種別(2)",
-			5 => "一般名称（今後増えてきたものにする）",
+			5 => "一般名称（今後増えてきたものにする）", 
 			6 => "独自（都、国、市町村）の呼称",
 			7 => "保障額・保障内容",
 			8 => "対象の方",
@@ -90,13 +90,18 @@ module ApplicationHelper
 		area_info_by_scene = Hash[existing_scenes.map{|k| [k, Array.new]}]
 		shared_info = Hash[existing_scenes.map{|k| [k, Array.new]}]
 
+		p 'EXISTING '
+		p existing_scenes
+
 		existing_scenes.each{|scene|
 			
 			
 			cities.each{|city| 
-				p 'QUERT'
-				p query.update({:"0" => city, :"2" => scene})
-				all_results[city] = Incident.where(query.update({:"0" => city, :"2" => scene})) }
+				full_query = query.update({:"0" => city, :"2" => scene})
+				p 'FULLLLLLLL'
+				p full_query
+				all_results[city] = Incident.where(full_query) 
+			}
 			
 			all_results[cities[0]].each{|row| shared_info[scene].append convert_sharedinfo_row_to_hash(row) }
 
