@@ -161,4 +161,21 @@ module ApplicationHelper
 		return cities
 	end
 
+	def get_all_scenes()
+		scenes = (Incident.all.pluck(:"2").uniq[1..-1] + Incident.all.pluck(:"3").uniq[1..-1]).uniq
+		scenes.delete nil
+		return scenes
+	end
+
+	def get_all_stuff()
+		stuff = Incident.all.pluck(:"5").uniq[1..-1]
+		stuff.delete nil
+		return stuff
+	end
+
+	def get_header_data()
+		@all_cities = get_all_cities	
+		@all_scenes = get_all_scenes
+	end
+
 end

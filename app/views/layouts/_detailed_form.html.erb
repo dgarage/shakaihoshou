@@ -5,7 +5,7 @@
 				<tr>
 					<td><strong>シーン</strong></td>
 					<td>
-						<%= select_tag "city", options_for_select(@cities)
+						<%= select_tag "city", options_for_select(@all_cities)
  %>
 
 					</td>
@@ -14,7 +14,7 @@
 				<tr>
 					<td><strong>シーン</strong></td>
 					<td>
-						<% @scenes.each do |scene| %>
+						<% @all_scenes.each do |scene| %>
 							<%= check_box :scene, scene %>  <%= scene %>
 						<% end %>
 					</td>

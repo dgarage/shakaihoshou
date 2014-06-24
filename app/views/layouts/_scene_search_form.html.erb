@@ -1,7 +1,7 @@
 <div class="row">
 	<div class="col-lg-8">
 		<strong>シーン</strong>
-		<% @scenes.each do |scene| %>
+		<% @all_scenes.each do |scene| %>
 			<br/>
 			<%= link_to scene, action: 'search_by_scene',  selected_scene: scene %> 
 

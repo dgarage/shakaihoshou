@@ -2,15 +2,10 @@
 class HomeController < ApplicationController
 	include ApplicationHelper
 
+	before_filter :get_header_data
+
 	def index
-		areas = ['nan', '世田谷区地域社会福祉協議会', '世田谷区', 'test1', 'test2', 'test3', 'test4', 'test5']
-		@area_hash = Hash.new
-		areas.each{|area| @area_hash[area] = false}
-		# @cities = ['世田谷区', '渋谷区', '新宿区', '中野区']
-		@cities = get_all_cities
 		
-		@scenes = (Incident.all.pluck(:"2").uniq[1..-1] + Incident.all.pluck(:"3").uniq[1..-1]).uniq
-		@scenes.delete nil
 		
 		@targets = Array.new
 		(18..24).each{|x| @targets.push get_column_name(x)}
@@ -21,20 +16,6 @@ class HomeController < ApplicationController
 		@situations.delete nil
 	end
 
-	# def top_search
-	# 	@results = Incident.where({:"0" => params[:area], :"2" => params[:shin]})
-		
-	# 	@column_names = Array.new
-	# 	if @results.blank? 
-	# 		@results = Array.new
-	# 	else
-	# 		@results.first.attributes.keys.each{|k|
-	# 			@column_names.append get_column_name(k)
-	# 		}
-	# 	end
-	# 	p @column_names
-	# 	render 'dummy'
-	# end
 
 	def detailed_search
 		query = Hash.new
@@ -71,8 +52,13 @@ class HomeController < ApplicationController
 		render 'search_results'
 	end
 
+	# def header_search
+	# 	@cities = params[:selected_city]
+	# end
 
 	def search_by_area
+		p 'PARARARAR'
+		p params
 		query_parameters = params[:selected_city]
 		
 		if query_parameters.instance_of? String
@@ -90,11 +76,11 @@ class HomeController < ApplicationController
 		if params[:scene]
 			@selected_scenes = [params[:scene]]
 		else
-			@selected_scenes = (Incident.all.pluck(:"2").uniq[1..-1] + Incident.all.pluck(:"3").uniq[1..-1]).uniq
-			@selected_scenes.delete nil
+			@selected_scenes = get_all_scenes
 		end
 		
 		@area_info_by_scene, @shared_info = structure_data(@selected_scenes, @cities, {})
+		p @area_info_by_scene
 
 		render 'search_results'
 	end
@@ -106,22 +92,20 @@ class HomeController < ApplicationController
 
 	def search_by_scene
 		@selected_scene = params[:selected_scene]
-		@stuff = Incident.all.pluck(:"5").uniq[1..-1]
+		@stuff = get_all_stuff
 		@stuffcount = Hash.new
 		@stuff.each{|x| 
 			count = Incident.where({:"2" => params[:selected_scene], :"5" => x}).count
 			@stuffcount[x] = count if count > 0
 		}
-			# @stuffcount[x] = Incident.where({:"2" => params[:selected_scene], :"5" => x}).count}
 		render 'scene_search_step2'
 	end
 
 	def search_by_scene_step2
 		@search_criteria = params[:search_criteria]
 		
-		all_cities = Incident.all.pluck(:"0").uniq[1..-1]
-		all_cities.delete nil
-
+		all_cities = get_all_cities
+		
 		@available_cities = Array.new
 		all_cities.each{|city| 
 			query = @search_criteria.update({:"0" => city})

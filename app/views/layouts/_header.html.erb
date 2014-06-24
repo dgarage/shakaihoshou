@@ -3,9 +3,9 @@
     	<h1>東京の社会保障を検索</h1>
     	<%= form_tag 'search_by_area', method:'get' do %>
 
-            <%= select_tag :selected_city,  options_for_select({'渋谷区' => '渋谷区', '世田谷区' => '世田谷区'})%> 
+            <%= select_tag :selected_city,  options_for_select(@all_cities)%> 
             ×
-            <%= select_tag :scene,  options_for_select(['病気・けが'])%> 
+            <%= select_tag :scene,  options_for_select(@all_scenes)%> 
             <%= submit_tag "検索", class: "btn btn-success" %>
 		<% end %>
     </div>
