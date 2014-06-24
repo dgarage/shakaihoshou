@@ -1,9 +1,37 @@
+<script type="text/javascript">
+	$( document ).ready(function() {
+    	console.log( "ready!" );
+    	
+    	$('[id=detailed_checkbox]').click(function(){
+    		var checked = false
+    		$('[id=detailed_checkbox]').each(function(a, b){
+    		if ($(b).is(':checked')) {
+        		checked = checked | true;
+			} else{
+				checked = checked | false;
+			}
+    		});
+    		if (checked == true){
+    			$("#btn_detailed_submit").attr("disabled", false);
+    		} else{
+    			$("#btn_detailed_submit").attr("disabled", true);
+    		}	
+    	});
+
+    	
+
+    	$('#btn_area_submit').click(function(){
+    		console.log('Yeah, motherfucker!');
+    	});
+	});
+</script>
+
 <div class="row">
 	<div class="col-lg-8">
 		<%= bootstrap_form_tag url: 'detailed_search', method:'get' do |f| %>
 		<table class="table table-striped table-borderless">
 				<tr>
-					<td><strong>シーン</strong></td>
+					<td><strong>市・区</strong></td>
 					<td>
 						<%= select_tag "city", options_for_select(@all_cities)
  %>
@@ -15,7 +43,7 @@
 					<td><strong>シーン</strong></td>
 					<td>
 						<% @all_scenes.each do |scene| %>
-							<%= check_box :scene, scene %>  <%= scene %>
+							<%= check_box :scene, scene, id:'detailed_checkbox' %>  <%= scene %>
 						<% end %>
 					</td>
 				</tr>
@@ -26,7 +54,7 @@
 					<td>
 						<%= select_tag :gender,  options_for_select(['女', '男'	])%> <br/>
 						<% @targets.each do |target| %>
-							<%= check_box :target, target%>  <%= target %>
+							<%= check_box :target, target, id:'detailed_checkbox' %>  <%= target %>
 						<% end %>
 					</td>
 				</tr>
@@ -34,13 +62,13 @@
 					<td><strong>状態</strong></td> 
 					<td>
 						<% @situations.each do |situation| %>
-							<%= check_box :situation, situation%>  <%= situation %>
+							<%= check_box :situation, situation, id:'detailed_checkbox' %>  <%= situation %>
 						<% end %>
 					</td>
 				</tr>
 				
 			<tr>
-				<td><%= f.submit "検索", class: "btn btn-success" %></td>
+				<td><%= f.submit "検索", class: "btn btn-success", id:'btn_detailed_submit', disabled:true %></td>
 			</tr>
 			</table>
 		<% end %>		

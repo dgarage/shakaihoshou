@@ -176,6 +176,7 @@ module ApplicationHelper
 	def get_header_data()
 		@all_cities = get_all_cities	
 		@all_scenes = get_all_scenes
+		@messages = Array.new
 	end
 
 end

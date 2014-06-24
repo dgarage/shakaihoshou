@@ -5,8 +5,6 @@ class HomeController < ApplicationController
 	before_filter :get_header_data
 
 	def index
-		
-		
 		@targets = Array.new
 		(18..24).each{|x| @targets.push get_column_name(x)}
 		@targets.delete nil
@@ -14,6 +12,32 @@ class HomeController < ApplicationController
 		@situations = Array.new
 		[15, 16, 25, 26, 27].each{|x| @situations.push get_column_name(x)}
 		@situations.delete nil
+	end
+
+	def search_by_area
+		query_parameters = params[:selected_city]
+		
+		if query_parameters.instance_of? String
+			# Makes sure that the query parameters are in the right format (hash with city as keys and 1/0 as values)
+			query_parameters = {query_parameters => "1"}
+		end
+
+		@cities = Array.new
+		query_parameters.each_entry{|city, chosen|
+			if chosen.to_i == 1
+				@cities.append city
+			end
+		}
+		
+		if params[:scene]
+			@selected_scenes = [params[:scene]]
+		else
+			@selected_scenes = get_all_scenes
+		end
+		
+		@area_info_by_scene, @shared_info = structure_data(@selected_scenes, @cities, {})
+		render 'search_results'	
+	
 	end
 
 
@@ -52,38 +76,7 @@ class HomeController < ApplicationController
 		render 'search_results'
 	end
 
-	# def header_search
-	# 	@cities = params[:selected_city]
-	# end
 
-	def search_by_area
-		p 'PARARARAR'
-		p params
-		query_parameters = params[:selected_city]
-		
-		if query_parameters.instance_of? String
-			# Makes sure that the query parameters are in the right format (hash with city as keys and 1/0 as values)
-			query_parameters = {query_parameters => "1"}
-		end
-
-		@cities = Array.new
-		query_parameters.each_entry{|city, chosen|
-			if chosen.to_i == 1
-				@cities.append city
-			end
-		}
-		
-		if params[:scene]
-			@selected_scenes = [params[:scene]]
-		else
-			@selected_scenes = get_all_scenes
-		end
-		
-		@area_info_by_scene, @shared_info = structure_data(@selected_scenes, @cities, {})
-		p @area_info_by_scene
-
-		render 'search_results'
-	end
 
 	def show_details
 		@incident = Incident.find params[:id]
