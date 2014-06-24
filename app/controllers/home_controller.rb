@@ -37,8 +37,6 @@ class HomeController < ApplicationController
 	# end
 
 	def detailed_search
-		p 'AKDHASDKJALSDKJLKJD'
-		p params
 		query = Hash.new
 
 		if params[:gender] == '女'
@@ -46,7 +44,6 @@ class HomeController < ApplicationController
 		elsif params[:gender] == '男'
 			query[:"13"] = "○"
 		end
-
 
 		@selected_scenes = Array.new
 		params[:scene].each_entry{|scene, chosen|
@@ -66,18 +63,10 @@ class HomeController < ApplicationController
 				query[get_column_code(target)] = "○"
 			end
 		}
-		# @existing_scenes = (Incident.all.pluck(:"2").uniq[1..-1] + Incident.all.pluck(:"3").uniq[1..-1]).uniq
-		# @existing_scenes.delete nil
 
 		@cities = [params[:city]]
-
-		# @cities = Incident.all.pluck(:"0").uniq[1..-1]
-		# @cities.delete nil
 		
 		@area_info_by_scene, @shared_info = structure_data(@selected_scenes, @cities, query)
-
-		p 'QUERY'
-		p query
 
 		render 'search_results'
 	end
@@ -119,7 +108,11 @@ class HomeController < ApplicationController
 		@selected_scene = params[:selected_scene]
 		@stuff = Incident.all.pluck(:"5").uniq[1..-1]
 		@stuffcount = Hash.new
-		@stuff.each{|x| @stuffcount[x] = Incident.where({:"2" => params[:selected_scene], :"5" => x}).count}
+		@stuff.each{|x| 
+			count = Incident.where({:"2" => params[:selected_scene], :"5" => x}).count
+			@stuffcount[x] = count if count > 0
+		}
+			# @stuffcount[x] = Incident.where({:"2" => params[:selected_scene], :"5" => x}).count}
 		render 'scene_search_step2'
 	end
 
