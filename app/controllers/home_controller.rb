@@ -6,7 +6,8 @@ class HomeController < ApplicationController
 		areas = ['nan', '世田谷区地域社会福祉協議会', '世田谷区', 'test1', 'test2', 'test3', 'test4', 'test5']
 		@area_hash = Hash.new
 		areas.each{|area| @area_hash[area] = false}
-		@cities = ['世田谷区', '渋谷区', '新宿区', '中野区']
+		# @cities = ['世田谷区', '渋谷区', '新宿区', '中野区']
+		@cities = get_all_cities
 		
 		@scenes = (Incident.all.pluck(:"2").uniq[1..-1] + Incident.all.pluck(:"3").uniq[1..-1]).uniq
 		@scenes.delete nil
@@ -36,6 +37,7 @@ class HomeController < ApplicationController
 	# end
 
 	def detailed_search
+		p 'AKDHASDKJALSDKJLKJD'
 		p params
 		query = Hash.new
 
@@ -67,7 +69,11 @@ class HomeController < ApplicationController
 		# @existing_scenes = (Incident.all.pluck(:"2").uniq[1..-1] + Incident.all.pluck(:"3").uniq[1..-1]).uniq
 		# @existing_scenes.delete nil
 
-		# @cities = ['世田谷区']
+		@cities = [params[:city]]
+
+		# @cities = Incident.all.pluck(:"0").uniq[1..-1]
+		# @cities.delete nil
+		
 		@area_info_by_scene, @shared_info = structure_data(@selected_scenes, @cities, query)
 
 		p 'QUERY'
