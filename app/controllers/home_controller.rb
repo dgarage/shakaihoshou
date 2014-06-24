@@ -109,7 +109,7 @@ class HomeController < ApplicationController
 		@available_cities = Array.new
 		all_cities.each{|city| 
 			query = @search_criteria.update({:"0" => city})
-			@available_cities.append(city) if Incident.where(query) != nil
+			@available_cities.append(city) if Incident.where(query) != []
 			}
 		
 		
