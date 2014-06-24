@@ -155,4 +155,10 @@ module ApplicationHelper
 		return city_row_hash
 	end
 
+	def get_all_cities()
+		cities = Incident.all.pluck(:"0").uniq[1..-1]
+		cities.delete nil
+		return cities
+	end
+
 end
