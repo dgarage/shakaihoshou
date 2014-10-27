@@ -1,0 +1,67 @@
+// icon アイコンの画像
+
+@import "icon/*.png";
+$icon-sprite-dimensions: true;
+$icon: sprite-map("icon/*.png"); 
+@include all-icon-sprites;
+
+
+
+// sprites スプライト画像
+
+@import "sprites/*.png";
+$sprites-sprite-dimensions: true;
+$sprites: sprite-map("sprites/*.png"); 
+@include all-sprites-sprites;
+
+
+.sprites-head--logo {
+ float: left;
+ margin: 15px 10px 0 0;
+ text-indent:100%;
+ white-space:nowrap;
+ overflow:hidden;
+}
+
+p.head--city {
+ font-size: 90%;
+ color: $brand-primary;
+ margin: 20px 0 0;
+}
+
+span.head--city {
+ font-size: 24px;
+ font-weight: bold;
+ color: $brand-success;
+ margin: 4px 12px;
+}
+
+
+// icon 調整
+.glyphicon-nav {
+  background-color: #fff;
+  padding: 30px;
+  margin: 10px 10px 0;
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.glyphicon-s {
+  margin: 0 10px 0 5px;
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

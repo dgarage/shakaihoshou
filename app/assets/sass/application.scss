@@ -1,0 +1,234 @@
+// customize bootstrap variables here:
+@import "variables";
+@import "bootstrap";
+@import "icon";
+
+
+.navbar {
+  position: relative;
+  min-height: 0;
+  margin-bottom: 0;
+  border: 1px solid transparent;
+}
+
+.navbar-default {
+  background-color: #fffae8;
+  border-color: #e7e7e7;
+}
+
+.page-header {
+  margin: 0;
+}
+
+
+//
+// footer新規
+// --------------------------------------------------
+
+.container-foot {
+  background-color: $brand-primary;
+
+  p {
+    color: #fff;
+    font-size: 12px;
+    margin: 10px 0;;
+  }
+
+  }
+
+//
+// Jumbotron　打ち消し
+// --------------------------------------------------
+
+
+.jumbotron {
+  background: url("head--search.png");
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 250px;
+  margin-bottom: 0;
+
+  h1,
+  .h1 {
+    color: $brand-primary;
+    font-size: 24px;
+    font-weight: bold;
+
+  }
+
+  span.city {
+    color: $brand-success;
+    font-size: 120%;
+    font-weight: bold;
+  }
+
+  span.search {
+    color: $brand-primary;
+    font-size: 120%;
+    font-weight: bold;
+  }
+
+.container-search {
+  background-color: rgba(255,255,255,0.6);
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 0;
+  padding: 20px;
+  }
+
+}
+
+
+//
+// container-nav 新規
+// --------------------------------------------------
+
+
+.container-nav {
+  background-color: $brand-primary;
+  margin-bottom: 20px;
+
+  h2,
+  .h2 {
+    color: #fff;
+    font-size: 14px;
+  }
+
+  p {
+    color: #fff;
+    font-size: 12px;
+  }
+
+  span.city {
+  	color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+    .border-left {
+    border-left: 1px dashed #b1a7a0;
+    margin: 0;
+  }
+
+  .border-right {
+    border-right: 1px dashed #b1a7a0;
+    margin: 10px 0;
+  }
+
+
+  }
+
+  // Page-search 新規
+// -------------------------
+
+.page-search {
+  padding-bottom: (($line-height-computed / 2) - 1);
+  margin: ($line-height-computed * 2) 0 $line-height-computed;
+
+  h2,
+  .h2 {
+    color: $brand-primary;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #f2f1f1;
+    padding: 10px;
+  }
+
+  p {
+  margin-bottom: 15px;
+  }
+
+  img,
+  .img {
+    width: 100%;
+  }
+
+
+  td.title {
+  width: 70px;
+  }
+
+  span.city {
+    color: $brand-success;
+    font-size: 120%;
+    font-weight: bold;
+  }
+
+  span.search {
+    color: $brand-primary;
+    font-size: 120%;
+    font-weight: bold;
+  }
+
+  .col-md-4.s {
+    padding-left:  ($grid-gutter-width / 4);
+    padding-right: ($grid-gutter-width / 4);
+}
+
+  .row.s {
+    padding-left:  ($grid-gutter-width / 4);
+    padding-right: ($grid-gutter-width / 4);
+}
+}
+
+
+//
+// Thumbnails　打ち消し
+// --------------------------------------------------
+
+
+// Mixin and adjust the regular image class
+.thumbnail {
+  display: block;
+  padding: $thumbnail-padding;
+  margin-bottom: ($grid-gutter-width / 2);
+  line-height: $line-height-base;
+  background-color: $thumbnail-bg;
+  border: 1px solid $thumbnail-border;
+  border-radius: 0;
+  @include transition(all .2s ease-in-out);
+
+  h3.title {
+    color: $brand-primary;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 4px 0 5px 0;
+    margin: 0px;
+  }
+
+  p.desc {
+  margin-bottom: 0;
+  font-size: 80%;
+  }
+
+  li{
+    list-style: none;
+ }
+
+  .gridpadding {
+      padding-left:  0;
+  }
+
+
+  // [converter] extracted a&:hover, a&:focus, a&.active to a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active
+
+  // Image captions
+  .caption {
+    padding: $thumbnail-caption-padding;
+    color: $thumbnail-caption-color;
+  }
+
+
+
+}
+
+// Add a hover state for linked versions only
+a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail.active {
+  border-color: $link-color;
+}
+
+
+
