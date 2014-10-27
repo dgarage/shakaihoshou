@@ -1,16 +1,89 @@
-<div class="row">
-	<div class="col-lg-6 header">
-    	<h1>東京の社会保障を検索</h1>
-    	<%= form_tag 'search_by_area', method:'get' do %>
+<div class="jumbotron">
 
+    <div class="container">
+
+      <div>
+<!--         <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>   -->      
+    	<h1><span class="city">東京都</span>の<span class="city">社会保障</span>を<span class="search">検索</span></h1>
+
+        <div class="col-md-5 container-search  img-rounded ">
+
+    	<%= form_tag 'search_by_area', method:'get' do %>
+            自治体
             <%= select_tag :selected_city,  options_for_select(@all_cities)%> 
             ×
+            シーン
             <%= select_tag :scene,  options_for_select(@all_scenes)%> 
             <%= submit_tag "検索", class: "btn btn-success" %>
 		<% end %>
+        </div>
+<!--       <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>    -->     
+      </div>
+
     </div>
-	
-    <div class="col-lg-6">
-    	
-    </div>
+
 </div>
+
+<div class="container-nav">
+      <!-- nav -->
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-4">
+            <a href="#search-area">
+             <div class="row">
+
+                 <div class="col-lg-9 col-md-8 col-sm-10 col-xs-9 col-lg-push-3 col-md-push-4 col-sm-push-2 col-xs-push-3">
+                    <h2><span class="city">地域・自治体</span>で探す</h2>
+                    <p>地域・自治体から探すことができます。</p>
+                 </div>
+
+                 <div class="border-left col-lg-3 col-md-4 col-sm-2 col-xs-3 col-lg-pull-9 col-md-pull-8 col-sm-pull-10 col-xs-pull-9">
+                    <p><span class="glyphicon-nav img-rounded icon-area_m icon-nav "></span></p>
+                 </div>
+
+             </div>
+            </a>  
+        </div>
+
+        <div class="col-md-4">
+            <a href="#search-scene">
+             <div class="row">
+
+                 <div class="col-lg-9 col-md-8 col-sm-10 col-xs-9 col-lg-push-3 col-md-push-4 col-sm-push-2 col-xs-push-3">
+                    <h2><span class="city">シーン</span>で探す</h2>
+                    <p>病気・けが、出産・育児、老後、住まい、仕事、弔意、...</p>
+                 </div>
+
+                 <div class="border-left col-lg-3 col-md-4 col-sm-2 col-xs-3 col-lg-pull-9 col-md-pull-8 col-sm-pull-10 col-xs-pull-9">
+                    <p><span class="glyphicon-nav img-rounded icon-scene_m icon-nav "></span></p>
+                 </div>
+
+             </div>
+            </a>  
+        </div>
+
+        <div class="col-md-4">
+            <a href="#search-option">
+             <div class="row">
+
+                 <div class="col-lg-9 col-md-8 col-sm-10 col-xs-9 col-lg-push-3 col-md-push-4 col-sm-push-2 col-xs-push-3">
+                    <h2><span class="city">詳細を指定</span>して探す</h2>
+                    <p>絞り込みオプションを指定して探せます。</p>
+                 </div>
+
+                 <div class="border-left col-lg-3 col-md-4 col-sm-2 col-xs-3 col-lg-pull-9 col-md-pull-8 col-sm-pull-10 col-xs-pull-9">
+                    <p><span class="glyphicon-nav img-rounded icon-option_m icon-nav "></span></p>
+                 </div>
+
+             </div>
+            </a>  
+        </div>
+
+
+      </div>
+    </div>
+ </div>
+
+  
+

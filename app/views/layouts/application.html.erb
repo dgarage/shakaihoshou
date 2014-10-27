@@ -1,16 +1,63 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>社会保身</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
+  <meta charset="UTF-8">
+  <meta name="language" content="ja">
+  <meta name="keywords" content="社会保証ドットコム,社会保証.com">
+  <meta name="description" content="社会保証ドットコム,社会保証.com">
+
+  <title>社会保証ドットコム - 社会保障ドットコムは、ライフステージ（妊娠・出産・育児・病気・住まい・仕事・老後・弔意）で必要な社会保障を気軽に確認できるサイトです。</title>
+
+
+  <%= stylesheet_link_tag "application" %>
+  <%= javascript_include_tag "application" %>
+  <!--[if IE]>
+      <link href="/app/assets/ie.css" media="all" rel="stylesheet" />
+  <![endif]-->
+
 </head>
+
+
 <body>
-<div class="container">
-	<%= render 'layouts/header'%>
-	<%= yield %>
-	<%= render 'layouts/footer'%>
-</div>
+
+	<div class="navbar navbar-default navbar-fixed-top">
+	    <div class="container small">
+	      社会保証ドットコム - 社会保障ドットコムは、ライフステージ（妊娠・出産・育児・病気・住まい・仕事・老後・弔意）で必要な社会保障を気軽に確認できるサイトです。
+	    </div>
+	</div>
+
+	<div class="page-header">
+	     <div class="container">
+	        <p class="sprites-head--logo">社会保証ドットコム</p>
+	       	<p class="head--city" href="/"><span class="head--city">東京都</span>現在は東京23区内のみに対応しています。地域は順次拡大中！</p>
+	     </div>
+	</div>
+
+<!-- main -->
+
+
+<!-- header -->
+
+			<%= render 'layouts/header'%>
+
+<!-- end header -->
+
+
+		<div class=" container">
+			<%= yield %>
+		</div>
+
+
+<!-- footer -->
+
+			<%= render 'layouts/footer'%>
+<!-- end footer-->
+
+<!-- endmain -->
+
 </body>
 </html>
+
+
+
