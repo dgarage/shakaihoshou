@@ -6,11 +6,11 @@ class HomeController < ApplicationController
 
 	def index
 		@targets = Array.new
-		(18..24).each{|x| @targets.push get_column_name(x)}
+		(18..26).each{|x| @targets.push get_column_name(x)}
 		@targets.delete nil
 		
 		@situations = Array.new
-		[15, 16, 25, 26, 27, 28, 29].each{|x| @situations.push get_column_name(x)}
+		[15, 16, 27, 28, 29,].each{|x| @situations.push get_column_name(x)}
 		@situations.delete nil
 	end
 

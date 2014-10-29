@@ -22,7 +22,7 @@
 
 
 //
-// footer新規
+// footer new
 // --------------------------------------------------
 
 .container-foot {
@@ -81,7 +81,7 @@
 
 
 //
-// container-nav 新規
+// container-nav new
 // --------------------------------------------------
 
 
@@ -119,7 +119,8 @@
 
   }
 
-  // Page-search 新規
+//
+// Page-search new
 // -------------------------
 
 .page-search {
@@ -143,7 +144,6 @@
   .img {
     width: 100%;
   }
-
 
   td.title {
   width: 70px;
@@ -230,5 +230,76 @@ a.thumbnail.active {
   border-color: $link-color;
 }
 
+//
+// search-results new
+// --------------------------------------------------
 
 
+.search-results {
+
+  h1,
+  .h1 {
+    color: $brand-primary;
+    font-size: 22px;
+  }
+
+  h2,
+  .h2 {
+    color: $brand-primary;
+    font-size: 18px;
+  }
+
+  p {
+    color: $brand-primary;
+    font-size: 12px;
+  }
+
+  span.number {
+    color: $brand-success;
+    font-size: 120%;
+  }
+
+  span.city {
+    color: $brand-success;
+    font-size: 140%;
+  }
+
+}
+
+//
+// Tables 打ち消し
+// --------------------------------------------------
+
+
+table {
+  max-width: 100%;
+  background-color: $table-bg;
+
+  th.title {
+  width: 100px;
+  }
+ 
+  th.header {
+  background-color: #e8dfd1;
+  }
+
+th.type {
+  text-align: left;
+  width: 1em;
+}
+
+// Zebra-striping 打ち消し
+//
+// Default zebra-stripe styles (alternating gray and transparent backgrounds)
+
+.table-striped {
+  th:nth-child(1) {
+      background-color: #e8dfd1;
+  }
+
+  td:nth-child(2n+1) {
+      background-color: $table-bg-accent;
+  }
+}
+
+}
