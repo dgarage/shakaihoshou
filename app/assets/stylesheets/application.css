@@ -8511,11 +8511,10 @@ a.thumbnail.active {
 }
 /* line 369, ../sass/application.scss */
 .search-results .table-striped2 > tbody > tr:nth-child(odd) > th {
-  background-color: #e8dfd1;
   border-top: 0;
   border-bottom: 0;
 }
-/* line 375, ../sass/application.scss */
+/* line 374, ../sass/application.scss */
 .search-results .table > tbody > tr > td {
   border-top: 0;
 }
