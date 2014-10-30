@@ -8392,57 +8392,130 @@ a.thumbnail.active {
   border-color: #428bca;
 }
 
-/* line 241, ../sass/application.scss */
+/* line 240, ../sass/application.scss */
 .search-results h1,
 .search-results .h1 {
   color: #5f4b3e;
   font-size: 22px;
 }
-/* line 247, ../sass/application.scss */
+/* line 246, ../sass/application.scss */
 .search-results h2,
 .search-results .h2 {
   color: #5f4b3e;
   font-size: 18px;
 }
-/* line 252, ../sass/application.scss */
+/* line 251, ../sass/application.scss */
 .search-results p {
   color: #5f4b3e;
   font-size: 12px;
 }
-/* line 257, ../sass/application.scss */
+/* line 256, ../sass/application.scss */
 .search-results span.number {
   color: #f66994;
   font-size: 120%;
 }
-/* line 262, ../sass/application.scss */
+/* line 261, ../sass/application.scss */
 .search-results span.city {
   color: #f66994;
   font-size: 140%;
 }
-
-/* line 274, ../sass/application.scss */
-table {
+/* line 270, ../sass/application.scss */
+.search-results table {
   max-width: 100%;
   background-color: transparent;
+  border: 2px solid #d1c0a5;
 }
-/* line 278, ../sass/application.scss */
-table th.title {
-  width: 100px;
+/* line 275, ../sass/application.scss */
+.search-results table .table-header-scene {
+  width: 80px;
 }
-/* line 282, ../sass/application.scss */
-table th.header {
-  background-color: #e8dfd1;
+/* line 279, ../sass/application.scss */
+.search-results table .table-label {
+  border-left: 2px solid #ebe4d8;
+  border-right: 2px solid #ebe4d8;
 }
-/* line 286, ../sass/application.scss */
-table th.type {
-  text-align: left;
+/* line 284, ../sass/application.scss */
+.search-results table .table-header-label {
+  border-left: 2px solid #d1c0a5;
+  border-right: 2px solid #d1c0a5;
+}
+/* line 289, ../sass/application.scss */
+.search-results table .table-header-label {
+  background: #e8dfd1;
+  font-size: 120%;
+}
+/* line 297, ../sass/application.scss */
+.search-results table .table-label:last-child,
+.search-results table .table-label:first-child,
+.search-results table .table-header-label:last-child,
+.search-results table .table-header-label:first-child {
+  border: 0;
+}
+/* line 301, ../sass/application.scss */
+.search-results table .table-header-city {
+  background-color: #d1c0a5;
+  border-bottom: 2px solid #d1c0a5;
+  font-size: 120%;
+}
+/* line 307, ../sass/application.scss */
+.search-results table .table-header-type {
+  background-color: #ddcfbc;
+  border-left: 2px solid #d1c0a5;
+  border-right: 2px solid #d1c0a5;
+}
+/* line 314, ../sass/application.scss */
+.search-results table .table-header-type:last-child,
+.search-results table .table-header-type:first-child {
+  border-left: 0;
+  border-right: 0;
+}
+/* line 319, ../sass/application.scss */
+.search-results table .table-type-s {
+  border-left: 1px solid #ebe4d8;
+  border-right: 1px solid #ebe4d8;
+}
+/* line 324, ../sass/application.scss */
+.search-results table .table-header-type-s {
+  border-left: 1px solid #d1c0a5;
+  border-right: 1px solid #d1c0a5;
+}
+/* line 329, ../sass/application.scss */
+.search-results table .table-header-type-s {
+  background: #e8dfd1;
+  text-align: center;
   width: 1em;
 }
-/* line 296, ../sass/application.scss */
-table .table-striped th:nth-child(1) {
-  background-color: #e8dfd1;
+/* line 336, ../sass/application.scss */
+.search-results table .table-header-type-s:last-child,
+.search-results table .table-header-type-s:first-child {
+  border-left: 0;
+  border-right: 0;
 }
-/* line 300, ../sass/application.scss */
-table .table-striped td:nth-child(2n+1) {
+/* line 341, ../sass/application.scss */
+.search-results table .table-type-s_vline {
+  border-right: 2px solid #ebe4d8;
+}
+/* line 345, ../sass/application.scss */
+.search-results table .table-header-type-s_vline {
+  border-right: 2px solid #d1c0a5;
+}
+/* line 352, ../sass/application.scss */
+.search-results table .table-header-border_hline {
+  border-bottom: 2px solid #d1c0a5;
+}
+/* line 363, ../sass/application.scss */
+.search-results .table-striped2 > tbody > tr:nth-child(odd) > td {
   background-color: #f9f9f9;
+  border-top: 0;
+  border-bottom: 0;
+}
+/* line 369, ../sass/application.scss */
+.search-results .table-striped2 > tbody > tr:nth-child(odd) > th {
+  background-color: #e8dfd1;
+  border-top: 0;
+  border-bottom: 0;
+}
+/* line 375, ../sass/application.scss */
+.search-results .table > tbody > tr > td {
+  border-top: 0;
 }

@@ -234,7 +234,6 @@ a.thumbnail.active {
 // search-results new
 // --------------------------------------------------
 
-
 .search-results {
 
   h1,
@@ -264,42 +263,117 @@ a.thumbnail.active {
     font-size: 140%;
   }
 
-}
 
-//
-// Tables 打ち消し
+// search-results Tables new
 // --------------------------------------------------
-
 
 table {
   max-width: 100%;
   background-color: $table-bg;
+  border: 2px solid #d1c0a5;
 
-  th.title {
-  width: 100px;
-  }
- 
-  th.header {
-  background-color: #e8dfd1;
+  .table-header-scene {
+  width: 80px;
   }
 
-th.type {
-  text-align: left;
+  .table-label {
+  border-left: 2px solid #ebe4d8;
+  border-right: 2px solid #ebe4d8;
+  }
+
+  .table-header-label {
+  border-left: 2px solid #d1c0a5;
+  border-right: 2px solid #d1c0a5;
+  }
+
+  .table-header-label {
+  background: #e8dfd1;
+  font-size: 120%;
+  }
+
+  .table-label:last-child,
+  .table-label:first-child,
+  .table-header-label:last-child,
+  .table-header-label:first-child {
+  border: 0;
+  }
+
+  .table-header-city {
+  background-color: #d1c0a5;
+  border-bottom: 2px solid #d1c0a5;
+  font-size: 120%;
+  }
+
+  .table-header-type {
+  background-color: #ddcfbc;
+  border-left: 2px solid #d1c0a5;
+  border-right: 2px solid #d1c0a5;
+  }
+
+  .table-header-type:last-child,
+  .table-header-type:first-child {
+  border-left: 0;
+  border-right: 0;
+  }
+
+  .table-type-s {
+  border-left: 1px solid #ebe4d8;
+  border-right: 1px solid #ebe4d8;
+}
+
+  .table-header-type-s {
+  border-left: 1px solid #d1c0a5;
+  border-right: 1px solid #d1c0a5;
+}
+
+  .table-header-type-s {
+  background: #e8dfd1;
+  text-align: center;
   width: 1em;
 }
 
-// Zebra-striping 打ち消し
+  .table-header-type-s:last-child,
+  .table-header-type-s:first-child {
+  border-left: 0;
+  border-right: 0;
+}
+
+  .table-type-s_vline {
+  border-right: 2px solid #ebe4d8;
+}
+
+  .table-header-type-s_vline {
+  border-right: 2px solid #d1c0a5;
+}
+
+
+
+
+  .table-header-border_hline {
+  border-bottom: 2px solid #d1c0a5;
+  }
+
+}
+
+
 //
-// Default zebra-stripe styles (alternating gray and transparent backgrounds)
+// Tables new add
+// --------------------------------------------------
 
-.table-striped {
-  th:nth-child(1) {
-      background-color: #e8dfd1;
-  }
+.table-striped2 > tbody > tr:nth-child(odd) > td {
+  background-color: #f9f9f9;
+  border-top: 0;
+  border-bottom: 0;
+}
 
-  td:nth-child(2n+1) {
-      background-color: $table-bg-accent;
-  }
+.table-striped2 > tbody > tr:nth-child(odd) > th {
+  background-color: #e8dfd1;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.table>tbody>tr>td {
+ border-top: 0;
 }
 
 }
