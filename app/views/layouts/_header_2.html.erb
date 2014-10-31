@@ -1,0 +1,30 @@
+<div class="jumbotron2">
+
+    <div class="container">
+
+      <div>
+<!--         <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>   -->      
+
+        <div class="col-md-5 container-search  img-rounded ">
+
+        <%= form_tag 'search_by_area', method:'get' do %>
+            自治体
+            <%= select_tag :selected_city,  options_for_select(@all_cities)%> 
+            ×
+            シーン
+            <%= select_tag :scene,  options_for_select(@all_scenes)%> 
+            <%= submit_tag "検索", class: "btn btn-success" %>
+        <% end %>
+        </div>
+<!--       <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>    -->     
+      </div>
+
+    </div>
+
+</div>
+
+
+ </div>
+
+  
+

@@ -34,6 +34,8 @@ span.head--city {
  font-weight: bold;
  color: $brand-success;
  margin: 4px 12px;
+ border-left: 1px dashed $brand-primary;
+ padding: 0 0 0 10px;
 }
 
 

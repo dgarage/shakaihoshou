@@ -79,6 +79,49 @@
 
 }
 
+//
+// Jumbotron2　打ち消し
+// --------------------------------------------------
+
+
+.jumbotron2 {
+  background-color: #f5f1ea;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-top: 1px solid #d8d5d0;
+  border-bottom: 1px solid $brand-primary;
+  padding: 20px;
+  margin-bottom: 0;
+
+  h1,
+  .h1 {
+    color: $brand-primary;
+    font-size: 24px;
+    font-weight: bold;
+
+  }
+
+  span.city {
+    color: $brand-success;
+    font-size: 120%;
+    font-weight: bold;
+  }
+
+  span.search {
+    color: $brand-primary;
+    font-size: 120%;
+    font-weight: bold;
+  }
+
+.container-search {
+  background-color: rgba(255,255,255,0.6);
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 0;
+  padding: 20px;
+  }
+
+}
 
 //
 // container-nav new
@@ -106,12 +149,13 @@
     font-weight: bold;
   }
 
-    .border-left {
+
+  .border {
     border-left: 1px dashed #b1a7a0;
-    margin: 0;
+    margin: 10px 0;
   }
 
-  .border-right {
+  .border:last-child {
     border-right: 1px dashed #b1a7a0;
     margin: 10px 0;
   }
@@ -248,6 +292,12 @@ a.thumbnail.active {
     font-size: 18px;
   }
 
+  h3,
+  .h3 {
+    color: $brand-primary;
+    font-size: 18px;
+  }
+
   p {
     color: $brand-primary;
     font-size: 12px;
@@ -273,6 +323,10 @@ table {
   border: 2px solid #d1c0a5;
 
   .table-header-scene {
+  width: 80px;
+  }
+
+  .table-he {
   width: 80px;
   }
 
@@ -346,22 +400,28 @@ table {
   border-right: 2px solid #d1c0a5;
 }
 
-
-
-
   .table-header-border_hline {
   border-bottom: 2px solid #d1c0a5;
   }
 
-}
+  tr.table-header-title {
+  background-color: #938774;
+  border-top: 2px solid #fff;
+  font-size: 120%;
+  }
 
+  tr.table-header-title th {
+  color: #fff;
+  }
+
+}
 
 //
 // Tables new add
 // --------------------------------------------------
 
 .table-striped2 > tbody > tr:nth-child(odd) > td {
-  background-color: #f9f9f9;
+  background-color: #f2f1f1;
   border-top: 0;
   border-bottom: 0;
 }
