@@ -5,3 +5,13 @@
 <a class="icn_logo_head" href="/"><%= image_tag 'pr.png' %></a>
 	</div>
 
+<div class="">
+
+		<strong>シーン</strong>
+		<% @all_scenes.each do |scene| %>
+			<br/>
+			<%= link_to scene, action: 'search_by_scene',  selected_scene: scene %> 
+
+		<% end %>
+
+</div>

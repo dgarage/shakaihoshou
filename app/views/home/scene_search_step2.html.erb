@@ -1,7 +1,10 @@
-<div class="row">
-	<div class="col-lg-8">
-		<% @stuffcount.each_entry do |stuff, count| %>
-			<span style="padding: 10px;"><%= link_to "#{stuff} (#{count})", action: 'search_by_scene_step2',  search_criteria: {"5" => stuff, "2" => @selected_scene} %> </span>
-		<% end %>
+<%= render 'layouts/header_2'%>
+<div class=" container">
+	<div class="row">
+		<div class="col-lg-8">
+			<% @stuffcount.each_entry do |stuff, count| %>
+				<span style="padding: 10px;"><%= link_to "#{stuff} (#{count})", action: 'search_by_scene_step2',  search_criteria: {"5" => stuff, "2" => @selected_scene} %> </span>
+			<% end %>
+		</div>
 	</div>
 </div>
