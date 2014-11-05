@@ -1,10 +1,21 @@
 <%= render 'layouts/header_2'%>
 <div class=" container">
-	<div class="row">
-		<div class="col-lg-8">
+
+<div class="page-search">
+
+
+	<h2><span class="glyphicon-s icon-scene_s"></span><span class="city">シーンカテゴリ名を引き継いで表示挿入</span>の<span class="search">社会保障内容</span></h2>
+		<p><span class="city">シーンカテゴリ名を引き継いで表示挿入</span>には<span class="city">&nbsp;26 項目&nbsp;</span>の社会保証があります。</p>
+
+	<ul class="list_inline grid_vertical_s">
 			<% @stuffcount.each_entry do |stuff, count| %>
-				<span style="padding: 10px;"><%= link_to "#{stuff} (#{count})", action: 'search_by_scene_step2',  search_criteria: {"5" => stuff, "2" => @selected_scene} %> </span>
+			<li><%= link_to "#{stuff} (#{count})", action: 'search_by_scene_step2',  search_criteria: {"5" => stuff, "2" => @selected_scene} %> </li>
 			<% end %>
-		</div>
-	</div>
+	</ul>
+
 </div>
+
+
+
+</div>
+
