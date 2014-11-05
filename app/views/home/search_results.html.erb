@@ -1,35 +1,3 @@
-    <style type="text/css">
-
-    .header, .footer {
-        height: 200px;
-        background: #e3e3e3;
-    }
-
-    .left_column {
-        float: left;
-    }
-    .right_column {
-        padding: 20px 0 20px 220px; 
-    }
-    .content {
-        background: #eee;
-    }
-    .my_affix {
-        margin: 0;
-        width: 100%;
-        background: #eee;
-        float: left;
-    }
-    .my_affix.affix {
-        position: fixed;
-        top: 0;
-    }
-    .my_affix.affix-bottom {
-        position: absolute;
-        top: auto;
-        bottom: 220px;
-    }
-    </style>
 
     <%= render 'layouts/header_2'%>
 <div class=" container">
@@ -51,14 +19,14 @@
 					<% if @shared_info[scene].length > 0 %>
 
 					<h2 colspan="18">検索条件:<span class="city">&nbsp;東京都&nbsp;<%= city %></span></h2>
-						<h3><%= scene %></h3>
-						<table class="table table-striped2" >
-							<tr class="my_affix affix-top"  colspan="18">
+						
+						<table class="table table-striped2">
+							
 								<tr class="table-header-border_hline">
-									<th class="table-header-label table-header-scene" rowspan="3">シーン</th>
-									<th class="table-header-label" rowspan="3">一般名称/</br>自治体の呼称</th>
-									<th class="table-header-label" rowspan="3">運営/申請窓口</th>
-									<th class="table-header-label" rowspan="3">保障額・内容</th>
+									<th class="table-header-label table-scene" rowspan="3">シーン</th>
+									<th class="table-header-label table-basicname" rowspan="3">一般名称/</br>自治体の呼称</th>
+									<th class="table-header-label table-informationdesk" rowspan="3">運営/申請窓口</th>
+									<th class="table-header-label table-servicedetails" rowspan="3">保障額・内容</th>
 									
 										<th class="text-center table-header-city" colspan="18"><%= city %></th>
 									<% end %>	
@@ -73,7 +41,7 @@
 										<th class="text-center table-header-type" colspan="5">状態</th>
 										<tr class="table-header-border_hline">
 											<!-- 年齢 -->
-											<th class="table-header-type-s">開始 年齢</th>
+											<th class="table-header-type-s ">開始 年齢</th>
 											<th class="table-header-type-s table-header-type-s_vline">終了 年齢</th>
 											<!-- 性別 -->
 											<th class="table-header-type-s">女</th>
@@ -99,16 +67,43 @@
 										<% end %>
 									</tr>
 								</tr>
-							</tr>
-							<tr class="table-header-title"><th colspan="22"><span>&nbsp;[&nbsp;−&nbsp;]&nbsp;</span><%= scene %></th></tr>
+							</table>
+							<h3 class="table-header-title"><span>&nbsp;[&nbsp;−&nbsp;]&nbsp;</span><%= scene %></h3>
+							<table class="table table-striped2">
+							
 
 							<% (0...@shared_info[scene].length).each do |row| %>
 								<tr class="">											
-									<td class="table-label"><%= @shared_info[scene][row]["シーン種別(1)"] %></td>
-									<td class="table-label"><%= @shared_info[scene][row]["一般名称（今後増えてきたものにする）"]%></td>
-									<td class="table-label">東京都/居住区の自治体</td>
-									<td class="table-label"><%= @shared_info[scene][row]["保障額・内容"][0,10]%>
+									<td class="table-label table-scene"><%= @shared_info[scene][row]["シーン種別(1)"] %></td>
+									<td class="table-label table-basicname"><%= @shared_info[scene][row]["一般名称（今後増えてきたものにする）"]%></br><%= @shared_info[scene][row]["独自（都、国、市町村）の呼称"]%></td>
+									<td class="table-label table-informationdesk">項目もれ</td>
+									<td class="table-label table-servicedetails"><%= @shared_info[scene][row]["保障額・内容"][0,12]%>&hellip;
 										<%= link_to name = '詳細', controller:"home", action:"show_details", id:@shared_info[scene][row]["id"]%>
+
+										<!-- Button trigger modal -->
+										<button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">
+										  詳細
+										</button>
+
+										<!-- Modal -->
+										<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+										  <div class="modal-dialog">
+										    <div class="modal-content">
+										      <div class="modal-header">
+										        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+
+										        <h4 class="modal-title" id="myModalLabel"><%= @shared_info[scene][row]["5"]%></br><%= @shared_info[scene][row]["6"]%>IDを引き継いで一般名称（今後増えてきたものにする）と独自（都、国、市町村）の呼称を表示させる</h4>
+										      </div>
+										      <div class="modal-body">
+										        <%= @shared_info[scene][row]["8"]%>　IDを引き継いで保障額・内容を表示させる
+										      </div>
+										      <div class="modal-footer">
+										        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										      </div>
+										    </div>
+										  </div>
+										</div>
+
 									</td>
 									<% @cities.each do |city| %>
 										<% city_data = @area_info_by_scene[scene][row][city] %>
@@ -144,11 +139,3 @@
 
 
 
-<script type="text/javascript">
-$('.my_affix').affix({
-    offset: {
-        top: 0,
-        bottom: 0
-    }
-});
-</script>

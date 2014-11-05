@@ -8472,109 +8472,125 @@ a.thumbnail.active {
   border: 2px solid #d1c0a5;
 }
 /* line 325, ../sass/application.scss */
-.search-results table .table-header-scene {
+.search-results table .table-scene {
   width: 80px;
 }
 /* line 329, ../sass/application.scss */
-.search-results table .table-he {
-  width: 80px;
+.search-results table .table-basicname {
+  width: 200px;
 }
 /* line 333, ../sass/application.scss */
+.search-results table .table-informationdesk {
+  width: 80px;
+}
+/* line 337, ../sass/application.scss */
+.search-results table .table-servicedetails {
+  width: 180px;
+}
+/* line 341, ../sass/application.scss */
 .search-results table .table-label {
   border-left: 2px solid #ebe4d8;
   border-right: 2px solid #ebe4d8;
 }
-/* line 338, ../sass/application.scss */
+/* line 346, ../sass/application.scss */
 .search-results table .table-header-label {
   border-left: 2px solid #d1c0a5;
   border-right: 2px solid #d1c0a5;
-}
-/* line 343, ../sass/application.scss */
-.search-results table .table-header-label {
   background: #e8dfd1;
-  font-size: 120%;
+  font-size: 110%;
 }
-/* line 351, ../sass/application.scss */
+/* line 356, ../sass/application.scss */
 .search-results table .table-label:last-child,
 .search-results table .table-label:first-child,
 .search-results table .table-header-label:last-child,
 .search-results table .table-header-label:first-child {
   border: 0;
 }
-/* line 355, ../sass/application.scss */
+/* line 360, ../sass/application.scss */
 .search-results table .table-header-city {
   background-color: #d1c0a5;
   border-bottom: 2px solid #d1c0a5;
   font-size: 120%;
 }
-/* line 361, ../sass/application.scss */
+/* line 366, ../sass/application.scss */
 .search-results table .table-header-type {
   background-color: #ddcfbc;
   border-left: 2px solid #d1c0a5;
   border-right: 2px solid #d1c0a5;
 }
-/* line 368, ../sass/application.scss */
+/* line 373, ../sass/application.scss */
 .search-results table .table-header-type:last-child,
 .search-results table .table-header-type:first-child {
   border-left: 0;
   border-right: 0;
 }
-/* line 373, ../sass/application.scss */
+/* line 378, ../sass/application.scss */
 .search-results table .table-type-s {
   border-left: 1px solid #ebe4d8;
   border-right: 1px solid #ebe4d8;
 }
-/* line 378, ../sass/application.scss */
+/* line 383, ../sass/application.scss */
 .search-results table .table-header-type-s {
   border-left: 1px solid #d1c0a5;
   border-right: 1px solid #d1c0a5;
-}
-/* line 383, ../sass/application.scss */
-.search-results table .table-header-type-s {
   background: #e8dfd1;
   text-align: center;
-  width: 1em;
 }
-/* line 390, ../sass/application.scss */
+/* line 391, ../sass/application.scss */
+.search-results table .table-type-s,
+.search-results table .table-header-type-s {
+  width: 33px;
+}
+/* line 396, ../sass/application.scss */
 .search-results table .table-header-type-s:last-child,
 .search-results table .table-header-type-s:first-child {
   border-left: 0;
   border-right: 0;
 }
-/* line 395, ../sass/application.scss */
+/* line 401, ../sass/application.scss */
 .search-results table .table-type-s_vline {
   border-right: 2px solid #ebe4d8;
 }
-/* line 399, ../sass/application.scss */
+/* line 405, ../sass/application.scss */
 .search-results table .table-header-type-s_vline {
   border-right: 2px solid #d1c0a5;
 }
-/* line 403, ../sass/application.scss */
+/* line 409, ../sass/application.scss */
 .search-results table .table-header-border_hline {
   border-bottom: 2px solid #d1c0a5;
 }
-/* line 407, ../sass/application.scss */
-.search-results table tr.table-header-title {
-  background-color: #938774;
-  border-top: 2px solid #fff;
-  font-size: 120%;
-}
-/* line 413, ../sass/application.scss */
+/* line 415, ../sass/application.scss */
 .search-results table tr.table-header-title th {
+  background-color: #938774;
+  font-size: 120%;
   color: #fff;
 }
-/* line 423, ../sass/application.scss */
+/* line 424, ../sass/application.scss */
+.search-results h3.table-header-title {
+  background-color: #938774;
+  border-top: 2px solid #938774;
+  border-right: 2px solid #938774;
+  border-left: 2px solid #938774;
+  border-bottom: 1px solid #938774;
+  font-weight: bold;
+  font-size: 120%;
+  color: #fff;
+  margin-top: -10px;
+  margin-bottom: 0;
+  padding: 10px;
+}
+/* line 443, ../sass/application.scss */
 .search-results .table-striped2 > tbody > tr:nth-child(odd) > td {
   background-color: #f2f1f1;
   border-top: 0;
   border-bottom: 0;
 }
-/* line 429, ../sass/application.scss */
+/* line 449, ../sass/application.scss */
 .search-results .table-striped2 > tbody > tr:nth-child(odd) > th {
   border-top: 0;
   border-bottom: 0;
 }
-/* line 434, ../sass/application.scss */
+/* line 454, ../sass/application.scss */
 .search-results .table > tbody > tr > td {
   border-top: 0;
 }

@@ -322,13 +322,21 @@ table {
   background-color: $table-bg;
   border: 2px solid #d1c0a5;
 
-  .table-header-scene {
+  .table-scene {
   width: 80px;
   }
 
-  .table-he {
+  .table-basicname {
+  width: 200px;
+   }
+
+  .table-informationdesk {
   width: 80px;
-  }
+   }
+
+  .table-servicedetails {
+  width: 180px;
+   }
 
   .table-label {
   border-left: 2px solid #ebe4d8;
@@ -338,11 +346,8 @@ table {
   .table-header-label {
   border-left: 2px solid #d1c0a5;
   border-right: 2px solid #d1c0a5;
-  }
-
-  .table-header-label {
   background: #e8dfd1;
-  font-size: 120%;
+  font-size: 110%;
   }
 
   .table-label:last-child,
@@ -373,18 +378,19 @@ table {
   .table-type-s {
   border-left: 1px solid #ebe4d8;
   border-right: 1px solid #ebe4d8;
-}
+  }
 
   .table-header-type-s {
   border-left: 1px solid #d1c0a5;
   border-right: 1px solid #d1c0a5;
-}
-
-  .table-header-type-s {
   background: #e8dfd1;
   text-align: center;
-  width: 1em;
-}
+  }
+
+  .table-type-s,
+  .table-header-type-s {
+  width: 33px;
+  }
 
   .table-header-type-s:last-child,
   .table-header-type-s:first-child {
@@ -404,17 +410,31 @@ table {
   border-bottom: 2px solid #d1c0a5;
   }
 
-  tr.table-header-title {
-  background-color: #938774;
-  border-top: 2px solid #fff;
-  font-size: 120%;
-  }
+
 
   tr.table-header-title th {
+  background-color: #938774;
+  font-size: 120%;
   color: #fff;
   }
 
 }
+
+
+  h3.table-header-title {
+  background-color: #938774;
+  border-top: 2px solid #938774;
+  border-right: 2px solid #938774;
+  border-left: 2px solid #938774;
+  border-bottom: 1px solid #938774;
+  font-weight: bold;
+  font-size: 120%;
+  color: #fff;
+  margin-top: -10px;
+  margin-bottom: 0;
+  padding: 10px;
+  }
+
 
 //
 // Tables new add
@@ -434,5 +454,8 @@ table {
 .table>tbody>tr>td {
  border-top: 0;
 }
+
+
+
 
 }

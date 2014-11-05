@@ -1,7 +1,34 @@
 <%= render 'layouts/header_2'%>
 
 <div class=" container">
+
+
 	<div class="col-lg-12">
-		<%= @incident.attributes %>
+		<%= @incident.attributes["8"] %>
 	</div>
+
+
+</div>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">
+  詳細
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel"><%= @incident.attributes["5"] %></br><%= @incident.attributes["6"] %></h4>
+      </div>
+      <div class="modal-body">
+        <%= @incident.attributes["8"] %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>
