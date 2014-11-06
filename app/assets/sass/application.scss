@@ -199,10 +199,25 @@
     font-weight: bold;
   }
 
+  span.city a{
+    color: $brand-success;
+  }
+
   span.search {
     color: $brand-primary;
     font-size: 120%;
     font-weight: bold;
+  }
+
+  .list_inline {
+    -webkit-padding-start: 0px;
+  }
+
+  .list_inline li {
+    border-right: 1px solid #ddd;
+    display: inline-block;
+    padding: 0 10px 0 5px;
+    margin: 5px 0 0;
   }
 
   .col-md-4.s {
@@ -456,6 +471,19 @@ table {
 }
 
 
+}
 
 
+//
+// badge 打ち消し
+// --------------------------------------------------
+
+.badge {
+  font-size: 11px;
+  font-weight: bold;
+  background-color: $badge-bg;
+}
+
+.badge a {
+  color: white;
 }

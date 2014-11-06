@@ -110,7 +110,6 @@ class HomeController < ApplicationController
 	end
 
 	def search_by_scene_step3
-		
 		@cities = [params[:search_criteria][:"0"]]
 		@selected_scenes = [params[:search_criteria][:"2"]]
 		additional_criteria = {"5" => params[:search_criteria][:"5"]}
