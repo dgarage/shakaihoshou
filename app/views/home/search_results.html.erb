@@ -1,15 +1,4 @@
 
-<%= render 'layouts/header_2'%>
-<script type="text/javascript">
-$('#myAffix').affix({
-  offset: {
-    top: 10,
-    bottom: function () {
-      return (this.bottom = $('.footer').outerHeight(true))
-    }
-  }
-})
-</script>
 
 <div class=" container">
 	<div class="search-results">
@@ -23,7 +12,7 @@ $('#myAffix').affix({
 		</div>
 
 		<div class="row">
-			<div data-spy="affix" data-offset-top="60" data-offset-bottom="200">
+			
 			<div class="col-lg-12">		
 
 				<% @cities.each do |city| %>
@@ -81,7 +70,7 @@ $('#myAffix').affix({
 
 			<% end %>
 
-			</div>
+			
 			</div>
 		</div>
 
