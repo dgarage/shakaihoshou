@@ -8,6 +8,9 @@ gem 'rails', '4.0.0'
 
 gem 'pg'
 
+# Use thin for large URI
+gem 'thin'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 
