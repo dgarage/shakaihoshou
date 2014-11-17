@@ -3,6 +3,7 @@ class HomeController < ApplicationController
 	include ApplicationHelper
 
 	before_filter :get_header_data
+  before_filter :auth
 
 	def index
 		@targets = Array.new
@@ -118,5 +119,14 @@ class HomeController < ApplicationController
 		render 'search_results'
 		# render 'dummy'
 	end
+
+  private
+  def auth
+    if (Rails.env != "development") && (Rails.env != "test")
+      authenticate_or_request_with_http_basic do |user,pass|
+        user == 'kuyakusho' && pass == 'dgebisuminami357'
+      end
+    end
+  end
 
 end
