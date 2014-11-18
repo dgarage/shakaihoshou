@@ -16,3 +16,4 @@ config/secrets.yml
 /vendor/bundle
 .rvmrc
 .sass-cache/
+Gemfile.lock

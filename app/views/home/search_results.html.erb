@@ -4,7 +4,7 @@
 	<div class="search-results">
 
 		<div class="row">
-			<div class="col-lg-12">
+			<div class="">
 				<div style="text-align: center">
 					<h1><span class="number"><%= @total_count %>&nbsp;件&nbsp;</span>の検索結果</h1>
 				</div>
@@ -13,73 +13,87 @@
 
 		<div class="row">
 			
-			<div class="col-lg-12">		
+			<div class="">		
 
-				<% @cities.each do |city| %>
 				
-
-				<h2 colspan="18">検索条件:<span class="city">&nbsp;東京都&nbsp;<%= city %></span></h2>
+				<h2 colspan="18">検索条件:<span class="city">&nbsp;東京都&nbsp;
+				<% @cities.each do |city| %>
+				<%= city %>、
+				<% end %>
+				</span></h2>
 
 				<table class="table table-striped2">
 
-					<tr class="table-header-border_hline">
+					<tr class="table-header-border_hline" rowspan="3">
 						<th class="table-header-label table-scene" rowspan="3">シーン</th>
 						<th class="table-header-label table-basicname" rowspan="3">一般名称/</br>自治体の呼称</th>
 						<th class="table-header-label table-informationdesk" rowspan="3">運営/申請窓口</th>
-						<th class="table-header-label table-servicedetails" rowspan="3">保障額・内容</th>
-						<th class="text-center table-header-city" colspan="18"><%= city %></th>
-				
-						<tr class="table-header-border_hline" >
+						<th class="table-header-label table-servicedetails table-header-type-s_vline2" rowspan="3">保障額・内容</th>
+
 							<!-- エリア -->
-							<% @cities.each do |city| %>
+						<% @cities.each do |city| %>		
+						<th class="text-center table-header-city" colspan="18"><%= city %></th>
+						<% end %>
+
+						
+						<tr class="table-header-border_hline">
+						<% @cities.each do |city| %>
+
 								<!-- 基本情報 -->
 								<th class="text-center table-header-type" colspan="2">年齢</th>
 								<th class="text-center table-header-type" colspan="2">性別</th>
 								<!-- カテゴリ -->
 								<th class="text-center table-header-type" colspan="9">対象者</th>
-								<th class="text-center table-header-type" colspan="5">状態</th>
-								<tr class="table-header-border_hline">
-									<!-- 年齢 -->
-									<th class="table-header-type-s ">開始 年齢</th>
-									<th class="table-header-type-s table-header-type-s_vline">終了 年齢</th>
-									<!-- 性別 -->
-									<th class="table-header-type-s">女</th>
-									<th class="table-header-type-s table-header-type-s_vline">男</th>
-									<!-- 対象者 子供と大人 -->
-									<th class="table-header-type-s">乳児 0｜1歳</th>
-									<th class="table-header-type-s">幼児 1｜6歳</th>
-									<th class="table-header-type-s">小学生 6｜12歳</th>
-									<th class="table-header-type-s">中学生 12｜15歳</th>
-									<th class="table-header-type-s">高校生 15｜18歳</th>
-									<th class="table-header-type-s">高校生以上 15｜20歳</th>
-									<th class="table-header-type-s">大人 20｜64歳</th>
-									<th class="table-header-type-s">前期高齢者 65｜74歳</th>
-									<th class="table-header-type-s table-header-type-s_vline">後期高齢者 75歳以上</th>
-									<!-- 対象 -->
-									<th class="table-header-type-s">ひとり親</th>
-									<th class="table-header-type-s">妊婦｜産前産後</th>
-									<th class="table-header-type-s">要介護者</th>
-									<th class="table-header-type-s">障がい者</th>
-									<th class="table-header-type-s">住宅または店舗</th>
-								</tr>
+								<th class="text-center table-header-type table-header-type-s_vline2" colspan="5">状態</th>
+						<% end %>								
+						</tr>
 
+
+						<tr class="table-header-border_hline">
+							<% @cities.each do |city| %>								
+							<!-- 年齢 -->
+							<th class="table-header-type-s text-center ">開始 年齢</th>
+							<th class="table-header-type-s text-center table-header-type-s_vline" >終了 年齢</th>
+							<!-- 性別 -->
+							<th class="table-header-type-s text-center ">女</th>
+							<th class="table-header-type-s text-center table-header-type-s_vline">男</th>
+							<!-- 対象者 子供と大人 -->
+							<th class="table-header-type-s text-center ">乳児</br> ０｜１歳</br></th>
+							<th class="table-header-type-s text-center ">幼児</br> １｜６歳</th>
+							<th class="table-header-type-s text-center ">小学生</br> ６｜12歳</th>
+							<th class="table-header-type-s text-center ">中学生</br> 12｜15歳</th>
+							<th class="table-header-type-s text-center ">高校生</br> 15｜18歳</th>
+							<th class="table-header-type-s text-center ">高校生以上</br> 15｜20歳</th>
+							<th class="table-header-type-s text-center ">大人</br> 20｜64歳</th>
+							<th class="table-header-type-s text-center ">前期高齢者</br> 65｜74歳</th>
+							<th class="table-header-type-s text-center table-header-type-s_vline">後期高齢者</br> 75歳以上</th>
+							<!-- 対象 -->
+							<th class="table-header-type-s text-center ">ひとり親</th>
+							<th class="table-header-type-s text-center ">妊婦｜産前産後</th>
+							<th class="table-header-type-s text-center ">要介護者</th>
+							<th class="table-header-type-s text-center ">障がい者</th>
+							<th class="table-header-type-s text-center table-header-type-s_vline2">住宅または店舗</th>
 							<% end %>
 						</tr>
+
 					</tr>
+
+					
 				</table>
 
-			<% end %>
+			
 
 			
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="col-lg-12">
+			<div class="">
 				<% @selected_scenes.each do |scene| %>
 
 
 				<h3 class="table-header-title"><span>&nbsp;[&nbsp;−&nbsp;]&nbsp;</span><%= scene %></h3>
+
 				<table class="table table-striped2">
 
 
@@ -88,7 +102,7 @@
 							<td class="table-label table-scene"><%= @shared_info[scene][row]["シーン種別(1)"] %></td>
 							<td class="table-label table-basicname"><%= @shared_info[scene][row]["一般名称（今後増えてきたものにする）"]%></br><%= @shared_info[scene][row]["独自（都、国、市町村）の呼称"]%></td>
 							<td class="table-label table-informationdesk">項目もれ</td>
-							<td class="table-label table-servicedetails"><%= @shared_info[scene][row]["保障額・内容"][0,16]%>&hellip;
+							<td class="table-label table-servicedetails table-header-type-s_vline2"><%= @shared_info[scene][row]["保障額・内容"][0,16]%>&hellip;
 								
 
 								<!-- Button trigger modal -->
@@ -135,7 +149,7 @@
 								<td class="table-type-s"><%= city_data["妊婦(産前産後)"]%></td>
 								<td class="table-type-s"><%= city_data["要介護者"]%></td>
 								<td class="table-type-s"><%= city_data["障がい者"]%></td>
-								<td class="table-type-s"><%= city_data["住宅・店舗"]%></td>
+								<td class="table-type-s table-header-type-s_vline2"><%= city_data["住宅・店舗"]%></td>
 							<% end %>
 						</tr>
 					<% end%>

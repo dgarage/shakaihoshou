@@ -338,11 +338,11 @@ table {
   border: 2px solid #d1c0a5;
 
   .table-scene {
-  width: 80px;
+  width: 60px;
   }
 
   .table-basicname {
-  width: 200px;
+  width: 90px;
    }
 
   .table-informationdesk {
@@ -362,7 +362,7 @@ table {
   border-left: 2px solid #d1c0a5;
   border-right: 2px solid #d1c0a5;
   background: #e8dfd1;
-  font-size: 110%;
+  font-size: 100%;
   }
 
   .table-label:last-child,
@@ -375,7 +375,8 @@ table {
   .table-header-city {
   background-color: #d1c0a5;
   border-bottom: 2px solid #d1c0a5;
-  font-size: 120%;
+  border-right: 2px solid #938774;
+  font-size: 110%;
   }
 
   .table-header-type {
@@ -400,11 +401,14 @@ table {
   border-right: 1px solid #d1c0a5;
   background: #e8dfd1;
   text-align: center;
+  font-size: 110%;
   }
 
   .table-type-s,
   .table-header-type-s {
-  width: 33px;
+  width: 30px;
+  padding-left: 4px;
+  padding-right: 4px;
   }
 
   .table-header-type-s:last-child,
@@ -421,6 +425,10 @@ table {
   border-right: 2px solid #d1c0a5;
 }
 
+  .table-header-type-s_vline2 {
+  border-right: 2px solid #938774;
+}
+
   .table-header-border_hline {
   border-bottom: 2px solid #d1c0a5;
   }
@@ -429,7 +437,7 @@ table {
 
   tr.table-header-title th {
   background-color: #938774;
-  font-size: 120%;
+  font-size: 110%;
   color: #fff;
   }
 
@@ -466,9 +474,11 @@ table {
   border-bottom: 0;
 }
 
+.table>tbody>tr>th,
 .table>tbody>tr>td {
  border-top: 0;
 }
+
 
 
 }
