@@ -129,6 +129,7 @@ module ApplicationHelper
 		shared_info_row["id"] = row[:id]
 		shared_info_row["シーン種別(1)"] = row.attributes["2"]
 		shared_info_row["一般名称（今後増えてきたものにする）"] = row.attributes["5"]
+		shared_info_row["独自（都、国、市町村）の呼称"] = row.attributes["6"]
 		if row.attributes["7"]
 			shared_info_row["保障額・内容"] = row.attributes["7"]
 		else

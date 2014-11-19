@@ -8525,27 +8525,26 @@ a.thumbnail.active {
 .search-results table .table-header-city {
   background-color: #d1c0a5;
   border-bottom: 2px solid #d1c0a5;
-  border-right: 2px solid #938774;
   font-size: 110%;
 }
-/* line 382, ../sass/application.scss */
+/* line 381, ../sass/application.scss */
 .search-results table .table-header-type {
   background-color: #ddcfbc;
   border-left: 2px solid #d1c0a5;
   border-right: 2px solid #d1c0a5;
 }
-/* line 389, ../sass/application.scss */
+/* line 388, ../sass/application.scss */
 .search-results table .table-header-type:last-child,
 .search-results table .table-header-type:first-child {
   border-left: 0;
   border-right: 0;
 }
-/* line 394, ../sass/application.scss */
+/* line 393, ../sass/application.scss */
 .search-results table .table-type-s {
   border-left: 1px solid #ebe4d8;
   border-right: 1px solid #ebe4d8;
 }
-/* line 399, ../sass/application.scss */
+/* line 398, ../sass/application.scss */
 .search-results table .table-header-type-s {
   border-left: 1px solid #d1c0a5;
   border-right: 1px solid #d1c0a5;
@@ -8553,42 +8552,46 @@ a.thumbnail.active {
   text-align: center;
   font-size: 110%;
 }
-/* line 408, ../sass/application.scss */
+/* line 407, ../sass/application.scss */
 .search-results table .table-type-s,
 .search-results table .table-header-type-s {
   width: 30px;
   padding-left: 4px;
   padding-right: 4px;
 }
-/* line 415, ../sass/application.scss */
+/* line 414, ../sass/application.scss */
 .search-results table .table-header-type-s:last-child,
 .search-results table .table-header-type-s:first-child {
   border-left: 0;
   border-right: 0;
 }
-/* line 420, ../sass/application.scss */
+/* line 419, ../sass/application.scss */
 .search-results table .table-type-s_vline {
   border-right: 2px solid #ebe4d8;
 }
-/* line 424, ../sass/application.scss */
+/* line 423, ../sass/application.scss */
 .search-results table .table-header-type-s_vline {
   border-right: 2px solid #d1c0a5;
 }
-/* line 428, ../sass/application.scss */
+/* line 427, ../sass/application.scss */
 .search-results table .table-header-type-s_vline2 {
   border-right: 2px solid #938774;
 }
 /* line 432, ../sass/application.scss */
+.search-results table .table-header-type-s_vline2:last-child {
+  border-right: none;
+}
+/* line 437, ../sass/application.scss */
 .search-results table .table-header-border_hline {
   border-bottom: 2px solid #d1c0a5;
 }
-/* line 438, ../sass/application.scss */
+/* line 443, ../sass/application.scss */
 .search-results table tr.table-header-title th {
   background-color: #938774;
   font-size: 110%;
   color: #fff;
 }
-/* line 447, ../sass/application.scss */
+/* line 452, ../sass/application.scss */
 .search-results h3.table-header-title {
   background-color: #938774;
   border-top: 2px solid #938774;
@@ -8602,31 +8605,31 @@ a.thumbnail.active {
   margin-bottom: 0;
   padding: 10px;
 }
-/* line 466, ../sass/application.scss */
+/* line 471, ../sass/application.scss */
 .search-results .table-striped2 > tbody > tr:nth-child(odd) > td {
   background-color: #f2f1f1;
   border-top: 0;
   border-bottom: 0;
 }
-/* line 472, ../sass/application.scss */
+/* line 477, ../sass/application.scss */
 .search-results .table-striped2 > tbody > tr:nth-child(odd) > th {
   border-top: 0;
   border-bottom: 0;
 }
-/* line 478, ../sass/application.scss */
+/* line 483, ../sass/application.scss */
 .search-results .table > tbody > tr > th,
 .search-results .table > tbody > tr > td {
   border-top: 0;
 }
 
-/* line 491, ../sass/application.scss */
+/* line 496, ../sass/application.scss */
 .badge {
   font-size: 11px;
   font-weight: bold;
   background-color: #428bca;
 }
 
-/* line 497, ../sass/application.scss */
+/* line 502, ../sass/application.scss */
 .badge a {
   color: white;
 }
