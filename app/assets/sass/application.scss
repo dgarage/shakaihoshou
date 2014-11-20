@@ -337,46 +337,65 @@ table {
   background-color: $table-bg;
   border: 2px solid #d1c0a5;
 
+  .table-header-label {
+    border-left: 2px solid #d1c0a5;
+    border-right: 2px solid #d1c0a5;
+    background: #e8dfd1;
+    font-size: 100%;
+  }
+
+
+  .table-label {
+    border-left: 2px solid #ebe4d8;
+    border-right: 2px solid #ebe4d8;
+  }
+
   .table-scene {
-  width: 60px;
+  
   }
 
   .table-basicname {
-  width: 90px;
+    width: 120px;
+    border-right: 2px solid #938774;
    }
 
+  .table-window {
+    width: 120px;
+  }
+
+  .table-detail {
+    width: 230px;
+  }
+
+
   .table-informationdesk {
-  width: 80px;
+    width: 90px;
    }
 
   .table-servicedetails {
-  width: 180px;
+    width: 200px;
    }
 
-  .table-label {
-  border-left: 2px solid #ebe4d8;
-  border-right: 2px solid #ebe4d8;
-  }
 
-  .table-header-label {
-  border-left: 2px solid #d1c0a5;
-  border-right: 2px solid #d1c0a5;
-  background: #e8dfd1;
-  font-size: 100%;
-  }
 
   .table-label:last-child,
   .table-label:first-child,
   .table-header-label:last-child,
   .table-header-label:first-child {
-  border: 0;
+    border: 0;
   }
 
   .table-header-city {
-  background-color: #d1c0a5;
-  border-bottom: 2px solid #d1c0a5;
-  font-size: 110%;
+    background-color: #d1c0a5;
+    border-bottom: 2px solid #d1c0a5;
+    border-right: 2px solid #938774;
+    font-size: 110%;
   }
+
+  .table-header-city:last-child {
+    border-right: none;
+  }
+
 
   .table-header-type {
   background-color: #ddcfbc;
@@ -390,9 +409,11 @@ table {
   border-right: 0;
   }
 
+  .table-type-s_vline,
   .table-type-s {
   border-left: 1px solid #ebe4d8;
   border-right: 1px solid #ebe4d8;
+  font-size: 90%;
   }
 
   .table-header-type-s {
@@ -400,14 +421,19 @@ table {
   border-right: 1px solid #d1c0a5;
   background: #e8dfd1;
   text-align: center;
-  font-size: 110%;
+  font-size: 100%;
+  }
+
+  .table-type-s_vline,
+  .table-type-s,
+  .table-header-type-s {
+  padding-left: 4px;
+  padding-right: 4px;
   }
 
   .table-type-s,
   .table-header-type-s {
   width: 30px;
-  padding-left: 4px;
-  padding-right: 4px;
   }
 
   .table-header-type-s:last-child,
@@ -423,15 +449,6 @@ table {
   .table-header-type-s_vline {
   border-right: 2px solid #d1c0a5;
 }
-
-  .table-header-type-s_vline2 {
-  border-right: 2px solid #938774;
-}
-
-
-  .table-header-type-s_vline2:last-child {
-    border-right: none;
-  }
 
 
   .table-header-border_hline {

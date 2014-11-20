@@ -26,10 +26,10 @@
 
 					<tr class="table-header-border_hline" rowspan="3">
 						<th class="table-header-label table-scene" rowspan="3">シーン</th>
-						<th class="table-header-label table-basicname table-header-type-s_vline2" rowspan="3">一般名称</th>
+						<th class="table-header-label table-basicname" rowspan="3">一般名称</th>
 
 						<% @cities.each do |city| %>
-						<th class="text-center table-header-city table-header-type-s_vline2" colspan="21"><%= city %></th>
+						<th class="text-center table-header-city" colspan="21"><%= city %></th>
 
 						
 
@@ -43,7 +43,7 @@
 						<% @cities.each do |city| %>
 
 								<!-- 基本情報 -->
-								<th class="table-header-label table-basicname" rowspan="2">自治体の呼称</th>
+								<th class="table-header-label table-originalname" rowspan="2">自治体の呼称</th>
 								<th class="table-header-label table-informationdesk" rowspan="2">運営/申請窓口</th>
 								<th class="table-header-label table-servicedetails" rowspan="2">保障額・内容</th>
 								<!-- 検索条件 -->
@@ -108,14 +108,14 @@
 					<% (0...@shared_info[scene].length).each do |row| %>
 						<tr class="">											
 							<td class="table-label table-scene"><%= @shared_info[scene][row]["シーン種別(1)"] %></td>
-							<td class="table-label table-basicname table-header-type-s_vline2"><%= @shared_info[scene][row]["一般名称（今後増えてきたものにする）"]%></td>
+							<td class="table-label table-basicname"><%= @shared_info[scene][row]["一般名称（今後増えてきたものにする）"]%></td>
 							
 
 							<% @cities.each do |city| %>
 								<% city_data = @area_info_by_scene[scene][row][city] %>
-								<td class=""><%= @shared_info[scene][row]["独自（都、国、市町村）の呼称"]%></td>
-								<td class="">xxx課 ヒアリングの結果追加することに。</td>
-								<td class=""><%= @shared_info[scene][row]["保障額・内容"][0,48]%>&hellip;
+								<td class="table-type-s_vline table-originalname"><%= @shared_info[scene][row]["独自（都、国、市町村）の呼称"]%></td>
+								<td class="table-type-s_vline table-informationdesk">xxx課 ヒアリングの結果追加することに。</td>
+								<td class="table-type-s_vline table-servicedetails"><%= @shared_info[scene][row]["保障額・内容"][0,48]%>&hellip;
 									<!-- Button trigger modal -->
 									<button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">
 									詳細</button>
