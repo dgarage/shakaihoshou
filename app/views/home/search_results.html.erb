@@ -30,15 +30,9 @@
 
 						<% @cities.each do |city| %>
 						<th class="text-center table-header-city" colspan="21"><%= city %></th>
-
-						
-
-							<!-- エリア -->
-							
-						
 						<% end %>
 
-						
+						<!-- エリア -->
 						<tr class="table-header-border_hline">
 						<% @cities.each do |city| %>
 
@@ -119,6 +113,25 @@
 									<!-- Button trigger modal -->
 									<button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">
 									詳細</button>
+									<!-- Modal -->
+									<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+										<div class="modal-dialog">
+											<div class="modal-content">
+												<div class="modal-header">
+													<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+
+													<h4 class="modal-title" id="myModalLabel"><%= @shared_info[scene][row]["一般名称（今後増えてきたものにする）"]%></br><%= @shared_info[scene][row]["独自（都、国、市町村）の呼称"]%></h4>
+												</div>
+												<div class="modal-body">
+													<%= @shared_info[scene][row]["保障額・内容"]%>
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									
 								</td>
 								<td class="table-type-s "><%= city_data["年齢(以上)"]%></td>
 								<td class="table-type-s table-type-s_vline"><%= city_data["年齢(以下)"]%></td>
