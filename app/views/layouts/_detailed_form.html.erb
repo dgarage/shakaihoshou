@@ -6,16 +6,15 @@
 
 	<script type="text/javascript">
 	$( document ).ready(function() {
-    	console.log( "ready!" );
     	
     	$('[id=detailed_checkbox]').click(function(){
-    		var checked = false
-    		$('[id=detailed_checkbox]').each(function(a, b){
-    		if ($(b).is(':checked')) {
-        		checked = checked | true;
-			} else{
-				checked = checked | false;
-			}
+    		var checked = false;
+    		$('[id=detailed_checkbox]').each(function(a, b) {
+          if ($(b).is(':checked')) {
+            checked = checked | true;
+          } else {
+            checked = checked | false;
+          }
     		});
     		if (checked == true){
     			$("#btn_detailed_submit").attr("disabled", false);
@@ -23,12 +22,7 @@
     			$("#btn_detailed_submit").attr("disabled", true);
     		}	
     	});
-
     	
-
-    	$('#btn_area_submit').click(function(){
-    		console.log('Motherfucker!');
-    	});
 	});
 </script>
 
@@ -39,8 +33,7 @@
 				<tr>
 					<td class="title"><strong>市・区</strong></td>
 					<td>
-						<%= select_tag "city", options_for_select(@all_cities)
- %>
+						<%= select_tag "city", options_for_select(@all_cities) %>
 
 					</td>
 				</tr>
@@ -49,7 +42,7 @@
 					<td><strong>シーン</strong></td>
 					<td>
 						<% @all_scenes.each do |scene| %>
-							<%= check_box :scene, scene, id:'detailed_checkbox' %>  <%= scene %>
+							<%= check_box :scene, scene, id:'detailed_checkbox', checked:true %>  <%= scene %>
 						<% end %>
 					</td>
 				</tr>
@@ -60,7 +53,7 @@
 					<td>
 						<%= select_tag :gender,  options_for_select(['女', '男'	])%> <br/>
 						<% @targets.each do |target| %>
-							<%= check_box :target, target, id:'detailed_checkbox' %>  <%= target %>
+							<%= radio_button :target, target, id:'detailed_checkbox' %>  <%= target %>
 						<% end %>
 					</td>
 				</tr>
