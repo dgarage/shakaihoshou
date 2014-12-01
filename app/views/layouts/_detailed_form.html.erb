@@ -53,7 +53,7 @@
 					<td>
 						<%= select_tag :gender,  options_for_select(['女', '男'	])%> <br/>
 						<% @targets.each do |target| %>
-							<%= radio_button :target, target, id:'detailed_checkbox' %>  <%= target %>
+							<%= radio_button_tag :target, target, id:'detailed_checkbox' %>  <%= target %>
 						<% end %>
 					</td>
 				</tr>
