@@ -100,8 +100,8 @@ module ApplicationHelper
 			
 			cities.each{|city| 
 				full_query = query.update({:"0" => city, :"2" => scene})
-				p 'FULLLLLLLL'
-				p full_query
+				#p 'FULLLLLLLL'
+				#p full_query
 				results = Incident.where(full_query) 
 				all_results[city] = results
 				@total_count += results.count
@@ -120,6 +120,7 @@ module ApplicationHelper
 			}
 			area_info_by_scene[scene] = area_info_by_rows	
 		}	
+    @total_count = -1
 		return area_info_by_scene, shared_info	
 	end
 
