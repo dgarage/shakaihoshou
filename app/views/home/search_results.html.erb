@@ -105,7 +105,9 @@
 							
 
 							<% @cities.each do |city| %>
+                <%= scene %>
 								<% city_data = @area_info_by_scene[scene][row][city] %>
+								<%= @area_info_by_scene[scene][row] %>
 								<td class="table-type-s_vline table-originalname"><%= @shared_info[scene][row]["独自（都、国、市町村）の呼称"]%></td>
 								<td class="table-type-s_vline table-informationdesk">xxx課 ヒアリングの結果追加することに。</td>
 								<td class="table-type-s_vline table-servicedetails"><%= @shared_info[scene][row]["保障額・内容"][0,48]%>&hellip;

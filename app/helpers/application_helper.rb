@@ -120,7 +120,7 @@ module ApplicationHelper
 			}
 			area_info_by_scene[scene] = area_info_by_rows	
 		}	
-    @total_count = -1
+    #@total_count = -1
 		return area_info_by_scene, shared_info	
 	end
 
