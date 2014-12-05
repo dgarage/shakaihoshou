@@ -41,28 +41,41 @@
 				<tr>
 					<td><strong>シーン</strong></td>
 					<td>
+						<ul class="list_check">
 						<% @all_scenes.each do |scene| %>
-							<%= check_box :scene, scene, id:'detailed_checkbox', checked:true %>  <%= scene %>
+							<li><%= check_box :scene, scene, id:'detailed_checkbox', checked:true %>  <%= scene %></li>
 						<% end %>
+						</ul>
 					</td>
 				</tr>
- 
-				<tr>
-					<td><strong>対象</strong></td> 
+
+ 				<tr>
+					<td><strong>性別</strong></td> 
 					
 					<td>
 						<%= select_tag :gender,  options_for_select(['女', '男'	])%> <br/>
+					</td>
+				</tr>
+
+				<tr>
+					<td><strong>対象者</strong></td> 
+					
+					<td>
+						<ul class="list_check2">
 						<% @targets.each do |target| %>
-							<%= radio_button_tag :target, target, id:'detailed_checkbox' %>  <%= target %>
+							<li><%= radio_button_tag :target, target, id:'detailed_checkbox' %>  <%= target %></li>
 						<% end %>
+						</ul>
 					</td>
 				</tr>
 				<tr>
 					<td><strong>状態</strong></td> 
 					<td>
+						<ul class="list_check">
 						<% @situations.each do |situation| %>
-							<%= check_box :situation, situation, id:'detailed_checkbox' %>  <%= situation %>
+							<li><%= check_box :situation, situation, id:'detailed_checkbox' %>  <%= situation %></li>
 						<% end %>
+						</ul>
 					</td>
 				</tr>
 			</table>				

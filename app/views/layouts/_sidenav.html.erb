@@ -1,17 +1,134 @@
 
 
-	<div class="">
-<p>PRテキストが入ります。</p>
-<a class="icn_logo_head" href="/"><%= image_tag 'pr.png' %></a>
+	<div class="sidenav">
+		<a class="icn_logo_head" href="/"><%= image_tag 'pr.png' %></a>
 	</div>
 
-<div class="">
+<div class="sidenav">
 
-		<strong>シーン</strong>
-		<% @all_scenes.each do |scene| %>
-			<br/>
-			<%= link_to scene, action: 'search_by_scene',  selected_scene: scene %> 
+		<h2><strong>シーンでみる社会保障の種類</strong></h2>
 
-		<% end %>
+	<ul class="list-unstyled">
+	<div class="row s">
+				<li class="col-md-12 s">
+					<a href="search_by_scene?selected_scene=病気・けが"  class="thumbnail" >
+						<div class="row">
+							<div class="gridpadding col-lg-9 col-md-7 col-sm-10 col-xs-9 col-lg-push-3 col-md-push-5 col-sm-push-2 col-xs-push-3">
+								<h3 class="title">病気・けが</h3>
+								<p class="desc">医療 | 障がい&nbsp;…</p>
+							</div>
+							<div class="col-lg-3 col-md-5 col-sm-2 col-xs-3 col-lg-pull-9 col-md-pull-7 col-sm-pull-10 col-xs-pull-9">
+								<%= image_tag '001.png' %>
+							</div>
+						</div>
+					</a>
+				</li>
+
+
+				<li class="col-md-12 s">
+					<a href="search_by_scene?selected_scene=出産・育児" class="thumbnail">
+						<div class="row">
+							<div class="gridpadding col-lg-9 col-md-7 col-sm-10 col-xs-9 col-lg-push-3 col-md-push-5 col-sm-push-2 col-xs-push-3">
+								<h3 class="title">出産・育児</h3>
+								<p class="desc">妊娠 | 児童 | 教育 | ひとり親&nbsp;…</p>
+							</div>
+							<div class="col-lg-3 col-md-5 col-sm-2 col-xs-3 col-lg-pull-9 col-md-pull-7 col-sm-pull-10 col-xs-pull-9">
+								<%= image_tag '002.png' %>
+							</div>
+						</div>
+					</a>
+				</li>
+
+
+				<li class="col-md-12 s">
+					<a href="search_by_scene?selected_scene=住まい"  class="thumbnail" >
+						<div class="row">
+							<div class="gridpadding col-lg-9 col-md-7 col-sm-10 col-xs-9 col-lg-push-3 col-md-push-5 col-sm-push-2 col-xs-push-3">
+								<h3 class="title">住まい</h3>
+								<p class="desc">耐震 | 助成&nbsp;…</p>
+							</div>
+							<div class="col-lg-3 col-md-5 col-sm-2 col-xs-3 col-lg-pull-9 col-md-pull-7 col-sm-pull-10 col-xs-pull-9">
+								<%= image_tag '003.png' %>
+							</div>
+						</div>
+					</a>
+				</li>
+
+
+				<li class="col-md-12 s">
+					<a href="search_by_scene?selected_scene=仕事・けが"  class="thumbnail" >
+						<div class="row">
+							<div class="gridpadding col-lg-9 col-md-7 col-sm-10 col-xs-9 col-lg-push-3 col-md-push-5 col-sm-push-2 col-xs-push-3">
+								<h3 class="title">仕事・就労 </h3>
+								<p class="desc">労働災害 | 職業病 | 失業 | 再就職 | 雇用&nbsp;…</p>
+							</div>
+							<div class="col-lg-3 col-md-5 col-sm-2 col-xs-3 col-lg-pull-9 col-md-pull-7 col-sm-pull-10 col-xs-pull-9">
+								<%= image_tag '004.png' %>
+							</div>
+						</div>
+					</a>
+				</li>
+
+
+				<li class="col-md-12 s">
+					<a href="search_by_scene?selected_scene=老後"  class="thumbnail" >
+						<div class="row">
+							<div class="gridpadding col-lg-9 col-md-7 col-sm-10 col-xs-9 col-lg-push-3 col-md-push-5 col-sm-push-2 col-xs-push-3">
+								<h3 class="title">老後</h3>
+								<p class="desc">高齢者 | 介護 | 医療&nbsp;…</p>
+							</div>
+							<div class="col-lg-3 col-md-5 col-sm-2 col-xs-3 col-lg-pull-9 col-md-pull-7 col-sm-pull-10 col-xs-pull-9">
+								<%= image_tag '005.png' %>
+							</div>
+						</div>
+					</a>
+				</li>
+
+
+				<li class="col-md-12 s">
+					<a href="search_by_scene?selected_scene=弔意"  class="thumbnail" >
+						<div class="row">
+							<div class="gridpadding col-lg-9 col-md-7 col-sm-10 col-xs-9 col-lg-push-3 col-md-push-5 col-sm-push-2 col-xs-push-3">
+								<h3 class="title">弔意</h3>
+								<p class="desc">死亡| 遺族&nbsp;…</p>
+							</div>
+							<div class="col-lg-3 col-md-5 col-sm-2 col-xs-3 col-lg-pull-9 col-md-pull-7 col-sm-pull-10 col-xs-pull-9">
+								<%= image_tag '006.png' %>
+							</div>
+						</div>
+					</a>
+				</li>
+
+
+				<li class="col-md-12 s">
+					<a href="search_by_scene?selected_scene=生活・人権"  class="thumbnail" >
+						<div class="row">
+							<div class="gridpadding col-lg-9 col-md-7 col-sm-10 col-xs-9 col-lg-push-3 col-md-push-5 col-sm-push-2 col-xs-push-3">
+								<h3 class="title">生活・人権 </h3>
+								<p class="desc">支援 | 高齢者&nbsp;…</p>
+							</div>
+							<div class="col-lg-3 col-md-5 col-sm-2 col-xs-3 col-lg-pull-9 col-md-pull-7 col-sm-pull-10 col-xs-pull-9">
+								<%= image_tag '007.png' %>
+							</div>
+						</div>
+					</a>
+				</li>
+
+
+				<li class="col-md-12 s">
+					<a href="search_by_scene?selected_scene=施設"  class="thumbnail" >
+						<div class="row">
+							<div class="gridpadding col-lg-9 col-md-7 col-sm-10 col-xs-9 col-lg-push-3 col-md-push-5 col-sm-push-2 col-xs-push-3">
+								<h3 class="title">施設</h3>
+								<p class="desc">貸し出し | 高齢者 | 介護 | 医療&nbsp;…</p>
+							</div>
+							<div class="col-lg-3 col-md-5 col-sm-2 col-xs-3 col-lg-pull-9 col-md-pull-7 col-sm-pull-10 col-xs-pull-9">
+								<%= image_tag '008.png' %>
+							</div>
+						</div>
+					</a>
+				</li>
+</div>
+	</ul>
 
 </div>

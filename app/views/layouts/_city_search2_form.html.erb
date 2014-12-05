@@ -1,9 +1,8 @@
 <div class="page-search" id="search-area">
 
 
-	<h2><span class="glyphicon-s icon-area_s"></span><span class="city">地域・自治体</span>で<span class="search">比較検索</span></h2>
-		<p>比較する自治体（市区町村）を２つ選択してください。
-		</br>現在はエラー表示が出ます。初回リリースではこの機能を外します。</p>
+	<h2><span class="glyphicon-s icon-area_s"></span><span class="city">地域・自治体</span>で<span class="search">探す</span></h2>
+		<p>自治体（市区町村）を選択してください。</p>
 
 	<script type="text/javascript">
 	$( document ).ready(function() {
@@ -33,7 +32,6 @@
 				<tr>
 					<% slice.each do |city| %>
 						<td>
-							<%= check_box :selected_city, city, id:'area_checkbox'%> 
 							<%= link_to city, action: 'search_by_area',  selected_city: {city => 1} %>
 						</td>
 					<% end %>
@@ -42,9 +40,7 @@
 			</table>
 
 
-			<div>
-				<span class="icon"></span><p class="text-center"><%= f.submit "検索", class: "btn btn-success", id:'btn_area_submit', disabled:true %></p>
-			</div>
+
 
 		<% end %>
 
