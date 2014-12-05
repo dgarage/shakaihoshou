@@ -37,12 +37,12 @@ class HomeController < ApplicationController
 		end
 		
 		@area_info_by_scene, @shared_info = structure_data(@selected_scenes, @cities, {})
-    @selected_scenes.each do |scene|
-      p scene
-      p @area_info_by_scene[scene][0]
-      p @area_info_by_scene[scene][0]["テスト区"]
-      p @area_info_by_scene[scene][0]["江戸川区"]
-    end
+    #@selected_scenes.each do |scene|
+      #p scene
+      #p @area_info_by_scene[scene][0]
+      #p @area_info_by_scene[scene][0]["テスト区"]
+      #p @area_info_by_scene[scene][0]["江戸川区"]
+    #end
 		render 'search_results'
 	
 	end

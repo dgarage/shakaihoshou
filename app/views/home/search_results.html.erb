@@ -105,9 +105,8 @@
 							
 
 							<% @cities.each do |city| %>
-                <%= scene %>
 								<% city_data = @area_info_by_scene[scene][row][city] %>
-								<%= @area_info_by_scene[scene][row] %>
+								<% if !city_data.nil? %>
 								<td class="table-type-s_vline table-originalname"><%= @shared_info[scene][row]["独自（都、国、市町村）の呼称"]%></td>
 								<td class="table-type-s_vline table-informationdesk">xxx課 ヒアリングの結果追加することに。</td>
 								<td class="table-type-s_vline table-servicedetails"><%= @shared_info[scene][row]["保障額・内容"][0,48]%>&hellip;
@@ -152,6 +151,7 @@
 								<td class="table-type-s"><%= city_data["要介護者"]%></td>
 								<td class="table-type-s"><%= city_data["障がい者"]%></td>
 								<td class="table-type-s table-header-type-s_vline2"><%= city_data["住宅・店舗"]%></td>
+                <% end %>
 							<% end %>
 						</tr>
 					<% end%>
