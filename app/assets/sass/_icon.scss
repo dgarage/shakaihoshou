@@ -93,16 +93,16 @@ span.head--city {
 
 @font-face {
   font-family: "iconvault";
-  src: url("origin/iconvault_1243e2a081b8b368f4b3f00747278c18.eot");
-  src: url("origin/iconvault_1243e2a081b8b368f4b3f00747278c18.eot?#iefix") format("embedded-opentype"),
-       url("origin/iconvault_1243e2a081b8b368f4b3f00747278c18.woff") format("woff"),
-       url("origin/iconvault_1243e2a081b8b368f4b3f00747278c18.ttf") format("truetype"),
-       url("origin/iconvault_1243e2a081b8b368f4b3f00747278c18.svg#iconvault") format("svg");
+  src: url("origin/iconvault_530c1139a23b8c90748fb7f455381ceb.eot");
+  src: url("origin/iconvault_530c1139a23b8c90748fb7f455381ceb.eot?#iefix") format("embedded-opentype"),
+       url("origin/iconvault_530c1139a23b8c90748fb7f455381ceb.woff") format("woff"),
+       url("origin/iconvault_530c1139a23b8c90748fb7f455381ceb.ttf") format("truetype"),
+       url("origin/iconvault_530c1139a23b8c90748fb7f455381ceb.svg#iconvault") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
-.icon-logo:before,
+.icon-scene:before,
 .icon-map:before {
   color: #5f4b3e;
   font-family: "iconvault";
@@ -117,11 +117,13 @@ span.head--city {
   text-decoration: inherit;
 }
 
-.icon-logo:before { content: "\f100"; }
+.icon-scene:before { content: "\f100"; }
+.icon-scene_2:before { content: "\f100"; }
 .icon-map:before { content: "\f101"; }
-.icon-map_l:before { content: "\f101"; }
+.icon-map_2:before { content: "\f101"; }
 
-.icon-map_l:before {
+.icon-scene_2:before,
+.icon-map_2:before {
   color: #5f4b3e;
   font-family: "iconvault";
   font-style: normal;
