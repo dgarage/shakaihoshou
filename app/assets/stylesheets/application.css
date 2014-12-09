@@ -8221,14 +8221,13 @@ span.head--city {
 .icon-list_l:before,
 .icon-scene_l:before,
 .icon-map_l:before {
-  color: #5f4b3e;
+  color: #fff;
   font-family: "iconvault";
   font-style: normal;
   font-size: 60px;
   line-height: 1;
-  border-radius: 6px;
+  border-radius: 3px;
   display: inline-block;
-  background-color: #fff;
   padding: 5px;
   margin: 10px 10px 0;
   position: relative;
