@@ -1,3 +1,16 @@
+<script>
+$(function(){
+	hTop = $('#table-header').offset().top;
+});
+$(window).scroll(function () {
+	if($(window).scrollTop() > hTop - 0) {
+		$('#table-header').css('position', 'fixed');
+		$('#table-header').css('top', '0px');
+	}else{
+		$('#table-header').css('position', 'static');
+	}
+});
+</script>
 
 <div class="container">
 	<div class="search-results">
@@ -12,7 +25,6 @@
 
 		<div class="row">
 			
-			<div class="">		
 
 				
 				<h2>検索条件:<span class="city">&nbsp;東京都&nbsp;
@@ -21,14 +33,14 @@
 				<% end %>
 				</span></h2>
 
-				<table class="table table-striped2">
+				<table class="table table-striped2"  id="table-header">
 
-					<tr class="table-header-border_hline" rowspan="3">
+					<tr class="table-header-border_hline" rowspan="3" >
 						<th class="table-header-label table-scene" rowspan="3">シーン</th>
 						<th class="table-header-label table-basicname" rowspan="3">一般名称</th>
 
 						<% @cities.each do |city| %>
-						<th class="text-center table-header-city" colspan="21"><%= city %></th>
+						<th class="text-center table-header-city" colspan="20"><%= city %></th>
 						<% end %>
 
 						<!-- エリア -->
@@ -37,7 +49,7 @@
 
 								<!-- 基本情報 -->
 								<th class="table-header-label table-originalname" rowspan="2">自治体の呼称</th>
-								<th class="table-header-label table-informationdesk" rowspan="2">運営/申請窓口</th>
+								<!-- <th class="table-header-label table-informationdesk" rowspan="2">運営・申請窓口</th> -->
 								<th class="table-header-label table-servicedetails" rowspan="2">保障額・内容</th>
 								<!-- 検索条件 -->
 								<th class="table-header-type" colspan="2">年齢</th>
@@ -85,11 +97,7 @@
 			
 
 			
-			</div>
-		</div>
 
-		<div class="row">
-			<div class="">
 				<% @selected_scenes.each do |scene| %>
 
 
@@ -108,7 +116,7 @@
 								<% city_data = @area_info_by_scene[scene][row][city] %>
 								<% if !city_data.nil? %>
 								<td class="table-type-s_vline table-originalname"><%= @shared_info[scene][row]["独自（都、国、市町村）の呼称"]%></td>
-								<td class="table-type-s_vline table-informationdesk">xxx課 ヒアリングの結果追加することに。</td>
+								<!-- <td class="table-type-s_vline table-informationdesk">xxx課 ヒアリングの結果追加することに。</td> -->
 								<td class="table-type-s_vline table-servicedetails"><%= @shared_info[scene][row]["保障額・内容"][0,48]%>&hellip;
 									<!-- Button trigger modal -->
 									<button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">
@@ -158,7 +166,6 @@
 				</table>
 				
 				<% end %>
-			</div>
 		</div>
 
 	</div>

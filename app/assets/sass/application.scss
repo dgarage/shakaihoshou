@@ -45,7 +45,7 @@
   background-color: #fff;
   background-position: center;
   background-repeat: no-repeat;
-  height: 250px;
+  height: 210px;
   margin-bottom: 0;
 
   h1,
@@ -395,7 +395,8 @@ a.thumbnail.active {
 // --------------------------------------------------
 
 table {
-  max-width: 100%;
+  max-width: 1170px;
+  min-width: 970px;
   background-color: $table-bg;
   border: 2px solid #d1c0a5;
 
@@ -489,7 +490,7 @@ table {
   border-right: 1px solid #d1c0a5;
   background: #e8dfd1;
   text-align: center;
-  font-size: 100%;
+  font-size: 12px;
   }
 
   .table-header-type-s_vline2,
@@ -502,7 +503,7 @@ table {
 
   .table-type-s,
   .table-header-type-s {
-  width: 30px;
+  width: 22px;
   }
 
   .table-header-type-s:last-child,
@@ -543,6 +544,8 @@ table {
 
 
   h3.table-header-title {
+  max-width: 1170px;
+  min-width: 970px;
   background-color: #938774;
   border-top: 2px solid #938774;
   border-right: 2px solid #938774;
