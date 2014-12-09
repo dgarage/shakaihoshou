@@ -129,7 +129,7 @@
 
 .container-nav {
   background-color: $brand-primary;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 
   h2,
   .h2 {
@@ -151,12 +151,8 @@
 
   .border {
     border-left: 1px dashed #b1a7a0;
-    margin: 10px 0;
-  }
-
-  .border:last-child {
     border-right: 1px dashed #b1a7a0;
-    margin: 10px 0;
+    margin: 5px 0;
   }
 
 
