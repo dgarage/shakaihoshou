@@ -68,6 +68,32 @@
     font-weight: bold;
   }
 
+  p.search_txt {
+    color: $brand-primary;
+    font-size: 80%;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+
+  p.search_txt_l {
+    color: $brand-primary;
+    font-size: 230%;
+    margin-bottom: 0;
+  }
+
+  .search_box_btn,
+  .search_box {
+    float: left;
+    padding: 0 10px 0 0;
+  }
+
+  .search_box_btn {
+    float: left;
+    padding: 0 0 0 0;
+    margin-top: 12px;
+  }
+
+
 .container-search {
   background-color: rgba(255,255,255,0.6);
   background-position: center;
