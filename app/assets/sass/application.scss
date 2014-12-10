@@ -39,7 +39,7 @@
 // Jumbotron　打ち消し
 // --------------------------------------------------
 
-
+.jumbotron2,
 .jumbotron {
   background: url("head--search.png");
   background-color: #fff;
@@ -108,44 +108,16 @@
 // Jumbotron2　打ち消し
 // --------------------------------------------------
 
-
 .jumbotron2 {
+  background: none;
   background-color: #f5f1ea;
   background-position: center;
   background-repeat: no-repeat;
   border-top: 1px solid #d8d5d0;
   border-bottom: 1px solid $brand-primary;
+  height: 130px;
   padding: 20px;
   margin-bottom: 0;
-
-  h1,
-  .h1 {
-    color: $brand-primary;
-    font-size: 24px;
-    font-weight: bold;
-
-  }
-
-  span.city {
-    color: $brand-success;
-    font-size: 120%;
-    font-weight: bold;
-  }
-
-  span.search {
-    color: $brand-primary;
-    font-size: 120%;
-    font-weight: bold;
-  }
-
-.container-search {
-  background-color: rgba(255,255,255,0.6);
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-bottom: 0;
-  padding: 20px;
-  }
-
 }
 
 //
