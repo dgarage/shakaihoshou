@@ -98,6 +98,7 @@ $(window).scroll(function () {
 
 			
 
+        <% i = 0 %>
 				<% @selected_scenes.each do |scene| %>
 
 
@@ -106,7 +107,6 @@ $(window).scroll(function () {
 				<table class="table table-striped2">
 
 
-          <% i = 0 %>
 					<% (0...@shared_info[scene].length).each do |row| %>
 						<tr class="">											
 							<td class="table-label table-scene"><%= @shared_info[scene][row]["シーン種別(1)"] %></td>
@@ -139,7 +139,7 @@ $(window).scroll(function () {
 											</div>
 										</div>
 									</div>
-									
+                  <% i+=1 %>
 								</td>
 								<td class="table-type-s "><%= city_data["年齢(以上)"]%></td>
 								<td class="table-type-s table-type-s_vline"><%= city_data["年齢(以下)"]%></td>
@@ -162,7 +162,6 @@ $(window).scroll(function () {
                 <% end %>
 							<% end %>
 						</tr>
-            <% i+=1 %>
 					<% end%>
 				</table>
 				
