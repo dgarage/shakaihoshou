@@ -26,6 +26,7 @@
 
 .container-foot {
   background-color: $brand-primary;
+  margin-top: 160px;
 
   p {
     color: #fff;
@@ -42,11 +43,14 @@
 .jumbotron2,
 .jumbotron {
   background: url("head--search.png");
-  background-color: #fff;
+  background-color: #F9F9F9;
   background-position: center;
   background-repeat: no-repeat;
   height: 210px;
   margin-bottom: 0;
+  padding-top: 24px; 
+  margin-bottom: 0; 
+
 
   h1,
   .h1 {
@@ -109,7 +113,6 @@
 // --------------------------------------------------
 
 .jumbotron2 {
-  background: none;
   background-color: #f5f1ea;
   background-position: center;
   background-repeat: no-repeat;
@@ -133,6 +136,11 @@
   .h2 {
     color: #fff;
     font-size: 14px;
+  }
+
+
+  p.navbar {
+  margin-bottom: 20px;
   }
 
   p {
