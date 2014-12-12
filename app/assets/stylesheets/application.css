@@ -8274,7 +8274,7 @@ span.head--city {
   background-color: #F9F9F9;
   background-position: center;
   background-repeat: no-repeat;
-  height: 210px;
+  min-height: 210px;
   margin-bottom: 0;
   padding-top: 24px;
   margin-bottom: 0;
