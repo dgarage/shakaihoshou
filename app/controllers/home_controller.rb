@@ -3,7 +3,7 @@ class HomeController < ApplicationController
 	include ApplicationHelper
 
 	before_filter :get_header_data
-  before_filter :auth
+  #before_filter :auth
 
 	def index
 		@targets = Array.new
