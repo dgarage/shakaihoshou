@@ -46,9 +46,8 @@
   background-color: #F9F9F9;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 210px;
+  min-height: 260px;
   margin-bottom: 0;
-  padding-top: 24px; 
   margin-bottom: 0; 
 
 
@@ -113,12 +112,13 @@
 // --------------------------------------------------
 
 .jumbotron2 {
+  background: url("head--search2.png");
   background-color: #f5f1ea;
   background-position: center;
   background-repeat: no-repeat;
   border-top: 1px solid #d8d5d0;
   border-bottom: 1px solid $brand-primary;
-  height: 130px;
+  min-height: 130px;
   padding: 20px;
   margin-bottom: 0;
 }

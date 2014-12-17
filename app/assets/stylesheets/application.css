@@ -8260,12 +8260,11 @@ span.head--city {
   background-color: #F9F9F9;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 210px;
+  min-height: 260px;
   margin-bottom: 0;
-  padding-top: 24px;
   margin-bottom: 0;
 }
-/* line 56, ../sass/application.scss */
+/* line 55, ../sass/application.scss */
 .jumbotron2 h1,
 .jumbotron2 .h1,
 .jumbotron h1,
@@ -8274,21 +8273,21 @@ span.head--city {
   font-size: 24px;
   font-weight: bold;
 }
-/* line 63, ../sass/application.scss */
+/* line 62, ../sass/application.scss */
 .jumbotron2 span.city,
 .jumbotron span.city {
   color: #f66994;
   font-size: 120%;
   font-weight: bold;
 }
-/* line 69, ../sass/application.scss */
+/* line 68, ../sass/application.scss */
 .jumbotron2 span.search,
 .jumbotron span.search {
   color: #5f4b3e;
   font-size: 120%;
   font-weight: bold;
 }
-/* line 75, ../sass/application.scss */
+/* line 74, ../sass/application.scss */
 .jumbotron2 p.search_txt,
 .jumbotron p.search_txt {
   color: #5f4b3e;
@@ -8296,14 +8295,14 @@ span.head--city {
   font-weight: bold;
   margin-bottom: 0;
 }
-/* line 82, ../sass/application.scss */
+/* line 81, ../sass/application.scss */
 .jumbotron2 p.search_txt_l,
 .jumbotron p.search_txt_l {
   color: #5f4b3e;
   font-size: 230%;
   margin-bottom: 0;
 }
-/* line 89, ../sass/application.scss */
+/* line 88, ../sass/application.scss */
 .jumbotron2 .search_box_btn,
 .jumbotron2 .search_box,
 .jumbotron .search_box_btn,
@@ -8311,14 +8310,14 @@ span.head--city {
   float: left;
   padding: 0 10px 0 0;
 }
-/* line 94, ../sass/application.scss */
+/* line 93, ../sass/application.scss */
 .jumbotron2 .search_box_btn,
 .jumbotron .search_box_btn {
   float: left;
   padding: 0 0 0 0;
   margin-top: 12px;
 }
-/* line 101, ../sass/application.scss */
+/* line 100, ../sass/application.scss */
 .jumbotron2 .container-search,
 .jumbotron .container-search {
   background-color: rgba(255, 255, 255, 0.6);
@@ -8328,14 +8327,15 @@ span.head--city {
   padding: 20px;
 }
 
-/* line 115, ../sass/application.scss */
+/* line 114, ../sass/application.scss */
 .jumbotron2 {
+  background: url("head--search2.png");
   background-color: #f5f1ea;
   background-position: center;
   background-repeat: no-repeat;
   border-top: 1px solid #d8d5d0;
   border-bottom: 1px solid #5f4b3e;
-  height: 130px;
+  min-height: 130px;
   padding: 20px;
   margin-bottom: 0;
 }
