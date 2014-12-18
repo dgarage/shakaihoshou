@@ -8207,12 +8207,13 @@ span.head--city {
 .icon-list_l:before,
 .icon-scene_l:before,
 .icon-map_l:before {
+  background-color: #4a3a30;
+  border-radius: 50%;
   color: #fff;
   font-family: "iconvault";
   font-style: normal;
   font-size: 42px;
   line-height: 1;
-  border-radius: 3px;
   display: inline-block;
   padding: 9px;
   margin: 12px 0 0 0;
