@@ -3,13 +3,6 @@
 @import "bootstrap";
 @import "icon";
 
-.navbar {
-  position: relative;
-  min-height: 0;
-  margin-bottom: 0;
-  border: 1px solid transparent;
-}
-
 
 
 .page-header {
@@ -23,13 +16,56 @@
 }
 
 
+
+
+//
+// page-top
+// --------------------------------------------------
+
+#page-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 77%;
+}
+#page-top a {
+    background: rgba(102, 102, 102, 0.72);
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    display: block;
+    border-radius: 5px;
+}
+#page-top a:hover {
+    text-decoration: none;
+    background: rgba(37, 37, 37, 0.72);
+}
+
+//
+// nav
+// --------------------------------------------------
+
+.table-nav {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fixed {
+    position: fixed;
+    width: 1140px;
+    top: 55px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 //
 // footer new
 // --------------------------------------------------
 
 .container-foot {
   background-color: $brand-primary;
-  margin-top: 160px;
+  margin-top: 300px;
 
   p {
     color: #fff;
@@ -50,7 +86,6 @@
   background-position: center;
   background-repeat: no-repeat;
   min-height: 330px;
-  margin-top: -60px;
   margin-bottom: 0;
   padding-top: 100px;
 
@@ -122,7 +157,6 @@
   border-bottom: 1px solid #d8d5d0;
   min-height: 190px;
   padding-top: 70px;
-  margin-top: -50px;
 }
 
 
@@ -143,7 +177,8 @@
 
 
   p.navbar {
-  margin-bottom: 20px;
+    argin-bottom: 30px;
+    min-height: 0;
   }
 
   p {
@@ -366,6 +401,8 @@ a.thumbnail.active {
 
 .search-results {
 
+  margin-bottom: 100%;
+
   h1,
   .h1 {
     color: $brand-primary;
@@ -399,13 +436,16 @@ a.thumbnail.active {
     font-size: 140%;
   }
 
+  .navbar-fixed-top {
+    top: 70px;
+}
+
 
 // search-results Tables new
 // --------------------------------------------------
 
+
 table {
-  max-width: 1170px;
-  min-width: 970px;
   background-color: $table-bg;
   border: 2px solid #d1c0a5;
 

@@ -1,20 +1,27 @@
-<script>
-$(function(){
-	hTop = $('#table-header').offset().top;
-});
-$(window).scroll(function () {
-	if($(window).scrollTop() > hTop - 0) {
-		$('#table-header').css('position', 'fixed');
-		$('#table-header').css('top', '0px');
-	}else{
-		$('#table-header').css('position', 'static');
-	}
+
+<script type="text/javascript">
+$(function() {
+    var nav = $('.table-nav');
+    //navの位置    
+    var navTop = nav.offset().top;
+    //スクロールするたびに実行
+    $(window).scroll(function () {
+        var winTop = $(this).scrollTop();
+        //スクロール位置がnavの位置より下だったらクラスfixedを追加
+        if (winTop >= navTop) {
+            nav.addClass('fixed')
+        } else if (winTop <= navTop) {
+            nav.removeClass('fixed')
+        }
+    });
 });
 </script>
 
+
 <%= render 'layouts/header_2'%>
+<div class="search-results">
 <div class="container">
-	<div class="search-results">
+
 
 		<div class="row">
 			<div class="">
@@ -25,16 +32,22 @@ $(window).scroll(function () {
 		</div>
 
 		<div class="row">
-			
-
 				
 				<h2>検索条件:<span class="city">&nbsp;東京都&nbsp;
 				<% @cities.each do |city| %>
 				<%= city %>、
 				<% end %>
 				</span></h2>
+		</div>
+</div>
 
-				<table class="table table-striped2"  id="table-header">
+
+
+
+<div class="container">
+<div class="table-nav">
+
+				<table class="table table-striped2">
 
 					<tr class="table-header-border_hline" rowspan="3" >
 						<th class="table-header-label table-scene" rowspan="3">シーン</th>
@@ -92,13 +105,12 @@ $(window).scroll(function () {
 
 					</tr>
 
-					
 				</table>
+</div>
+</div>
+		
 
-			
-
-			
-
+<div class="container">
         <% i = 0 %>
 				<% @selected_scenes.each do |scene| %>
 
@@ -117,7 +129,6 @@ $(window).scroll(function () {
 								<% city_data = @area_info_by_scene[scene][row][city] %>
 								<% if !city_data.nil? %>
 								<td class="table-type-s_vline table-originalname"><%= @shared_info[scene][row]["独自（都、国、市町村）の呼称"]%></td>
-								<!-- <td class="table-type-s_vline table-informationdesk">xxx課 ヒアリングの結果追加することに。</td> -->
 								<td class="table-type-s_vline table-servicedetails"><%= @shared_info[scene][row]["保障額・内容"][0,48]%>&hellip;
 									<!-- Button trigger modal -->
                   <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal<%= i %>">
@@ -167,7 +178,8 @@ $(window).scroll(function () {
 				</table>
 				
 				<% end %>
-		</div>
 
-	</div>
+
+</div>
+
 </div>
