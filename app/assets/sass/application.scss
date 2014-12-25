@@ -78,11 +78,12 @@
 //
 // Jumbotron　打ち消し
 // --------------------------------------------------
-
+.jumbotron3,
 .jumbotron2,
 .jumbotron {
   background: url("head--search.jpg");
-  background-color: #F9F9F9;
+  background-size: 1270px;
+  background-color: #FFF;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 330px;
@@ -94,7 +95,7 @@
     color: $brand-primary;
     font-size: 24px;
     font-weight: bold;
-
+    text-shadow: 0 -1px 10px #FFF, -1px 0 10px #FFF, 4px 0 10px #FFF;
   }
 
   span.city {
@@ -159,6 +160,17 @@
   padding-top: 70px;
 }
 
+//
+// Jumbotron3　打ち消し
+// --------------------------------------------------
+
+.jumbotron3 {
+  background: url("head--search3.jpg");
+  background-size: 920px;
+  background-color: #F9F9F9;
+  background-position: right;
+  background-repeat: no-repeat;
+}
 
 //
 // container-nav new
