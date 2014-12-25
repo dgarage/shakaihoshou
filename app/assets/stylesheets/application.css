@@ -8409,7 +8409,7 @@ span.head--city {
 /* line 83, ../sass/application.scss */
 .jumbotron2,
 .jumbotron {
-  background: url("head--search.png");
+  background: url("head--search.jpg");
   background-color: #F9F9F9;
   background-position: center;
   background-repeat: no-repeat;
@@ -8482,7 +8482,7 @@ span.head--city {
 
 /* line 152, ../sass/application.scss */
 .jumbotron2 {
-  background: url("head--search2.png");
+  background: url("head--search2.jpg");
   background-color: #F9F9F9;
   background-position: center;
   background-repeat: no-repeat;
