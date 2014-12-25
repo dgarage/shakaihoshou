@@ -8877,8 +8877,6 @@ a.thumbnail.active {
 }
 /* line 595, ../sass/application.scss */
 .search-results h3.table-header-title {
-  max-width: 1170px;
-  min-width: 970px;
   background-color: #938774;
   border-top: 2px solid #938774;
   border-right: 2px solid #938774;
@@ -8891,31 +8889,31 @@ a.thumbnail.active {
   margin-bottom: 0;
   padding: 10px;
 }
-/* line 616, ../sass/application.scss */
+/* line 614, ../sass/application.scss */
 .search-results .table-striped2 > tbody > tr:nth-child(odd) > td {
   background-color: #f2f1f1;
   border-top: 0;
   border-bottom: 0;
 }
-/* line 622, ../sass/application.scss */
+/* line 620, ../sass/application.scss */
 .search-results .table-striped2 > tbody > tr:nth-child(odd) > th {
   border-top: 0;
   border-bottom: 0;
 }
-/* line 628, ../sass/application.scss */
+/* line 626, ../sass/application.scss */
 .search-results .table > tbody > tr > th,
 .search-results .table > tbody > tr > td {
   border-top: 0;
 }
 
-/* line 641, ../sass/application.scss */
+/* line 639, ../sass/application.scss */
 .badge {
   font-size: 11px;
   font-weight: bold;
   background-color: #428bca;
 }
 
-/* line 647, ../sass/application.scss */
+/* line 645, ../sass/application.scss */
 .badge a {
   color: white;
 }
