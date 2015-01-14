@@ -67,3 +67,12 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+#
+group :test, :development do
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'capybara-webkit'
+  gem 'selenium-webdriver'
+  gem 'poltergeist'
+  gem 'rack_session_access'
+end
