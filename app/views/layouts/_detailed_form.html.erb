@@ -43,8 +43,8 @@
           <td>
             <ul class="list_check">
             <% @all_scenes.each do |scene| %>
-              <% name = "scene[" + scene + "]" %>
-              <li><%= check_box_tag name, 1, true, {id:scene, class:"scene_checkbox"} %> <label for="<%= name %>"><%= scene %></label></li>
+              <% scene_name = "scene[" + scene + "]" %>
+              <li><%= check_box :scene, scene, {id:scene_name, class:"scene_checkbox", checked:true} %> <label for="<%= scene_name %>"><%= scene %></label></li>
             <% end %>
             </ul>
           </td>
@@ -63,9 +63,12 @@
 					
 					<td>
 						<ul class="list_check2">
+            <% index = 1 %>
 						<% @targets.each do |target| %>
-              <% name = "target[" + target + "]" %>
-              <li><%= radio_button_tag name, target, true, id:target  %> <label for="<%= name %>"><%= target %></label></li>
+              <% target_name = "target[" + target + "]" %>
+              <% i = (index == 1) ? true : false %>
+              <li><%= radio_button_tag :target, target, i, id:target_name  %> <label for="<%= target_name %>"><%= target %></label></li>
+              <% index += 1 %>
 						<% end %>
 						</ul>
 					</td>
@@ -75,8 +78,8 @@
 					<td>
 						<ul class="list_check">
 						<% @situations.each do |situation| %>
-              <% name = "situation[" + situation + "]" %>
-              <li><%= check_box_tag name, situation, false, {id:situation, value:0} %> <label for="<%= name %>"><%= situation %></label></li>
+              <% situation_name = "situation[" + situation + "]" %>
+              <li><%= check_box :situation, situation, {id:situation_name} %> <label for="<%= situation_name %>"><%= situation %></label></li>
 						<% end %>
 						</ul>
 					</td>
