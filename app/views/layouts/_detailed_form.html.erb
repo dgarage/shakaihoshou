@@ -7,9 +7,9 @@
 	<script type="text/javascript">
 	$( document ).ready(function() {
     	
-    	$('[id=detailed_checkbox]').click(function(){
+    	$('.scene_checkbox').click(function(){
     		var checked = false;
-    		$('[id=detailed_checkbox]').each(function(a, b) {
+    		$('.scene_checkbox').each(function(a, b) {
           if ($(b).is(':checked')) {
             checked = checked | true;
           } else {
@@ -28,26 +28,27 @@
 
 
 
-		<%= bootstrap_form_tag url: 'detailed_search', method:'get' do |f| %>
-		<table class="table table-striped table-borderless">
-				<tr>
-					<td class="title"><strong>市・区</strong></td>
-					<td>
-						<%= select_tag "city", options_for_select(@all_cities) %>
+    <%= bootstrap_form_tag url: 'detailed_search', method:'get' do |f| %>
+    <table class="table table-striped table-borderless">
+        <tr>
+          <td class="title"><strong>市・区</strong></td>
+          <td>
+            <%= select_tag "city", options_for_select(@all_cities) %>
 
-					</td>
-				</tr>
+          </td>
+        </tr>
 
-				<tr>
-					<td><strong>シーン</strong></td>
-					<td>
-						<ul class="list_check">
-						<% @all_scenes.each do |scene| %>
-							<li><%= check_box :scene, scene, id:'detailed_checkbox', checked:true %>  <%= scene %></li>
-						<% end %>
-						</ul>
-					</td>
-				</tr>
+        <tr>
+          <td><strong>シーン</strong></td>
+          <td>
+            <ul class="list_check">
+            <% @all_scenes.each do |scene| %>
+              <% name = "scene[" + scene + "]" %>
+              <li><%= check_box_tag name, 1, true, {id:scene, class:"scene_checkbox"} %> <label for="<%= name %>"><%= scene %></label></li>
+            <% end %>
+            </ul>
+          </td>
+        </tr>
 
  				<tr>
 					<td><strong>性別</strong></td> 
@@ -63,7 +64,8 @@
 					<td>
 						<ul class="list_check2">
 						<% @targets.each do |target| %>
-							<li><%= radio_button_tag :target, target, id:'detailed_checkbox' %>  <%= target %></li>
+              <% name = "target[" + target + "]" %>
+              <li><%= radio_button_tag name, target, true, id:target  %> <label for="<%= name %>"><%= target %></label></li>
 						<% end %>
 						</ul>
 					</td>
@@ -73,7 +75,8 @@
 					<td>
 						<ul class="list_check">
 						<% @situations.each do |situation| %>
-							<li><%= check_box :situation, situation, id:'detailed_checkbox' %>  <%= situation %></li>
+              <% name = "situation[" + situation + "]" %>
+              <li><%= check_box_tag name, situation, false, {id:situation, value:0} %> <label for="<%= name %>"><%= situation %></label></li>
 						<% end %>
 						</ul>
 					</td>
