@@ -228,8 +228,7 @@
     color: $brand-primary;
     font-size: 18px;
     font-weight: bold;
-    background-color: #f2f1f1;
-    padding: 10px;
+    padding: 10px 0;
   }
 
   p {
@@ -241,7 +240,93 @@
     width: 100%;
   }
 
+  span.title {
+    color: $brand-success;
+    font-size: 120%;
+    font-weight: bold;
+  }
+
+  span.ranking1 {
+    color: #ffaf25;
+    font-size: 120%;
+    font-weight: bold;
+    margin: 0 10px 0 5px;
+  }
+
+  span.ranking2 {
+    color: #848484;
+    font-size: 120%;
+    font-weight: bold;
+    margin: 0 10px 0 5px;
+  }
+
+  span.ranking3 {
+    color: #d08e48;
+    font-size: 120%;
+    font-weight: bold;
+    margin: 0 10px 0 5px;
+  }
+
+  span.ranking-out {
+    color: #A19B94;
+    font-size: 120%;
+    margin: 0 10px 0 5px;
+  }
 }
+
+//
+// sidenav ranking new
+// -------------------------
+
+.sidenav-rank{
+  padding-bottom: (($line-height-computed / 2) - 1);
+  margin: ($line-height-computed * 2) 0 $line-height-computed;
+
+  h2,
+  .h2 {
+    color: $brand-primary;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 0;
+  }
+
+  p {
+  margin-bottom: 15px;
+  }
+
+  img,
+  .img {
+    width: 100%;
+  }
+
+  span.title {
+    color: $brand-success;
+    font-size: 120%;
+    font-weight: bold;
+  }
+
+  span.ranking1 {
+    color: #ffaf25;
+    font-size: 120%;
+    font-weight: bold;
+    margin: 0 10px 0 5px;
+  }
+
+  span.ranking2 {
+    color: #a9aaab;
+    font-size: 120%;
+    font-weight: bold;
+    margin: 0 10px 0 5px;
+  }
+
+  span.ranking3 {
+    color: #d08e48;
+    font-size: 120%;
+    font-weight: bold;
+    margin: 0 10px 0 5px;
+  }
+}
+
 
 
 
@@ -258,8 +343,7 @@
     color: $brand-primary;
     font-size: 18px;
     font-weight: bold;
-    background-color: #f2f1f1;
-    padding: 10px;
+    padding: 10px 0;
   }
 
   p {
