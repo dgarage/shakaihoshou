@@ -1,4 +1,5 @@
 Blog::Application.routes.draw do
+  get '/ranking' => 'home#ranking'
   get '/top_search' => 'home#top_search'
   get '/header_search' => 'home#header_search'
   get '/search_by_area' => 'home#search_by_area'
