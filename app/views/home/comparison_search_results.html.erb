@@ -12,7 +12,6 @@
     </div>
 
     <div class="row">
-
       <h2>検索条件:<span class="city">&nbsp;東京都&nbsp;
         <% @cities.each do |city| %>
         <%= city %>、
@@ -106,16 +105,16 @@
               <td class="table-type-s_vline table-originalname"><%= @shared_info[scene][row]["独自（都、国、市町村）の呼称"]%></td>
               <td class="table-type-s_vline table-servicedetails"><%= @shared_info[scene][row]["保障額・内容"][0,48]%>&hellip;
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal<%= i %>">
+                <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal<%= city + i.to_s %>">
                 詳細</button>
                 <!-- Modal -->
-                <div class="modal fade" id="myModal<%= i %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel<%= i %>" aria-hidden="true">
+                <div class="modal fade" id="myModal<%= city + i.to_s %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel<%= city + i.to_s %>" aria-hidden="true">
                   <div class="modal-dialog">
                     <div class="modal-content">
                       <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
 
-                        <h4 class="modal-title" id="myModalLabel<%= i %>"><%= @shared_info[scene][row]["一般名称（今後増えてきたものにする）"]%></br><%= @shared_info[scene][row]["独自（都、国、市町村）の呼称"]%></h4>
+                        <h4 class="modal-title" id="myModalLabel<%= city + i.to_s %>"><%= @shared_info[scene][row]["一般名称（今後増えてきたものにする）"]%></br><%= @shared_info[scene][row]["独自（都、国、市町村）の呼称"]%></h4>
                       </div>
                       <div class="modal-body">
                         <%= @shared_info[scene][row]["保障額・内容"]%>

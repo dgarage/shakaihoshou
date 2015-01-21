@@ -3,6 +3,7 @@ Blog::Application.routes.draw do
   get '/top_search' => 'home#top_search'
   get '/header_search' => 'home#header_search'
   get '/search_by_area' => 'home#search_by_area'
+  get '/comparison_by_area' => 'home#comparison_by_area'
   get '/show_details' => 'home#show_details'
   get '/detailed_search' => 'home#detailed_search'
   get 'search_by_scene' => 'home#search_by_scene'
