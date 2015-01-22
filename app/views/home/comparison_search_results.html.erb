@@ -13,9 +13,7 @@
 
     <div class="row">
       <h2>検索条件:<span class="city">&nbsp;東京都&nbsp;
-        <% @cities.each do |city| %>
-        <%= city %>、
-        <% end %>
+        <%= @cities.join("、") %>
       </span></h2>
     </div>
   </div>
@@ -94,16 +92,16 @@
 
     <table class="table table-striped2">
 
-      <% (0...@shared_info[@cities[0]][scene].length).each do |row| %>
+      <% (0...@row_length[scene]).each do |row| %>
         <tr class="">											
-          <td class="table-label table-scene"><%= @shared_info[@cities[0]][scene][row]["シーン種別(1)"] %></td>
-          <td class="table-label table-basicname"><%= @shared_info[@cities[0]][scene][row]["一般名称（今後増えてきたものにする）"]%></td>
-
           <% @cities.each do |city| %>
+              <td class="table-label table-scene"><%= @shared_info[city][scene][row] ? @shared_info[city][scene][row]["シーン種別(1)"] : "" %></td>
+              <td class="table-label table-basicname"><%= @shared_info[city][scene][row] ? @shared_info[city][scene][row]["一般名称（今後増えてきたものにする）"] : "" %></td>
+
             <% city_data = @area_info_by_scene[scene][row][city] %>
-            <% if !city_data.nil? %>
-              <td class="table-type-s_vline table-originalname"><%= @shared_info[city][scene][row]["独自（都、国、市町村）の呼称"]%></td>
-              <td class="table-type-s_vline table-servicedetails"><%= @shared_info[city][scene][row]["保障額・内容"][0,48]%>&hellip;
+            <% if !city_data.nil? && @shared_info[city][scene][row] %>
+              <td class="table-type-s_vline table-originalname"><%= @shared_info[city][scene][row]["独自（都、国、市町村）の呼称"] %></td>
+              <td class="table-type-s_vline table-servicedetails"><%= @shared_info[city][scene][row]["保障額・内容"][0,48] %>&hellip;
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal<%= city + i.to_s %>">
                 詳細</button>
@@ -114,10 +112,10 @@
                       <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
 
-                        <h4 class="modal-title" id="myModalLabel<%= city + i.to_s %>"><%= @shared_info[city][scene][row]["一般名称（今後増えてきたものにする）"]%></br><%= @shared_info[city][scene][row]["独自（都、国、市町村）の呼称"]%></h4>
+                        <h4 class="modal-title" id="myModalLabel<%= city + i.to_s %>"><%= @shared_info[city][scene][row]["一般名称（今後増えてきたものにする）"] %></br><%= @shared_info[city][scene][row]["独自（都、国、市町村）の呼称"] %></h4>
                       </div>
                       <div class="modal-body">
-                        <%= @shared_info[city][scene][row]["保障額・内容"]%>
+                        <%= @shared_info[city][scene][row]["保障額・内容"] %>
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -127,24 +125,46 @@
                 </div>
                 <% i+=1 %>
               </td>
-              <td class="table-type-s "><%= city_data["年齢(以上)"]%></td>
-              <td class="table-type-s table-type-s_vline"><%= city_data["年齢(以下)"]%></td>
-              <td class="table-type-s"><%= city_data["女"]%></td>
-              <td class="table-type-s table-type-s_vline"><%= city_data["男"]%></td>
-              <td class="table-type-s"><%= city_data["乳児 0歳-1歳"]%></td>
-              <td class="table-type-s"><%= city_data["就学前、保育園、幼稚園 １歳-６歳"]%></td>
-              <td class="table-type-s"><%= city_data["小学生 ６歳-12歳"]%></td>
-              <td class="table-type-s"><%= city_data["中学生 12歳-15歳"]%></td>
-              <td class="table-type-s"><%= city_data["高校生 15歳-18歳"]%></td>
-              <td class="table-type-s"><%= city_data["高校生以上、15歳-20歳"]%></td>
-              <td class="table-type-s"><%= city_data["大人 20歳-64歳"]%></td>
-              <td class="table-type-s"><%= city_data["高齢者 前期高齢者対象 65歳-74歳"]%></td>
-              <td class="table-type-s table-type-s_vline"><%= city_data["高齢者 後期高齢者対象 75歳以上"]%></td>
-              <td class="table-type-s"><%= city_data["ひとり親"]%></td>
-              <td class="table-type-s"><%= city_data["妊婦（産前産後）"]%></td>
-              <td class="table-type-s"><%= city_data["要介護者"]%></td>
-              <td class="table-type-s"><%= city_data["障がい者"]%></td>
-              <td class="table-type-s table-header-type-s_vline2"><%= city_data["住宅・店舗"]%></td>
+              <td class="table-type-s "><%= city_data["年齢(以上)"] %></td>
+              <td class="table-type-s table-type-s_vline"><%= city_data["年齢(以下)"] %></td>
+              <td class="table-type-s"><%= city_data["女"] %></td>
+              <td class="table-type-s table-type-s_vline"><%= city_data["男"] %></td>
+              <td class="table-type-s"><%= city_data["乳児 0歳-1歳"] %></td>
+              <td class="table-type-s"><%= city_data["就学前、保育園、幼稚園 １歳-６歳"] %></td>
+              <td class="table-type-s"><%= city_data["小学生 ６歳-12歳"] %></td>
+              <td class="table-type-s"><%= city_data["中学生 12歳-15歳"] %></td>
+              <td class="table-type-s"><%= city_data["高校生 15歳-18歳"] %></td>
+              <td class="table-type-s"><%= city_data["高校生以上、15歳-20歳"] %></td>
+              <td class="table-type-s"><%= city_data["大人 20歳-64歳"] %></td>
+              <td class="table-type-s"><%= city_data["高齢者 前期高齢者対象 65歳-74歳"] %></td>
+              <td class="table-type-s table-type-s_vline"><%= city_data["高齢者 後期高齢者対象 75歳以上"] %></td>
+              <td class="table-type-s"><%= city_data["ひとり親"] %></td>
+              <td class="table-type-s"><%= city_data["妊婦（産前産後）"] %></td>
+              <td class="table-type-s"><%= city_data["要介護者"] %></td>
+              <td class="table-type-s"><%= city_data["障がい者"] %></td>
+              <td class="table-type-s table-header-type-s_vline2"><%= city_data["住宅・店舗"] %></td>
+            <% else %>
+              <td class="table-type-s_vline table-originalname"></td>
+              <td class="table-type-s_vline table-servicedetails">&hellip;
+              </td>
+              <td class="table-type-s "></td>
+              <td class="table-type-s table-type-s_vline"></td>
+              <td class="table-type-s"></td>
+              <td class="table-type-s table-type-s_vline"></td>
+              <td class="table-type-s"></td>
+              <td class="table-type-s"></td>
+              <td class="table-type-s"></td>
+              <td class="table-type-s"></td>
+              <td class="table-type-s"></td>
+              <td class="table-type-s"></td>
+              <td class="table-type-s"></td>
+              <td class="table-type-s"></td>
+              <td class="table-type-s table-type-s_vline"></td>
+              <td class="table-type-s"></td>
+              <td class="table-type-s"></td>
+              <td class="table-type-s"></td>
+              <td class="table-type-s"></td>
+              <td class="table-type-s table-header-type-s_vline2"></td>
             <% end %>
           <% end %>
         </tr>

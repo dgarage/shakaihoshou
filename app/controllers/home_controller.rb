@@ -65,6 +65,11 @@ class HomeController < ApplicationController
     
     @area_info_by_scene, @shared_info = structure_comparison_data(@selected_scenes, @cities, {})
 
+    @row_length = Hash.new
+    @selected_scenes.each do |scene|
+      @row_length[scene] = [@shared_info[@cities[0]][scene].length, @shared_info[@cities[1]][scene].length].max
+    end
+
     render 'comparison_search_results'
 
   end
