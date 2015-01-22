@@ -94,16 +94,16 @@
 
     <table class="table table-striped2">
 
-      <% (0...@shared_info[scene].length).each do |row| %>
+      <% (0...@shared_info[@cities[0]][scene].length).each do |row| %>
         <tr class="">											
-          <td class="table-label table-scene"><%= @shared_info[scene][row]["シーン種別(1)"] %></td>
-          <td class="table-label table-basicname"><%= @shared_info[scene][row]["一般名称（今後増えてきたものにする）"]%></td>
+          <td class="table-label table-scene"><%= @shared_info[@cities[0]][scene][row]["シーン種別(1)"] %></td>
+          <td class="table-label table-basicname"><%= @shared_info[@cities[0]][scene][row]["一般名称（今後増えてきたものにする）"]%></td>
 
           <% @cities.each do |city| %>
             <% city_data = @area_info_by_scene[scene][row][city] %>
             <% if !city_data.nil? %>
-              <td class="table-type-s_vline table-originalname"><%= @shared_info[scene][row]["独自（都、国、市町村）の呼称"]%></td>
-              <td class="table-type-s_vline table-servicedetails"><%= @shared_info[scene][row]["保障額・内容"][0,48]%>&hellip;
+              <td class="table-type-s_vline table-originalname"><%= @shared_info[city][scene][row]["独自（都、国、市町村）の呼称"]%></td>
+              <td class="table-type-s_vline table-servicedetails"><%= @shared_info[city][scene][row]["保障額・内容"][0,48]%>&hellip;
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal<%= city + i.to_s %>">
                 詳細</button>
@@ -114,10 +114,10 @@
                       <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
 
-                        <h4 class="modal-title" id="myModalLabel<%= city + i.to_s %>"><%= @shared_info[scene][row]["一般名称（今後増えてきたものにする）"]%></br><%= @shared_info[scene][row]["独自（都、国、市町村）の呼称"]%></h4>
+                        <h4 class="modal-title" id="myModalLabel<%= city + i.to_s %>"><%= @shared_info[city][scene][row]["一般名称（今後増えてきたものにする）"]%></br><%= @shared_info[city][scene][row]["独自（都、国、市町村）の呼称"]%></h4>
                       </div>
                       <div class="modal-body">
-                        <%= @shared_info[scene][row]["保障額・内容"]%>
+                        <%= @shared_info[city][scene][row]["保障額・内容"]%>
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
