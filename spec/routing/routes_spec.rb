@@ -10,6 +10,7 @@ describe 'Routes' do
   end
 
   it "blog page" do
+    pending '/blog and rss links'
     visit '/blog'
     expect( current_path ).to eq( '/blog' )
   end
