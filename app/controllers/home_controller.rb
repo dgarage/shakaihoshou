@@ -130,6 +130,7 @@ class HomeController < ApplicationController
 
   def search_by_scene
     if params[:selected_scene].nil?
+      p params[:selected_scene]
       redirect_to :page_not_found
     else
       @selected_scene = params[:selected_scene]
