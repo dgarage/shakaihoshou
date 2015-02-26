@@ -13,7 +13,7 @@
 					<% slice.each do |city| %>
 						<td>
 							<%= check_box :selected_city, city, id:'area_checkbox'%> 
-							<%= link_to city, action: 'comparison_by_area',  selected_city: {city => 1} %>
+							<%= link_to city, action: 'search_by_area',  selected_city: {city => 1} %>
 						</td>
 					<% end %>
 				</tr>

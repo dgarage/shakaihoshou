@@ -14,9 +14,7 @@
     <div class="row">
 
       <h2>検索条件:<span class="city">&nbsp;東京都&nbsp;
-        <% @cities.each do |city| %>
-        <%= city %>、
-        <% end %>
+        <%= @cities.join("、") %>
       </span></h2>
     </div>
   </div>

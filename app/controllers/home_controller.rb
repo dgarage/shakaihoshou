@@ -102,12 +102,6 @@ class HomeController < ApplicationController
         end
       }
 
-      #params[:target].each_entry{|target, chosen|
-      #	if chosen.to_i == 1
-      #		query[get_column_code(target)] = "○"
-      #	end
-      #}
-
       params[:situation].each_entry{|target, chosen|
         if chosen.to_i == 1
           query[get_column_code(target)] = "○"
