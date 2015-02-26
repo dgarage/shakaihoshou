@@ -83,11 +83,7 @@ class HomeController < ApplicationController
   end
 
   def detailed_search
-    p params[:scene]
-    p params[:gender]
-    p params[:situation]
-    p params[:city]
-    if params[:scene].nil? || params[:gender].nil? || params[:situation] || params[:city]
+    if params[:scene].nil? || params[:gender].nil? || params[:situation].nil? || params[:city].nil?
       redirect_to :page_not_found
     else
 
