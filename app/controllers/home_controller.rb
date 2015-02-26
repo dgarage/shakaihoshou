@@ -83,6 +83,10 @@ class HomeController < ApplicationController
   end
 
   def detailed_search
+    p params[:scene]
+    p params[:gender]
+    p params[:situation]
+    p params[:city]
     if params[:scene].nil? || params[:gender].nil? || params[:situation] || params[:city]
       redirect_to :page_not_found
     else
@@ -130,7 +134,6 @@ class HomeController < ApplicationController
 
   def search_by_scene
     if params[:selected_scene].nil?
-      p params[:selected_scene]
       redirect_to :page_not_found
     else
       @selected_scene = params[:selected_scene]
