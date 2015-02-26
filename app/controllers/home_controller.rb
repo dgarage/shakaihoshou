@@ -136,15 +136,13 @@ class HomeController < ApplicationController
       @stuff = get_all_stuff
       @stuffcount = Hash.new
 
-      #p @stuff
-      #test = @stuff.sort!
-      #p test
-
       @stuff.each{|x| 
+        p 'x'
         count = Incident.where({:"2" => params[:selected_scene], :"5" => x}).count
         @stuffcount[x] = count if count > 0
       }
 
+      p @stuff
       render 'scene_search_step2'
     end
   end
