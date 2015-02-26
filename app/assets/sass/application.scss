@@ -172,6 +172,62 @@
   background-repeat: no-repeat;
 }
 
+
+//
+// container-search2 new
+// --------------------------------------------------
+
+
+.container-search2 {
+  background-color: $brand-primary;
+
+  h1,
+  .h1 {
+    color: $brand-primary;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  span.city {
+    color: $brand-success;
+    font-size: 120%;
+    font-weight: bold;
+  }
+
+  span.search {
+    color: $brand-primary;
+    font-size: 120%;
+    font-weight: bold;
+  }
+
+  p.search_txt {
+    color: $brand-primary;
+    font-size: 80%;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+
+  p.search_txt_l {
+    color: $brand-primary;
+    font-size: 230%;
+    margin-bottom: 0;
+  }
+
+  .search_box_btn,
+  .search_box {
+    float: left;
+    padding: 0 10px 0 0;
+  }
+
+  .search_box_btn {
+    float: left;
+    padding: 0 0 0 0;
+    margin-top: 12px;
+  }
+
+
+  }
+
 //
 // container-nav new
 // --------------------------------------------------
