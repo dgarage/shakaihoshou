@@ -10,6 +10,8 @@ Blog::Application.routes.draw do
   get 'search_by_scene_step2' => 'home#search_by_scene_step2'
   get 'search_by_scene_step3' => 'home#search_by_scene_step3'
   get '/page_not_found' => 'home#page_not_found'
+  get '/sitemap.xml' => 'sitemap#index'
+  get '/robots.txt'  => 'sitemap#robots'
   root :to => 'home#index'
 
  

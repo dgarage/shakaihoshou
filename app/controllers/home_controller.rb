@@ -164,6 +164,10 @@ class HomeController < ApplicationController
     render 'search_results'
   end
 
+  def sitemap
+    render 'sitemap.xml', :formats => :xml, :layout => false, :content_type => 'application/xml'
+  end
+
   def page_not_found
     render 'page_not_found'
   end
