@@ -131,7 +131,8 @@
 
 
 <!-- シーン　generated-on="2015年1月22日 12:17 AM" -->
-<url>http://www.syakaihosyou.com/http://localhost:3000/search_by_scene?selected_scene=%E7%97%85%E6%B0%97%E3%83%BB%E3%81%91%E3%81%8C</loc>
+<url>
+  <loc>http://www.syakaihosyou.com/search_by_scene?selected_scene=%E7%97%85%E6%B0%97%E3%83%BB%E3%81%91%E3%81%8C</loc>
   <priority>0.8</priority>
   <changefreq>daily</changefreq>
 </url>
