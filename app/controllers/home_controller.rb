@@ -172,6 +172,10 @@ class HomeController < ApplicationController
     render 'page_not_found'
   end
 
+  def article
+    render 'home/article/001_kodomokosodate'
+  end
+
   private
 
   def auth
