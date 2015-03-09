@@ -8660,14 +8660,14 @@ span.head--city {
 .article .h2 {
   color: #5f4b3e;
   font-weight: bold;
-  padding: 10px 0;
+  padding: 0;
 }
 /* line 357, ../sass/application.scss */
 .article h3,
 .article .h3 {
   color: #5f4b3e;
   font-weight: bold;
-  padding: 10px 0;
+  padding: 30px 0 10px;
 }
 /* line 363, ../sass/application.scss */
 .article p {
@@ -9185,4 +9185,14 @@ a.thumbnail.active {
 /* line 931, ../sass/application.scss */
 .badge a {
   color: white;
+}
+
+/* line 936, ../sass/application.scss */
+.container-author {
+  background-color: rgba(255, 255, 255, 0.6);
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 50px;
+  padding: 14px;
+  border: 1px solid #d8d5d0;
 }

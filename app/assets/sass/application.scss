@@ -350,14 +350,14 @@
     color: $brand-primary;
 
     font-weight: bold;
-    padding: 10px 0;
+    padding: 0;
   }
 
   h3,
   .h3 {
     color: $brand-primary;
     font-weight: bold;
-    padding: 10px 0;
+    padding: 30px 0 10px;
   }
 
   p {
@@ -931,3 +931,16 @@ table {
 .badge a {
   color: white;
 }
+
+
+.container-author {
+  background-color: rgba(255,255,255,0.6);
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 50px;
+  padding: 14px;
+  border: 1px solid #d8d5d0;
+  }
+
+
+
