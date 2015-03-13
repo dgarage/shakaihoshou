@@ -409,7 +409,24 @@
     font-size: 120%;
     margin: 0 10px 0 5px;
   }
+
+.container-author {
+  background-color: rgba(255,255,255,0.6);
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 50px;
+  padding: 14px;
+  border: 1px solid #d8d5d0;
+  }
+
+  .container-author p {
+  font-size: 100%;
+  margin: 0 0;
+  }
+
 }
+
+
 
 //
 // sns new
@@ -959,16 +976,6 @@ table {
 .badge a {
   color: white;
 }
-
-
-.container-author {
-  background-color: rgba(255,255,255,0.6);
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-top: 50px;
-  padding: 14px;
-  border: 1px solid #d8d5d0;
-  }
 
 
 
