@@ -1,5 +1,6 @@
 Blog::Application.routes.draw do
-  get '/article' => 'home#article'
+  get '/article' => 'article#index'
+  get '/article/:title' => 'article#title'
   get '/ranking' => 'home#ranking'
   get '/top_search' => 'home#top_search'
   get '/header_search' => 'home#header_search'
