@@ -1,30 +1,30 @@
 <%= render 'layouts/header_2'%>
 <div class=" container">
-	<div class="col-md-8">
+	<div class="row">
+		<div class="col-md-8">
 
-		<div class="page-search">
+			<div class="page-search">
 
+				<h2><span class="glyphicon-s icon-scene"></span><span class="city"><%= @selected_scene%></span>の<span class="search">社会保障項目</span></h2>
+					<p><span class="city"><%= @selected_scene%></span>には下記の社会保障があります。</p>
 
-			<h2><span class="glyphicon-s icon-scene"></span><span class="city"><%= @selected_scene%></span>の<span class="search">社会保障項目</span></h2>
-				<p><span class="city"><%= @selected_scene%></span>には下記の社会保障があります。</p>
+				<ul class="list_inline">
+						<% @stuffcount.each_entry do |stuff, count| %>
+						<li><%= link_to "#{stuff} ", action: 'search_by_scene_step2',  search_criteria: {"5" => stuff, "2" => @selected_scene} %>
+						<span class="badge"><%= link_to "#{count}", action: 'search_by_scene_step2',  search_criteria: {"5" => stuff, "2" => @selected_scene} %></span>
+						</li>
+						<% end %>
+				</ul>
 
-			<ul class="list_inline">
-					<% @stuffcount.each_entry do |stuff, count| %>
-					<li><%= link_to "#{stuff} ", action: 'search_by_scene_step2',  search_criteria: {"5" => stuff, "2" => @selected_scene} %>
-					<span class="badge"><%= link_to "#{count}", action: 'search_by_scene_step2',  search_criteria: {"5" => stuff, "2" => @selected_scene} %></span>
-					</li>
-					<% end %>
-			</ul>
-
+			</div>
+		
 		</div>
 
+		<div class="col-md-4">
+		<%= render 'layouts/sidenav' %>
+		</div>
 
 	</div>
-
-	<div class="col-md-4">
-	<%= render 'layouts/sidenav' %>
-	</div>
-
 </div>
 
 
