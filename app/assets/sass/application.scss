@@ -278,7 +278,7 @@
   h2,
   .h2 {
     color: #fff;
-    font-size: 14px;
+    font-size: 14em;
   }
 
 
@@ -358,8 +358,6 @@
 
 }
 
-
-
 .article-title:before {
   background:url("a001_4179217.jpg");
   background-position: center;
@@ -380,6 +378,17 @@
   opacity: .3;
 }
 
+  span.vol {
+    color: $brand-success;
+    font-size: 80%;
+    font-weight: bold;
+    padding: 0 10px 0 0px;
+  }
+
+  p.description {
+  font-size: 110%;
+  margin: 15px 0;
+  }
 
 //
 // article new
