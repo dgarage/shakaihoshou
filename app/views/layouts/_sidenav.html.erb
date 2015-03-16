@@ -9,6 +9,53 @@
 
 
 
+<div class="sidenav">
+	<h2><span class="glyphicon-s icon-scene"></span><span class="city">社会保障ドットコム内</span>で<span class="search">検索</span></h2>
+	<script>
+	  (function() {
+	    var cx = '002234983006078243760:u_zcxc1hamc';
+	    var gcse = document.createElement('script');
+	    gcse.type = 'text/javascript';
+	    gcse.async = true;
+	    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+	        '//www.google.com/cse/cse.js?cx=' + cx;
+	    var s = document.getElementsByTagName('script')[0];
+	    s.parentNode.insertBefore(gcse, s);
+	  })();
+	</script>
+	<gcse:search></gcse:search>
+</div>
+
+
+<div class="sidenav">
+	<h2><span class="glyphicon glyphicon-pencil"></span><span class="city">特集記事</span></h2>
+			<div class="col-lg-12">
+		
+				<div class="row">
+				<% @articles.each do |article| %>
+					<li class="article-list-side col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<a href="/article/<%= article['url'] %>">
+								<div class="row">	
+									<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+										<%= image_tag("a001_4179217.jpg", :class => "img-responsive") %>
+									</div> 
+
+									<div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+												<h3><span class="vol"><%= article['vol'] %></span><%= article['title'] %><span class="search"></span></h3>
+											
+												<time><%= article['time'] %></time>
+									</div> 
+								</div> 
+					</a>
+					</li>
+				<% end %>
+				</div>
+
+			</div>
+
+</div> 
+
+
 
 <div class="sidenav">
 
@@ -191,19 +238,4 @@
 
 </div>
 
-<div class="sidenav">
-	<h2><span class="glyphicon-s icon-scene"></span><span class="city">社会保障ドットコム内</span>で<span class="search">検索</span></h2>
-	<script>
-	  (function() {
-	    var cx = '002234983006078243760:u_zcxc1hamc';
-	    var gcse = document.createElement('script');
-	    gcse.type = 'text/javascript';
-	    gcse.async = true;
-	    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-	        '//www.google.com/cse/cse.js?cx=' + cx;
-	    var s = document.getElementsByTagName('script')[0];
-	    s.parentNode.insertBefore(gcse, s);
-	  })();
-	</script>
-	<gcse:search></gcse:search>
-</div>
+
