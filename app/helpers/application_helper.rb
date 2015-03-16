@@ -231,6 +231,7 @@ module ApplicationHelper
   		"time" => '更新日：2015年3月16日',
   		"image" => "a001_4179217.jpg"
   		},
+      
   	]
   end
 

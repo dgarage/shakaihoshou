@@ -12,6 +12,7 @@ class ArticleController < ApplicationController
   end
 
   def title
+    @articles = get_articles
   	title = params[:title]
   	article_list = Array.new
   	Dir.glob("#{Rails.root}/app/views/article/*").each do |article|
