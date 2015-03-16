@@ -6,6 +6,7 @@ class HomeController < ApplicationController
   #before_filter :auth
 
   def index
+    @articles = get_articles
     @targets = Array.new
     (18..26).each{|x| @targets.push get_column_name(x)}
     @targets.delete nil
@@ -16,6 +17,7 @@ class HomeController < ApplicationController
   end
 
   def search_by_area
+    @articles = get_articles
     query_parameters = params[:selected_city]
     if query_parameters.nil?
       redirect_to :page_not_found
@@ -47,6 +49,7 @@ class HomeController < ApplicationController
   end
 
   def comparison_by_area
+    @articles = get_articles
     query_parameters = params[:selected_city]
     if query_parameters.nil?
       redirect_to :page_not_found
@@ -83,6 +86,7 @@ class HomeController < ApplicationController
   end
 
   def detailed_search
+    @articles = get_articles
     if params[:scene].nil? || params[:gender].nil? || params[:situation].nil? || params[:city].nil?
       redirect_to :page_not_found
     else
@@ -118,11 +122,13 @@ class HomeController < ApplicationController
   end
 
   def show_details
+    @articles = get_articles
     @incident = Incident.find params[:id]
     render 'incident_details'
   end
 
   def search_by_scene
+    @articles = get_articles
     if params[:selected_scene].nil?
       redirect_to :page_not_found
     else
@@ -131,17 +137,16 @@ class HomeController < ApplicationController
       @stuffcount = Hash.new
 
       @stuff.each{|x| 
-        p 'x'
         count = Incident.where({:"2" => params[:selected_scene], :"5" => x}).count
         @stuffcount[x] = count if count > 0
       }
 
-      p @stuff
       render 'scene_search_step2'
     end
   end
 
   def search_by_scene_step2
+    @articles = get_articles
     @search_criteria = params[:search_criteria]
     
     all_cities = get_all_cities
@@ -156,6 +161,7 @@ class HomeController < ApplicationController
   end
 
   def search_by_scene_step3
+    @articles = get_articles
     @cities = [params[:search_criteria][:"0"]]
     @selected_scenes = [params[:search_criteria][:"2"]]
     additional_criteria = {"5" => params[:search_criteria][:"5"]}
