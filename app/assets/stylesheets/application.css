@@ -8401,7 +8401,7 @@ span.head--city {
 .fixed {
   position: fixed;
   width: 1168px;
-  top: 55px;
+  top: 0px;
   margin-left: auto;
   margin-right: auto;
 }
