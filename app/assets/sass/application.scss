@@ -89,6 +89,7 @@
   min-height: 330px;
   margin-bottom: 0;
   padding-top: 100px;
+  margin-top: -60px;
 
   h1,
   .h1 {
@@ -169,7 +170,7 @@
   background-position: center;
   background-repeat: no-repeat;
   border-bottom: 1px solid #d8d5d0;
-  padding-top: 60px;
+  margin-top: -20px;
 
   h1,
   .h1 {
@@ -477,6 +478,9 @@
   margin: 15px 0;
   }
 
+  img {
+  margin-bottom: 10px;
+  }
 }
 
 .article-title:before {
@@ -854,7 +858,7 @@ select[size]  {
 
   h3.title {
     color: $brand-primary;
-    font-size: 14px;
+    font-size: 1.2em;
     font-weight: bold;
     padding: 4px 0 5px 0;
     margin: 0px;
@@ -862,7 +866,7 @@ select[size]  {
 
   p.desc {
   margin-bottom: 0;
-  font-size: 80%;
+  font-size: 90%;
   }
 
   li{
