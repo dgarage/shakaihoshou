@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
 
+<!-- head -->
 <head>
+
+
+	<% if content_for?(:meta_contents) %>
+	<%= yield(:meta_contents) %> 
+	<% else %>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
 	<meta name="language" content="ja">
@@ -9,15 +15,19 @@
 	<meta name="description" content="社会保障ドットコムは、ライフステージ（妊娠・出産・育児・病気・住まい・仕事・老後・弔意）で必要な社会保障を気軽に確認できるサイトです。自治体と市民をつなぎ、みんなが暮らしやすい街づくりに貢献します。">
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="社会保障ドットコム">
-	<meta property="og:image"content="http://www.syakaihosyou.com/assets/ogi_syakaihosyou_vol1.png">
-	<meta property="og:image"content="http://www.syakaihosyou.com/assets/ogi_syakaihosyou_1l.png">
-	<meta property="og:image"content="http://www.syakaihosyou.com/assets/ogi_syakaihosyou_2s.png">
-	<meta property="og:image"content="http://www.syakaihosyou.com/assets/ogi_syakaihosyou_3m.png">
+	<meta property="og:image" content="http://www.syakaihosyou.com/assets/ogi_syakaihosyou_1l.png">
+	<meta property="og:image" content="http://www.syakaihosyou.com/assets/ogi_syakaihosyou_2s.png">
+	<meta property="og:image" content="http://www.syakaihosyou.com/assets/ogi_syakaihosyou_3m.png">
 	<meta property="og:url" content="http://www.syakaihosyou.com">
 	<meta property="og:description" content="社会保障ドットコムでは、ライフステージ（妊娠・出産・育児・病気・住まい・仕事・老後・弔意）で必要な社会保障を自治体ごとに比較検索できます。">
 	<meta property="og:site_name" content="社会保障ドットコム">
 
+	<% end %>
+	<% if content_for?(:title) %>
+	<%= yield(:title) %> 
+	<% else %> 
 	<title>社会保障ドットコム</title>
+	<% end %>
 
   <%= stylesheet_link_tag "application" %>
   <%= javascript_include_tag "application" %>
@@ -25,17 +35,23 @@
       <link href="/app/assets/ie.css" media="all" rel="stylesheet" />
   <![endif]-->
 
+	<!-- GoogleAnalytics -->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-57573925-1', 'auto');
+	  ga('send', 'pageview');
 
-  ga('create', 'UA-57573925-1', 'auto');
-  ga('send', 'pageview');
+	</script>
 
-</script>
+
+	<!-- twitter -->
+	<script>
+	window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
+	</script>
 
 </head>
 
@@ -53,7 +69,7 @@
 			<%= yield %>
 		
 <!-- footer -->
-			<%= render 'layouts/footer'%>
+			<%= render 'layouts/footer' %>
 <!-- end footer-->
 
 <!-- endmain -->
