@@ -124,7 +124,7 @@
 <url>
   <loc>http://www.syakaihosyou.com/search_by_area?selected_city%5B%E4%B8%AD%E5%A4%AE%E5%8C%BA%5D=1</loc>
   <priority>0.8</priority>
-  <changefreq>dweekly</changefreq>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>http://www.syakaihosyou.com/search_by_area?selected_city%5B%E6%B8%AF%E5%8C%BA%5D=1</loc>
