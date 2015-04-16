@@ -447,7 +447,7 @@
 //
 // article-Title new
 // --------------------------------------------------
-
+.article-title2, 
 .article-title {
   margin: 0 0 ($line-height-computed);
   padding: ($line-height-computed) 0;
@@ -483,12 +483,15 @@
   }
 }
 
+// --------------------------------------------------
+
 .article-title:before {
   background:url("a001_4179217.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: scroll;
 }
+
 .article-title:before {
   content: "";
   z-index: -1;
@@ -503,7 +506,26 @@
   opacity: .3;
 }
 
+.article-title2:before {
+  background:url("a002_11714360.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: scroll;
+}
 
+.article-title2:before {
+  content: "";
+  z-index: -1;
+  -webkit-filter: blur(4px);
+  -ms-filter: blur(4px);
+  filter: blur(4px);
+  position: absolute;
+  width: 90%;
+  height: 220px;
+  margin: -20px 0;
+  padding: 0;
+  opacity: .3;
+}
 
 //
 // article new
