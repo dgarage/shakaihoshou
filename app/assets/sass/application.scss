@@ -1006,13 +1006,16 @@ table {
   background-color: $table-bg;
   border: 2px solid #d1c0a5;
 
+  .tbody {
+    overflow-x: auto;
+  }
+
   .table-header-label {
     border-left: 2px solid #d1c0a5;
     border-right: 2px solid #d1c0a5;
     background: #e8dfd1;
     font-size: 100%;
   }
-
 
   .table-label {
     border-left: 2px solid #ebe4d8;
@@ -1135,56 +1138,94 @@ table {
   }
 
   .table-header-border_hline {
-  border-bottom: 2px solid #d1c0a5;
+    border-bottom: 2px solid #d1c0a5;
   }
 
 
 
-  tr.table-header-title th {
-  background-color: #938774;
-  font-size: 110%;
-  color: #fff;
+  tr.table-header-label2 {
+    border-bottom: 2px solid #d1c0a5;
   }
+
+  tr.table-header-label2 > th {
+    border-left: 2px solid #d1c0a5;
+    border-right: 2px solid #d1c0a5;
+    background: #e8dfd1;
+    font-size: 100%;
+  }
+
 
 }
 
 
-  h3.table-header-title {
-  background-color: #938774;
-  border-top: 2px solid #938774;
-  border-right: 2px solid #938774;
-  border-left: 2px solid #938774;
-  border-bottom: 1px solid #938774;
-  font-weight: bold;
-  font-size: 120%;
-  color: #fff;
-  margin-top: -10px;
-  margin-bottom: 0;
-  padding: 10px;
+  th.table-header-title{
+    background-color: #938774;
+    border-top: 2px solid #938774;
+    border-right: 2px solid #938774;
+    border-left: 2px solid #938774;
+    border-bottom: 1px solid #938774;
+    font-weight: bold;
+    font-size: 120%;
+    color: #fff;
+    margin-top: -10px;
+    margin-bottom: 0;
+    padding: 10px;
   }
 
 
 //
-// Tables new add
+// Tables table-striped2　new add
 // --------------------------------------------------
 
-.table-striped2 > tbody > tr:nth-child(odd) > td {
-  background-color: #f2f1f1;
-  border-top: 0;
-  border-bottom: 0;
-}
+  .table-striped2 > tbody > tr:nth-child(odd) > td,
+  .table-striped3 > tbody > tr:nth-child(odd) > td {
+    background-color: #f2f1f1;
+    border-top: 0;
+    border-bottom: 0;
+  }
 
-.table-striped2 > tbody > tr:nth-child(odd) > th {
-  border-top: 0;
-  border-bottom: 0;
-}
+  .table-striped2 > tbody > tr:nth-child(odd) > td,
+  .table-striped3 > tbody > tr:nth-child(odd) > th {
+    border-top: 0;
+    border-bottom: 0;
+  }
 
-.table>tbody>tr>th,
-.table>tbody>tr>td {
- border-top: 0;
-}
+  .table>tbody>tr>th,
+  .table>tbody>tr>td {
+   border-top: 0;
+  }
 
+  tr.table-header-label3 > th:first-child {
+    border-right: 1px solid #938774;
+  }
 
+  .table-striped3 > tbody > tr > td {
+    border-left: 0;
+    border-right: 2px solid #ebe4d8;
+  }
+
+  .table-striped3 > tbody > tr > td > mark {
+    background: #ff0;
+    color: #000;
+  }
+
+  .table-striped3 > tbody > tr > td:last-child {
+    border-right: 0;
+  }
+
+  .table-striped3 > tbody > tr > td:first-child {
+    font-weight: bold;
+    border-right: 2px solid #d1c0a5;
+  }
+
+  .table-striped3 > tbody > tr > td:nth-of-type(1),
+  .table-striped3 > tbody > tr > td:nth-of-type(2),
+  .table-striped3 > tbody > tr > td:nth-of-type(3),
+  .table-striped3 > tbody > tr > td:nth-of-type(4),
+  .table-striped3 > tbody > tr > td:nth-of-type(5),
+  .table-striped3 > tbody > tr > td:nth-of-type(6) {
+    font-weight: bold;
+  }
 
 }
 

@@ -1,389 +1,420 @@
 <%= render 'layouts/header_nav' %>
 <%= render 'layouts/header_mini' %>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <div class=" container search-results">
 
 <div class="sidenav">
-	<h2><span class="glyphicon-s icon-trophy"></span>東京23区<span class="title">子育て支援</span><span class="search">お役立ち助成一覧</span>（2015年4月調査）</h2>
+	<h2><span class="glyphicon glyphicon-stop"></span>東京23区<span class="title">出産・育児に優しい金銭的支援一覧</span><span class="search"></span>（2015年4月）</h2>
+	<p><a href="/article/002_ikuji23kuhikaku_1">特集記事：「出産・育児に優しい金銭的支援23区比較 2015年版」</a>を公開中！</p>
 
-
-		<div class="col-lg-12 col-md-4 col-sm-12 col-xs-12">
+	<div class="row">
+		<div class="table-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			
-			<table class="table table-striped">
-			 <tr class="table-header-border_hline">
-			  <th class="table-header-label table-scene">自治体名</th>
-			  <th class="table-header-label table-scene">妊婦健診公費負担_妊婦健康診査_回数</th>
-			  <th class="table-header-label table-scene">妊婦健診公費負担_超音波検査_回数</th>
-			  <th class="table-header-label table-scene" style='width:150pt'>里帰り出産等の妊婦健診公費負担</th>
-			  <th class="table-header-label table-scene" style='width:150pt'>子ども医療費助成<br>
-			  (通院・入院費)_助成を受けられる子どもの年齢</th>
-			  <th class="table-header-label table-scene" style='width:150pt'>任意予防接種、区独自の助成</th>
-			  <th class="table-header-label table-scene" style='width:150pt'>自治体独自の特質すべき支援２〜4項目程度（金可能な限金額を記載）</th>
-			 </tr>
+			<table class="table table-striped3">
+				<tr class="table-header-label2">
+					<th>自治体名</th>
+					<th>妊婦健康診査公費負担&nbsp;回数</th>
+					<th>超音波検査公費負担&nbsp;回数</th>
+					<th>里帰り出産等の妊婦健診公費負担</th>
+					<th>子ども医療費助成(通院・入院費)&nbsp;年齢</th>
+					<th>任意予防接種<br>自治体独自の助成</th>
+					<th>自治体独自の特質すべき支援</th>
+				</tr>
 
-			 <tr>
-			  <td height=174 style='height:174.0pt'>千代田区</td>
-			  <td class=xl146 width=116 style='width:116pt'>14回</td>
-			  <td class=xl146 width=107 style='width:107pt'>1回</td>
-			  <td>○</td>
-			  <td class=xl146 width=129 style='width:129pt'>・18歳（高校生まで）</td>
-			  <td class=xl146 width=262 style='width:262pt'>・おたふくかぜ<br>
-			  ・インフルエンザ</td>
-			  <td class=xl146 width=429 style='width:429pt'>◇外国人学校児童・生徒保護者補助金<br>
-			  児童・生徒一人につき・月額6,000円<br>
-			  <br>
-			  ◇次世代育成手当<br>
-			  16&#65374;18までの児童がいる世帯に児童1人につき5000円（月額）支給<br>
-			  <br>
-			  ◇誕生準備手当<br>
-			  妊娠20週以降の妊婦に一妊娠につき、1回 45,000円支給<br>
-			  <br>
-			  ◇高校生等医療費助成制度<br>
-			  高校生相当年齢（15歳に達した日以後の最初の3月31日を経過し、18歳に達した日以後の最初の3月31日までにある子ども）で、千代田区に住民登録があり、国内の健康保険に加入している方です。高校に通っていなくても対象になります。</td>
-			 </tr>
-			 <tr height=109 style='height:109.0pt'>
-			  <td height=109 style='height:109.0pt'>中央区</td>
-			  <td class=xl146 width=116 style='width:116pt'>14回</td>
-			  <td>1回</td>
-			  <td>○</td>
-			  <td class=xl146 width=129 style='width:129pt'>・15歳（中学生まで）</td>
-			  <td>・おたふくかぜ</td>
-			  <td class=xl146 width=429 style='width:429pt'>◇出産支援祝品（タクシー利用券）<br>
-			  妊婦さんにタクシー利用券（1万円分）を贈呈<br>
-			  <br>
-			  ◇新生児誕生祝品（区内共通買物券）の支給<br>
-			  区内共通買物券（3万円分）を贈呈<br>
-			  <br>
-			  ◇中央区外国人学校生徒等の外国人保護者に対する補助制度<br>
-			  生徒・児童一人につき月額8,000円</td>
-			 </tr>
-			 <tr height=96 style='height:96.0pt'>
-			  <td height=96 style='height:96.0pt'>港区</td>
-			  <td class=xl146 width=116 style='width:116pt'>14回</td>
-			  <td>2回</td>
-			  <td>○</td>
-			  <td class=xl146 width=129 style='width:129pt'>・15歳（中学生まで）</td>
-			  <td></td>
-			  <td class=xl146 width=429 style='width:429pt'>◇出産費用の助成<br>
-			 
-			  分娩費や出産にかかった入院費用（上限額60万円）から、健康保険で支給される出産育児一時金（付加金含む）を差し引いた額を助成。（例：国保の場合上限額60万-国保42万円=18万円支給）<br>
-			  <br>
-			  ◇港区立幼稚園就園奨励事業<br>
-			  入園料・保育料を所得と児童数に応じて全額または減免</td>
-			 </tr>
-			 <tr height=135 style='height:135.0pt'>
-			  <td height=135 style='height:135.0pt'>新宿区</td>
-			  <td class=xl146 width=116 style='width:116pt'>14回</td>
-			  <td>3回</td>
-			  <td>○</td>
-			  <td class=xl146 width=129 style='width:129pt'>・15歳（中学生まで）</td>
-			  <td>・おたふくかぜ</td>
-			  <td class=xl146 width=429 style='width:429pt'>◇子育てファミリー世帯居住支援（転入転居助成）<br>
-			  ・転入助成<br>
-			  <span style="mso-spacerun:yes">&nbsp;</span>（区外から区内へ）
-			  （募集世帯数制限、所得制限あり）契約時の礼金、仲介手数料の合計で最大36万円。<br>
-			  ・転居助成<br>
-			  <span
-			  style="mso-spacerun:yes">&nbsp;</span>（新宿区内の転居）引越し代の実費で、（募集世帯数制限、所得制限あり）最大20万円。（引越し荷物の搬送代で、引越し業者に依頼した場合に限る)<br>
-			  <br>
-			  ◇民間賃貸住宅家賃助成<br>
-			  子育てファミリー世帯向け（募集世帯数制限あり）月額3万円</td>
-			 </tr>
-			 <tr height=83 style='height:83.0pt'>
-			  <td height=83 style='height:83.0pt'>文京区</td>
-			  <td class=xl146 width=116 style='width:116pt'>14回</td>
-			  <td>1回</td>
-			  <td>○</td>
-			  <td class=xl146 width=129 style='width:129pt'>・15歳（中学生まで）</td>
-			  <td class=xl146 width=262 style='width:262pt'>・おたふくかぜ<br>
-			  ・麻しん風しん（第1期の定期予防接種の接種もれ）</td>
-			  <td class=xl146 width=429 style='width:429pt'>◇ひとり親世帯向け住み替え家賃助成<br>
-			  礼金、仲介手数料、引越経費の合計額15万円まで（所得制限あり）<br>
-			  <br>
-			  ◇入居支援<br>
-			  ひとり親家庭<br>
-			  初回保証料の一部（上限：5万円）</td>
-			 </tr>
-			 <tr height=70 style='height:70.0pt'>
-			  <td height=70 style='height:70.0pt'>台東区</td>
-			  <td class=xl146 width=116 style='width:116pt'>14回</td>
-			  <td>1回</td>
-			  <td>○</td>
-			  <td class=xl146 width=129 style='width:129pt'>・15歳（中学生まで）</td>
-			  <td>・麻しん風しん（第1期の定期予防接種の接種もれ）</td>
-			  <td class=xl146 width=429 style='width:429pt'>◇子どものインフルエンザ予防接種費用を一部助成（2,000円×2回まで接種可能）<br>
-			  <br>
-			  ◇麻しん風しん混合予防接種（第1期）未接種者へ接種料を助成<br>
-			  摂取費用　無料<br>
-			  </td>
-			 </tr>
-			 <tr height=31 style='height:31.0pt'>
-			  <td height=31 style='height:31.0pt'>墨田区</td>
-			  <td class=xl146 width=116 style='width:116pt'>14回</td>
-			  <td>1回</td>
-			  <td>○</td>
-			  <td class=xl146 width=129 style='width:129pt'>・15歳（中学生まで）</td>
-			  <td class=xl146 width=262 style='width:262pt'>・麻しん風しん（第1期の定期予防接種の接種もれ）</td>
-			  <td class=xl146 width=429 style='width:429pt'>◇3歳以上の障害者（児）で、失禁等によりおむつが必要な方に紙おむつを支給（病院指定のおむつの場合おむつ代を支給（7,000円限度）</td>
-			 </tr>
-			 <tr height=96 style='height:96.0pt'>
-			  <td height=96 style='height:96.0pt'>江東区</td>
-			  <td class=xl146 width=116 style='width:116pt'>14回</td>
-			  <td>1回</td>
-			  <td>○</td>
-			  <td class=xl146 width=129 style='width:129pt'>・15歳（中学生まで）</td>
-			  <td class=xl146 width=262 style='width:262pt'>・麻しん風しん（第1期の定期予防接種の接種もれ）<br>
-			  </td>
-			  <td class=xl146 width=429 style='width:429pt'>◇外国人学校保護者負担軽減制度<br>
-			  朝鮮学校、韓国学校および中華学校に通学する児童、生徒の保護者の負担を軽減<br>
-			  児童、生徒１人につき月額８，０００円<br>
-			  <br>
-			  ◇児童・幼児用自転車ヘルメットの購入あっせん<br>
-			  区内に住所を有する方が児童・幼児用自転車ヘルメットを購入する際、割引など各店舗が独自に特典を提供</td>
-			 </tr>
-			 <tr height=109 style='height:109.0pt'>
-			  <td height=109 style='height:109.0pt'>品川区</td>
-			  <td class=xl146 width=116 style='width:116pt'>14回</td>
-			  <td class=xl146 width=107 style='width:107pt'>1回</td>
-			  <td>○</td>
-			  <td class=xl146 width=129 style='width:129pt'>・15歳（中学生まで）</td>
-			  <td class=xl146 width=262 style='width:262pt'>・おたふくかぜ<br>
-			  ・B型肝炎</td>
-			  <td class=xl146 width=429 style='width:429pt'>◇多子家庭給食費補助<br>
-			  多子家庭の給食費の保護者負担を軽減<br>
-			  給食費日割（一食）単価 　320円まで<br>
-			  <br>
-			  ◇ぐんぐんスクール<br>
-			  ひとり親家庭のお子さんが対象<br>
-			  大学生や社会人のボランティアが個別指導での学習指導を行います。 <br>
-			  参加費無料</td>
-			 </tr>
-			 <tr height=83 style='height:83.0pt'>
-			  <td height=83 style='height:83.0pt'>目黒区</td>
-			  <td class=xl146 width=116 style='width:116pt'>14回</td>
-			  <td>1回</td>
-			  <td>○</td>
-			  <td class=xl146 width=129 style='width:129pt'>・15歳（中学生まで）</td>
-			  <td></td>
-			  <td class=xl146 width=429 style='width:429pt'>◇チャイルドシートのレンタル斡旋<br>
-			  1歳児未満用は4,725円から。その他の商品は各通常料金の15％引き<br>
-			  <br>
-			  ◇親子ふれあい入浴デー<br>
-			  毎月1回、保護者と小学生以下2人1組<br>
-			  公衆浴場に無料（証明不要）</td>
-			 </tr>
-			 <tr height=83 style='height:83.0pt'>
-			  <td height=83 style='height:83.0pt'>大田区</td>
-			  <td class=xl146 width=116 style='width:116pt'>14回</td>
-			  <td>1回</td>
-			  <td>○</td>
-			  <td class=xl146 width=129 style='width:129pt'>・15歳（中学生まで）</td>
-			  <td></td>
-			  <td class=xl146 width=429 style='width:429pt'>◇指定助産施設<br>
-			  入院して分べんする費用の支払が困難な妊産婦の方は、区指定の助産施設に入院できます。<br>
-			  <br>
-			  ◇義務教育費用<br>
-			  所得が基準以下のご家庭に、学校でかかる費用の一部を援助</td>
-			 </tr>
-			 <tr height=83 style='height:83.0pt'>
-			  <td height=83 style='height:83.0pt'>世田谷区</td>
-			  <td class=xl146 width=116 style='width:116pt'>14回</td>
-			  <td>1回</td>
-			  <td>○</td>
-			  <td class=xl146 width=129 style='width:129pt'>・15歳（中学生まで）</td>
-			  <td>・麻しん風しん（第1期の定期予防接種の接種もれ）</td>
-			  <td class=xl146 width=429 style='width:429pt'>◇さんさんサポート（子育て支援ヘルパー派遣）妊娠届の届出日から出産後1年まで<br>
-			  利用時間利用券2枚を使って4時間まで無料<br>
-			  <br>
-			  ◇第3子以降の出産費の一部を助成<br>
-			  出産費から「出産育児一時金」や「出産に伴うその他の給付金等の額を引いた差額分を助成。48万円（上限）</td>
-			 </tr>
-			 <tr height=122 style='height:122.0pt'>
-			  <td height=122 style='height:122.0pt'>渋谷区</td>
-			  <td class=xl146 width=116 style='width:116pt'>14回</td>
-			  <td>1回</td>
-			  <td>○</td>
-			  <td class=xl146 width=129 style='width:129pt'>・15歳（中学生まで）</td>
-			  <td class=xl146 width=262 style='width:262pt'>・ロタウイルスワクチン<br>
-			  ・おたふくかぜ<br>
-			  ・B型肝炎<br>
-			  ・麻しん風しん（第1期の定期予防接種の接種もれ）<br>
-			  ・インフルエンザ</td>
-			  <td class=xl146 width=429 style='width:429pt'>◇ハッピーマザー出産助成金<br>
-			  1人の出産につき80,000円まで<br>
-			  <br>
-			  ◇子どもの任意予防接種<br>
-			  インフルエンザ（全額助成）<br>
-			  ロタウイルスワクチン　7,500円を2回まで<br>
-			  おたふくかぜ1回5,000円<br>
-			  B型肝炎1回5,000円<br>
-			  麻しん風しん（MR）任意予防接種（全額助成）</td>
-			 </tr>
-			 <tr height=135 style='height:135.0pt'>
-			  <td height=135 style='height:135.0pt'>中野区</td>
-			  <td class=xl146 width=116 style='width:116pt'>14回</td>
-			  <td>1回</td>
-			  <td>○</td>
-			  <td class=xl146 width=129 style='width:129pt'>・15歳（中学生まで）</td>
-			  <td class=xl146 width=262 style='width:262pt'>・おたふくかぜ<br>
-			  ・麻しん風しん（第1期の定期予防接種の接種もれ）</td>
-			  <td class=xl146 width=429 style='width:429pt'>◇おたふくかぜ（流行性耳下腺炎）のワクチン接種<br>
-			  （中野区にお住む満1歳から小学校に入学するまでの子供）<br>
-			  4,000円の助成（助成は1回まで）<br>
-			  <br>
-			  ◇外国人学校児童・生徒保護者補助金<br>
-			  外国人学校に通っている外国籍の保護者に交付<br>
-			  児童・生徒1人につき、月額8,000円×授業料を納付した月数<br>
-			  <br>
-			  ◇長時間利用児保護者補助金（認定こども園（幼稚園型）を長時間利用契約している幼稚園児の、教育時間外保育料に対する補助）27,000円まで</td>
-			 </tr>
-			 <tr height=83 style='height:83.0pt'>
-			  <td height=83 style='height:83.0pt'>杉並区</td>
-			  <td class=xl146 width=116 style='width:116pt'>14回</td>
-			  <td>1回</td>
-			  <td>○</td>
-			  <td class=xl146 width=129 style='width:129pt'>・15歳（中学生まで）</td>
-			  <td>・おたふくかぜ</td>
-			  <td class=xl146 width=429 style='width:429pt'>◇区内指定医療機関及びファン助産院で産婦健診を受ける場合は産婦健診費用を公費負担<br>
-			  <br>
-			  ◇おたふくかぜワクチン及び水ぼうそうワクチン接種費用の一部助成<br>
-			  「水痘ワクチン」6,000円助成<br>
-			  「おたふくかぜワクチン」4,000円助成</td>
-			 </tr>
-			 <tr height=109 style='height:109.0pt'>
-			  <td height=109 style='height:109.0pt'>豊島区</td>
-			  <td class=xl146 width=116 style='width:116pt'>14回</td>
-			  <td>1回</td>
-			  <td>○</td>
-			  <td class=xl146 width=129 style='width:129pt'>・15歳（中学生まで）</td>
-			  <td>・おたふくかぜ</td>
-			  <td class=xl146 width=429 style='width:429pt'>◇おたふくかぜ予防接種の費用助成（1歳から7歳未満の就学前の子供）<br>
-			  3,000円助成（助成は1回まで）<br>
-			  <br>
-			  ◇子育てファミリー世帯への家賃助成制度<br>
-			 
-			  民間賃貸住宅（区民住宅ソシエを含む）に転居（転入）した場合に、一定の要件を満たす子育てファミリー世帯に対し、転居(転入）後の家賃と基準家賃との差額の一部を一定期間助成<br>
-			  助成期間：5年間、助成金額の上限：月額15,000円<span style="mso-spacerun:yes">&nbsp;
-			  </span>ただし、4年目からは2分の1<span style="mso-spacerun:yes">&nbsp;&nbsp;</span></td>
-			 </tr>
-			 <tr height=161 style='height:161.0pt'>
-			  <td height=161 style='height:161.0pt'>北区</td>
-			  <td class=xl146 width=116 style='width:116pt'>14回</td>
-			  <td>1回</td>
-			  <td>○</td>
-			  <td class=xl146 width=129 style='width:129pt'>・15歳（中学生まで）<br>
-			  ・18歳高校生は入院医療費に限り助成あり。</td>
-			  <td class=xl146 width=262 style='width:262pt'>・麻しん風しん（第1期の定期予防接種の接種もれ）<br>
-			  ・おたふくかぜ</td>
-			  <td class=xl146 width=429 style='width:429pt'>◇ファミリー世帯　住み替え家賃助成／転居費用助成<br>
-			  ・住み替え家賃助成（3年間、所得制限あり」）<br>
-			  上限月額2万円（1年間）<br>
-			  2年目・・・1年目の3分の2 <br>
-			  3年目・・・1年目の3分の1 <br>
-			  ・転居費用助成（所得制限あり）<br>
-			  転居費用のうち礼金・仲介手数料の合算額（上限30万円）を助成<br>
-			  <br>
-			  ◇高校生等の入院医療費助成<br>
-			  高校生等（18歳に達した日以降の最初の3月31日まで）のお子さんを養育されている保護者が対象
-			  <br>
-			  各健康保険適用の入院診療費の自己負担分を助成。（食事療養費も助成）</td>
-			 </tr>
-			 <tr height=83 style='height:83.0pt'>
-			  <td height=83 style='height:83.0pt'>荒川区</td>
-			  <td class=xl146 width=116 style='width:116pt'>14回</td>
-			  <td>1回</td>
-			  <td>○</td>
-			  <td class=xl146 width=129 style='width:129pt'>・15歳（中学生まで）</td>
-			  <td class=xl146 width=262 style='width:262pt'>・麻しん風しん（第1期の定期予防接種の接種もれ）<br>
-			  ・おたふくかぜ</td>
-			  <td class=xl146 width=429 style='width:429pt'>◇おたふくかぜ予防接種費用の助成<br>
-			  子どもの予防接種費用の一部を助成<br>
-			  助成額：3500円（1回のみ）<br>
-			  <br>
-			  ◇区民住宅を活用して子どもが3人以上いる家庭の支援<br>
-			  月2万円減額（所得制限あり）</td>
-			 </tr>
-			 <tr height=96 style='height:96.0pt'>
-			  <td height=96 style='height:96.0pt'>板橋区</td>
-			  <td class=xl146 width=116 style='width:116pt'>14回</td>
-			  <td>1回</td>
-			  <td>○</td>
-			  <td class=xl146 width=129 style='width:129pt'>・15歳（中学生まで）</td>
-			  <td></td>
-			  <td class=xl146 width=429 style='width:429pt'>◇赤ちゃんの駅<br>
-			  外出中にオムツ替えや授乳などで立ち寄ることができる区立保育園・児童館など<br>
-			  利用料無料<br>
-			  <br>
-			  ◇すくすくカード事業<br>
-			  子育て世代を応援する利用券（バウチャー）を配付する制度<br>
-			  1歳未満の子どもの保護者、子ども一人につき利用券5枚がついたカードを配付</td>
-			 </tr>
-			 <tr height=83 style='height:83.0pt'>
-			  <td height=83 style='height:83.0pt'>練馬区</td>
-			  <td class=xl146 width=116 style='width:116pt'>14回</td>
-			  <td>1回</td>
-			  <td>○</td>
-			  <td class=xl146 width=129 style='width:129pt'>・15歳（中学生まで）</td>
-			  <td class=xl146 width=262 style='width:262pt'>・麻しん風しん（第1期の定期予防接種の接種もれ）<br>
-			  ・おたふくかぜ</td>
-			  <td class=xl146 width=429 style='width:429pt'>◇水ぼうそう予防接種費用助成（1歳以上3歳未満）1回3,000円（2回）<br>
-			  <br>
-			  ◇おたふくかぜ予防接種費用助成（1歳以上3歳未満）1回3,000円（1回）<br>
-			  <br>
-			  ◇第3子誕生祝金<br>
-			  第3子以降の出生した児童1人につき20万円</td>
-			 </tr>
-			 <tr height=83 style='height:83.0pt'>
-			  <td height=83 style='height:83.0pt'>足立区</td>
-			  <td class=xl146 width=116 style='width:116pt'>14回</td>
-			  <td>2回</td>
-			  <td>○</td>
-			  <td class=xl146 width=129 style='width:129pt'>・15歳（中学生まで）</td>
-			  <td class=xl146 width=262 style='width:262pt'>・麻しん風しん（第1期の定期予防接種の接種もれ）<br>
-			  </td>
-			  <td class=xl146 width=429 style='width:429pt'>◇麻しんまたは風しんワクチン（MRワクチンを含む）を予防接種の公費負担（2歳から高3相当の年齢まで）<br>
-			  <br>
-			  ◇出産費用の助成<br>
-			  経済的な理由でその費用を支払うことが困難な家庭のために、低額な費用で入院・出産のできる「入院助産制度」</td>
-			 </tr>
-			 <tr height=96 style='height:96.0pt'>
-			  <td height=96 style='height:96.0pt'>葛飾区</td>
-			  <td class=xl146 width=116 style='width:116pt'>14回</td>
-			  <td>1回</td>
-			  <td>○</td>
-			  <td class=xl146 width=129 style='width:129pt'>・15歳（中学生まで）</td>
-			  <td class=xl146 width=262 style='width:262pt'>・麻しん風しん（第1期の定期予防接種の接種もれ）<br>
-			  ・おたふくかぜ</td>
-			  <td class=xl146 width=429 style='width:429pt'>◇三人乗り自転車購入費助成事業<br>
-			  三人乗り自転車（幼児2人同乗用自転車）の購入費助成<br>
-			  購入金額の2分の1を助成。（上限3万円）<br>
-			  <br>
-			  ◇赤ちゃんの駅<br>
-			  外出時におむつ替えや授乳などが行える「赤ちゃんの駅」<br>
-			  利用料無料</td>
-			 </tr>
-			 <tr height=109 style='height:109.0pt'>
-			  <td height=109 style='height:109.0pt'>江戸川区</td>
-			  <td class=xl146 width=116 style='width:116pt'>14回</td>
-			  <td>1回</td>
-			  <td>○</td>
-			  <td class=xl146 width=129 style='width:129pt'>・15歳（中学生まで）</td>
-			  <td class=xl146 width=262 style='width:262pt'>・麻しん風しん（第1期の定期予防接種の接種もれ）<br>
-			  </td>
-			  <td class=xl146 width=429 style='width:429pt'>◇乳児養育手当（ゼロ歳児）<br>
-			  赤ちゃんにとって、一番大切な時期を保育に専念していただくために経済的支援<br>
-			  手当支給額　月額　13,000円（所得制限あり）<br>
-			  <br>
-			  ◇ひとり親家庭民間賃貸住宅家賃等助成<br>
-			 
-			  民間賃貸住宅に居住していて、家主さんから建物の取り壊しなどで立ち退きを求められているひとり親家庭の世帯（18歳未満の児童とで構成する世帯）で、転居後の家賃などの差額を助成</td>
-			 </tr>
+				<tr>
+					<td class="text-center">千代田区</td>
+					<td class="text-center">14回</td>
+					<td class="text-center">1回</td>
+					<td class="text-center text-nowrap"><span class="glyphicon glyphicon-ok"></span></td>
+					<td>18歳（高校生まで）</td>
+					<td>・おたふくかぜ<br>
+					・インフルエンザ</td>
+					<td>●&nbsp;<strong>外国人学校児童・生徒保護者補助金</strong><br>
+					児童・生徒一人につき、月額&nbsp;6,000円<br>
+					<br>
+					●&nbsp;<strong>次世代育成手当</strong><br>
+					16&#65374;18歳までの児童がいる世帯に児童1人につき、月額&nbsp;5,000円支給<br>
+					<br>
+					●&nbsp;<strong>誕生準備手当</strong><br>
+					妊娠20週以降の妊婦に一妊娠につき、1回&nbsp;45,000円支給<br>
+					<br>
+					●&nbsp;<strong>高校生等医療費助成制度</strong><br>
+					高校生相当年齢（15歳に達した日以後の最初の3月31日を経過し、18歳に達した日以後の最初の3月31日までにある子ども）で、千代田区に住民登録があり、国内の健康保険に加入している方です。高校に通っていなくても対象になります。</td>
+				</tr>
+				<tr>
+					<td class="text-center">中央区</td>
+					<td class="text-center">14回</td>
+					<td class="text-center">1回</td>
+					<td class="text-center text-nowrap"><span class="glyphicon glyphicon-ok"></span></td>
+					<td>15歳（中学生まで）</td>
+					<td>・おたふくかぜ</td>
+					<td>●&nbsp;<strong>出産支援祝品（タクシー利用券）</strong><br>
+					妊婦さんにタクシー利用券（1万円分）を贈呈<br>
+					<br>
+					●&nbsp;<strong>新生児誕生祝品（区内共通買物券）の支給</strong><br>
+					区内共通買物券（3万円分）を贈呈<br>
+					<br>
+					●&nbsp;<strong>中央区外国人学校生徒等の外国人保護者に対する補助制度</strong><br>
+					生徒・児童一人につき、月額&nbsp;8,000円</td>
+				</tr>
+				<tr>
+					<td class="text-center">港区</td>
+					<td class="text-center">14回</td>
+					<td class="text-center">2回</td>
+					<td class="text-center text-nowrap"><span class="glyphicon glyphicon-ok"></span></td>
+					<td>15歳（中学生まで）</td>
+					<td></td>
+					<td>●&nbsp;<strong>出産費用の助成</strong><br>
+					分娩費や出産にかかった入院費用（上限額60万円）から、健康保険で支給される出産育児一時金（付加金含む）を差し引いた額を助成。（例：国保の場合上限額60万-国保42万円=18万円支給）<br>
+					<br>
+					●&nbsp;<strong>港区立幼稚園就園奨励事業</strong><br>
+					入園料・保育料を所得と児童数に応じて全額または減免</td>
+				</tr>
+				<tr>
+					<td class="text-center">新宿区</td>
+					<td class="text-center">14回</td>
+					<td class="text-center">3回</td>
+					<td class="text-center text-nowrap"><span class="glyphicon glyphicon-ok"></span></td>
+					<td>15歳（中学生まで）</td>
+					<td>・おたふくかぜ</td>
+					<td>●&nbsp;<strong>子育てファミリー世帯居住支援（転入転居助成）</strong><br>
+					・転入助成（区外から区内へ）<br>
+					（募集世帯数制限、所得制限あり）契約時の礼金、仲介手数料の合計で最大36万円。<br><br>
+					・転居助成（新宿区内の転居）<br>
+					引越し代の実費で、（募集世帯数制限、所得制限あり）最大20万円。（引越し荷物の搬送代で、引越し業者に依頼した場合に限る)<br>
+					<br>
+					●&nbsp;<strong>民間賃貸住宅家賃助成</strong><br>
+					子育てファミリー世帯向け（募集世帯数制限あり）月額&nbsp;3万円</td>
+					</tr>
+					<tr>
+					<td class="text-center">文京区</td>
+					<td class="text-center">14回</td>
+					<td class="text-center">1回</td>
+					<td class="text-center text-nowrap"><span class="glyphicon glyphicon-ok"></span></td>
+					<td>15歳（中学生まで）</td>
+					<td>・おたふくかぜ<br>
+					・麻しん風しん（第1期の定期予防接種の接種もれ）</td>
+					<td>●&nbsp;<strong>ひとり親世帯向け住み替え家賃助成</strong><br>
+					礼金、仲介手数料、引越経費の合計額15万円まで（所得制限あり）<br>
+					<br>
+					●&nbsp;<strong>入居支援</strong><br>
+					ひとり親家庭に初回保証料の一部（上限：5万円）</td>
+				</tr>
+				<tr>
+					<td class="text-center">台東区</td>
+					<td class="text-center">14回</td>
+					<td class="text-center">1回</td>
+					<td class="text-center text-nowrap"><span class="glyphicon glyphicon-ok"></span></td>
+					<td>15歳（中学生まで）</td>
+					<td>・麻しん風しん（第1期の定期予防接種の接種もれ）</td>
+					<td>●&nbsp;<strong>子どものインフルエンザ予防接種費用の一部助成</strong><br>
+					2,000円×2回まで接種可能<br>
+					<br>
+					●&nbsp;<strong>麻しん風しん混合予防接種（第1期）未接種者へ接種料を助成</strong><br>
+					摂取費用　無料<br>
+					</td>
+				</tr>
+				<tr>
+					<td class="text-center">墨田区</td>
+					<td class="text-center">14回</td>
+					<td class="text-center">1回</td>
+					<td class="text-center text-nowrap"><span class="glyphicon glyphicon-ok"></span></td>
+					<td>15歳（中学生まで）</td>
+					<td>・麻しん風しん（第1期の定期予防接種の接種もれ）</td>
+					<td>●&nbsp;<strong>3歳以上の障害者（児）で、失禁等によりおむつが必要な方に紙おむつを支給</strong><br>
+					病院指定のおむつの場合おむつ代を支給、月額&nbsp;7,000円限度<br>
+					住民税の課税されている世帯は、一部負負担</td>
+				</tr>
+				<tr>
+					<td class="text-center">江東区</td>
+					<td class="text-center">14回</td>
+					<td class="text-center">1回</td>
+					<td class="text-center text-nowrap"><span class="glyphicon glyphicon-ok"></span></td>
+					<td>15歳（中学生まで）</td>
+					<td>・麻しん風しん（第1期の定期予防接種の接種もれ）<br>
+					</td>
+					<td>●&nbsp;<strong>外国人学校保護者負担軽減制度</strong><br>
+					朝鮮学校、韓国学校および中華学校に通学する児童、生徒の保護者の負担を軽減<br>
+					児童、生徒１人につき、月額&nbsp;8,000円<br>
+					<br>
+					●&nbsp;<strong>児童・幼児用自転車ヘルメットの購入あっせん</strong><br>
+					区内に住所を有する方が児童・幼児用自転車ヘルメットを購入する際、割引など各店舗が独自に特典を提供</td>
+				</tr>
+				<tr>
+					<td class="text-center">品川区</td>
+					<td class="text-center">14回</td>
+					<td class="text-center">1回</td>
+					<td class="text-center text-nowrap"><span class="glyphicon glyphicon-ok"></span></td>
+					<td>15歳（中学生まで）</td>
+					<td>・おたふくかぜ<br>
+					・B型肝炎</td>
+					<td>●&nbsp;<strong>多子家庭給食費補助</strong><br>
+					多子家庭の給食費の保護者負担を軽減<br>
+					給食費日割（一食）単価&nbsp;320円まで<br>
+					<br>
+					●&nbsp;<strong>ぐんぐんスクール</strong><br>
+					ひとり親家庭のお子さんが対象<br>
+					大学生や社会人のボランティアが個別指導での学習指導を行います。 <br>
+					参加費無料</td>
+				</tr>
+				<tr>
+					<td class="text-center">目黒区</td>
+					<td class="text-center">14回</td>
+					<td class="text-center">1回</td>
+					<td class="text-center text-nowrap"><span class="glyphicon glyphicon-ok"></span></td>
+					<td>15歳（中学生まで）</td>
+					<td></td>
+					<td>●&nbsp;<strong>チャイルドシートのレンタル斡旋</strong><br>
+					1歳児未満用は4,725円から、その他の商品は各通常料金の15％引き<br>
+					<br>
+					●&nbsp;<strong>親子ふれあい入浴デー</strong><br>
+					毎月1回、保護者と小学生以下2人1組<br>
+					公衆浴場に無料（証明不要）</td>
+				</tr>
+				<tr>
+					<td class="text-center">大田区</td>
+					<td class="text-center">14回</td>
+					<td class="text-center">1回</td>
+					<td class="text-center text-nowrap"><span class="glyphicon glyphicon-ok"></span></td>
+					<td>15歳（中学生まで）</td>
+					<td></td>
+					<td>●&nbsp;<strong>指定助産施設</strong><br>
+					入院して分べんする費用の支払が困難な妊産婦の方は、区指定の助産施設に入院できます。<br>
+					<br>
+					●&nbsp;<strong>義務教育費用</strong><br>
+					所得が基準以下のご家庭に、学校でかかる費用の一部を援助</td>
+				</tr>
+				<tr>
+					<td class="text-center">世田谷区</td>
+					<td class="text-center">14回</td>
+					<td class="text-center">1回</td>
+					<td class="text-center text-nowrap"><span class="glyphicon glyphicon-ok"></span></td>
+					<td>15歳（中学生まで）</td>
+					<td>・麻しん風しん（第1期の定期予防接種の接種もれ）</td>
+					<td>●&nbsp;<strong>さんさんサポート（子育て支援ヘルパー派遣）</strong><br>
+					妊娠届の届出日から出産後1年まで<br>
+					利用時間利用券2枚を使って4時間まで無料<br>
+					<br>
+					●&nbsp;<strong>第3子以降の出産費の一部を助成</strong><br>
+					出産費から「出産育児一時金」や「出産に伴うその他の給付金等の額を引いた差額分を助成。48万円（上限）</td>
+				</tr>
+				<tr>
+					<td class="text-center">渋谷区</td>
+					<td class="text-center">14回</td>
+					<td class="text-center">1回</td>
+					<td class="text-center text-nowrap"><span class="glyphicon glyphicon-ok"></span></td>
+					<td>15歳（中学生まで）</td>
+					<td>・ロタウイルスワクチン<br>
+					・おたふくかぜ<br>
+					・B型肝炎<br>
+					・麻しん風しん（第1期の定期予防接種の接種もれ）<br>
+					・インフルエンザ</td>
+					<td>●&nbsp;<strong>ハッピーマザー出産助成金</strong><br>
+					1人の出産につき、80,000円まで<br>
+					<br>
+					●&nbsp;<strong>子どもの任意予防接種</strong><br>
+					インフルエンザ（全額助成）<br>
+					ロタウイルスワクチン&nbsp;7,500円を2回まで<br>
+					おたふくかぜ1回&nbsp;5,000円<br>
+					B型肝炎1回&nbsp;5,000円<br>
+					麻しん風しん（MR）任意予防接種（全額助成）</td>
+				</tr>
+				<tr>
+					<td class="text-center">中野区</td>
+					<td class="text-center">14回</td>
+					<td class="text-center">1回</td>
+					<td class="text-center text-nowrap"><span class="glyphicon glyphicon-ok"></span></td>
+					<td>15歳（中学生まで）</td>
+					<td>・おたふくかぜ<br>
+					・麻しん風しん（第1期の定期予防接種の接種もれ）</td>
+					<td>●&nbsp;<strong>おたふくかぜ（流行性耳下腺炎）のワクチン接種</strong><br>
+					中野区にお住む満1歳から小学校に入学するまでの子供<br>
+					4,000円の助成を1回まで<br>
+					<br>
+					●&nbsp;<strong>外国人学校児童・生徒保護者補助金</strong><br>
+					外国人学校に通っている外国籍の保護者に交付<br>
+					児童・生徒1人につき、月額&nbsp;8,000円×授業料を納付した月数<br>
+					<br>
+					●&nbsp;<strong>長時間利用児保護者補助金</strong><br>認定こども園（幼稚園型）を長時間利用契約している幼稚園児の、教育時間外保育料に対する補助）月額&nbsp;27,000円まで</td>
+				</tr>
+				<tr>
+				  <td class="text-center">杉並区</td>
+					<td class="text-center">14回</td>
+					<td class="text-center">1回</td>
+					<td class="text-center text-nowrap"><span class="glyphicon glyphicon-ok"></span></td>
+					<td>15歳（中学生まで）</td>
+					<td>・おたふくかぜ</td>
+					<td>●&nbsp;<strong>産婦健診費用の公費負担</strong><br>
+					区内指定医療機関及びファン助産院で産婦健診を受ける場合は産婦健診費用を負担<br>
+					<br>
+					●&nbsp;<strong>ワクチン接種費用の一部助成</strong><br>
+					「水痘ワクチン」6,000円助成<br>
+					「おたふくかぜワクチン」4,000円助成</td>
+				</tr>
+				<tr>
+					<td class="text-center">豊島区</td>
+					<td class="text-center">14回</td>
+					<td class="text-center">1回</td>
+					<td class="text-center text-nowrap"><span class="glyphicon glyphicon-ok"></span></td>
+					<td>15歳（中学生まで）</td>
+					<td>・おたふくかぜ</td>
+					<td>●&nbsp;<strong>おたふくかぜ予防接種の費用助成</strong><br>
+					1歳から7歳未満の就学前の子供に3,000円助成（助成は1回まで）<br>
+					<br>
+					●&nbsp;<strong>子育てファミリー世帯への家賃助成制度</strong><br>
+
+					民間賃貸住宅（区民住宅ソシエを含む）に転居（転入）した場合に、一定の要件を満たす子育てファミリー世帯に対し、転居(転入）後の家賃と基準家賃との差額の一部を一定期間助成<br>
+					助成期間：5年間、助成金額の上限：月額&nbsp;15,000円<br>
+					ただし、4年目からは2分の1</td>
+				</tr>
+				<tr>
+					<td class="text-center">北区</td>
+					<td class="text-center">14回</td>
+					<td class="text-center">1回</td>
+					<td class="text-center text-nowrap"><span class="glyphicon glyphicon-ok"></span></td>
+					<td>18歳（高校生は入院医療費に限る）<br><br>
+					15歳（中学生まで）
+					</td>
+					<td>・麻しん風しん（第1期の定期予防接種の接種もれ）<br>
+					・おたふくかぜ</td>
+					<td>●&nbsp;<strong>ファミリー世帯　住み替え家賃助成／転居費用助成</strong><br>
+					・住み替え家賃助成（3年間、所得制限あり」）<br>
+					&nbsp;&nbsp;1年目・・・上限月額&nbsp;2万円（1年間）<br>
+					&nbsp;&nbsp;2年目・・・1年目の3分の2 <br>
+					&nbsp;&nbsp;3年目・・・1年目の3分の1 <br><br>
+					・転居費用助成（所得制限あり）<br>
+					転居費用のうち礼金・仲介手数料の合算額（上限30万円）を助成<br>
+					<br>
+					●&nbsp;<strong>高校生等の入院医療費助成</strong><br>
+					高校生等（18歳に達した日以降の最初の3月31日まで）のお子さんを養育されている保護者が対象。
+					各健康保険適用の入院診療費の自己負担分を助成。（食事療養費も助成）</td>
+				</tr>
+				<tr>
+					<td class="text-center">荒川区</td>
+					<td class="text-center">14回</td>
+					<td class="text-center">1回</td>
+					<td class="text-center text-nowrap"><span class="glyphicon glyphicon-ok"></span></td>
+					<td>15歳（中学生まで）</td>
+					<td>・麻しん風しん（第1期の定期予防接種の接種もれ）<br>
+					・おたふくかぜ</td>
+					<td>●&nbsp;<strong>おたふくかぜ予防接種費用の助成</strong><br>
+					子どもの予防接種費用の一部を助成<br>
+					助成額：3,500円（1回のみ）<br>
+					<br>
+					●&nbsp;<strong>区民住宅を活用して子どもが3人以上いる家庭の支援</strong><br>
+					月2万円減額（所得制限あり）</td>
+				</tr>
+				<tr>
+					<td class="text-center">板橋区</td>
+					<td class="text-center">14回</td>
+					<td class="text-center">1回</td>
+					<td class="text-center text-nowrap"><span class="glyphicon glyphicon-ok"></span></td>
+					<td>15歳（中学生まで）</td>
+					<td></td>
+					<td>●&nbsp;<strong>赤ちゃんの駅</strong><br>
+					外出中にオムツ替えや授乳などで立ち寄ることができる区立保育園・児童館など<br>
+					利用料無料<br>
+					<br>
+					●&nbsp;<strong>すくすくカード事業</strong><br>
+					子育て世代を応援する利用券（バウチャー）を配付する制度<br>
+					1歳未満の子どもの保護者、子ども一人につき利用券5枚がついたカードを配付</td>
+				</tr>
+				<tr>
+					<td class="text-center">練馬区</td>
+					<td class="text-center">14回</td>
+					<td class="text-center">1回</td>
+					<td class="text-center text-nowrap"><span class="glyphicon glyphicon-ok"></span></td>
+					<td>15歳（中学生まで）</td>
+					<td>・麻しん風しん（第1期の定期予防接種の接種もれ）<br>
+					・おたふくかぜ</td>
+					<td>●&nbsp;<strong>水ぼうそう予防接種費用助成</strong><br>
+					1歳以上3歳未満&nbsp;1回&nbsp;3,000円（2回まで）<br>
+					<br>
+					●&nbsp;<strong>おたふくかぜ予防接種費用助成</strong><br>
+					1歳以上3歳未満&nbsp;1回&nbsp;3,000円（1回のみ）<br>
+					<br>
+					●&nbsp;<strong>第3子誕生祝金</strong><br>
+					第3子以降の出生した児童1人につき、20万円</td>
+				</tr>
+				<tr>
+					<td class="text-center">足立区</td>
+					<td class="text-center">14回</td>
+					<td class="text-center">2回</td>
+					<td class="text-center text-nowrap"><span class="glyphicon glyphicon-ok"></span></td>
+					<td>15歳（中学生まで）</td>
+					<td>・麻しん風しん（第1期の定期予防接種の接種もれ）<br>
+					</td>
+					<td>●&nbsp;<strong>麻しん風しんワクチン（MRワクチンを含む）予防接種の公費負担</strong><br>
+						2歳から高校3年齢相当の年齢まで<br>
+					<br>
+					●&nbsp;<strong>出産費用の助成</strong><br>
+					経済的な理由でその費用を支払うことが困難な家庭のために、低額な費用で入院・出産のできる「入院助産制度」</td>
+				</tr>
+				<tr>
+					<td class="text-center">葛飾区</td>
+					<td class="text-center">14回</td>
+					<td class="text-center">1回</td>
+					<td class="text-center text-nowrap"><span class="glyphicon glyphicon-ok"></span></td>
+					<td>15歳（中学生まで）</td>
+					<td>・麻しん風しん（第1期の定期予防接種の接種もれ）<br>
+					・おたふくかぜ</td>
+					<td>●&nbsp;<strong>三人乗り自転車購入費助成事業</strong><br>
+					三人乗り自転車（幼児2人同乗用自転車）の購入費助成<br>
+					購入金額の2分の1を助成（上限3万円）<br>
+					<br>
+					●&nbsp;<strong>赤ちゃんの駅</strong><br>
+					外出時におむつ替えや授乳などが行える「赤ちゃんの駅」<br>
+					利用料無料</td>
+				</tr>
+				<tr>
+					<td class="text-center">江戸川区</td>
+					<td class="text-center">14回</td>
+					<td class="text-center">1回</td>
+					<td class="text-center text-nowrap"><span class="glyphicon glyphicon-ok"></span></td>
+					<td>15歳（中学生まで）</td>
+					<td>・麻しん風しん（第1期の定期予防接種の接種もれ）<br>
+					</td>
+					<td>●&nbsp;<strong>乳児養育手当（ゼロ歳児）</strong><br>
+					赤ちゃんにとって、一番大切な時期を保育に専念していただくために経済的支援<br>
+					手当支給額、月額&nbsp;13,000円（所得制限あり）<br>
+					<br>
+					●&nbsp;<strong>ひとり親家庭民間賃貸住宅家賃等助成</strong><br>
+
+					民間賃貸住宅に居住していて、家主さんから建物の取り壊しなどで立ち退きを求められているひとり親家庭の世帯（18歳未満の児童とで構成する世帯）で、転居後の家賃などの差額を助成</td>
+				</tr>
 			</table>
 		</div>
-
+	</div>
 
 </div>
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-		<p class="small"><a href="###" >出典 東京23区自治体の公式ページにて調査</a>（2015/4/21アクセス）</p>
+		<p class="small">出典 東京23区自治体の公式ページにて調査しています</a>（2015/4/21アクセス） | 
+		<a href="http://www.city.chiyoda.lg.jp/">千代田区</a> | 
+		<a href="http://www.city.chuo.lg.jp/">中央区</a> | 
+		<a href="http://www.city.minato.tokyo.jp/">港区</a> | 
+		<a href="http://www.city.shinjuku.lg.jp/">新宿区</a> | 
+		<a href="http://www.city.bunkyo.lg.jp/index.html">文京区</a> | 
+		<a href="http://www.city.taito.lg.jp/">台東区</a> | 
+		<a href="http://www.city.sumida.lg.jp/">墨田区</a> | 
+		<a href="http://www.city.koto.lg.jp/">江東区</a> | 
+		<a href="http://www.city.shinagawa.tokyo.jp/">品川区</a> | 
+		<a href="http://www.city.meguro.tokyo.jp/">目黒区</a> | 
+		<a href="http://www.city.ota.tokyo.jp/">大田区</a> | 
+		<a href="http://www.city.setagaya.lg.jp/index.html">世田谷区</a> | 
+		<a href="http://www.city.shibuya.tokyo.jp/">渋谷区</a> | 
+		<a href="http://www.city.tokyo-nakano.lg.jp/">中野区</a> | 
+		<a href="http://www.city.suginami.tokyo.jp/">杉並区</a> | 
+		<a href="http://www.city.toshima.lg.jp/">豊島区</a> | 
+		<a href="http://www.city.kita.tokyo.jp/">北区</a> | 
+		<a href="http://www.city.arakawa.tokyo.jp/">荒川区</a> | 
+		<a href="http://www.city.itabashi.tokyo.jp/">板橋区</a> | 
+		<a href="http://www.city.nerima.tokyo.jp/">練馬区</a> | 
+		<a href="http://www.city.adachi.tokyo.jp/">足立区</a> | 
+		<a href="http://www.city.katsushika.lg.jp/">葛飾区</a> | 
+		<a href="http://www.city.edogawa.tokyo.jp/">江戸川区</a> | 
+
+
+</p>
 		</div>
 
 </div>
