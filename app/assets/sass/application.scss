@@ -87,7 +87,7 @@
   background-position: center;
   background-repeat: no-repeat;
   min-height: 330px;
-  margin-bottom: 0;
+  margin-bottom: 20px;
   padding-top: 100px;
   margin-top: -60px;
 
@@ -314,7 +314,7 @@
 // --------------------------------------------------
 
 .article-list {
-  margin: ($line-height-computed)  0 ($line-height-computed);
+  margin: 0;
   padding: ($line-height-computed) 0;
   border-bottom: 1px solid #d8d5d0;
   list-style: none;
@@ -386,9 +386,8 @@
 .article-list-side {
   padding: 5px 0;
   border-bottom: 1px solid #d8d5d0;
-  border-top: 1px solid #d8d5d0;
   list-style: none;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 
   a.article-list :hover,
   a.article-list :focus,
@@ -676,8 +675,8 @@
 // -------------------------
 
 .sidenav{
-  padding-bottom: (($line-height-computed / 2) - 1);
-  margin: ($line-height-computed * 2) 0 $line-height-computed;
+  padding-bottom: (($line-height-computed / 2));
+  margin: ($line-height-computed / 2) 0 0;
 
   h2,
   .h2 {

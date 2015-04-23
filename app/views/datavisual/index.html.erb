@@ -1,16 +1,16 @@
 	<% content_for :meta_contents do %>
 		<meta name="keywords" content="社会保障ドットコム,社会保障.com,子ども子育て支援新制度,待機児童,子ども園,保育園,幼稚園,入園,事故報告,補助金,認可保育園">
-		<meta name="description" content="社会保障ドットコムでは、子育て支援等の記事を公開しています。">
-		<meta property="og:title" content="社会保障ドットコム|社会保障ドットコム|特集記事一覧">
+		<meta name="description" content="社会保障ドットコムでは、社会保障に関する各種ビジュアルデータを公開しています。">
+		<meta property="og:title" content="社会保障ドットコム|社会保障ドットコム|ビジュアルデータ一覧">
 		<meta property="og:image" content="http://www.syakaihosyou.com/assets/ogi_syakaihosyou_1l.png">
 		<meta property="og:image" content="http://www.syakaihosyou.com/assets/ogi_syakaihosyou_2s.png">
 		<meta property="og:image" content="http://www.syakaihosyou.com/assets/ogi_syakaihosyou_3m.png">
 		<meta property="og:url" content="http://www.syakaihosyou.com/article">
-		<meta property="og:description" content="社会保障ドットコムでは、子育て支援等の記事を公開しています。">
+		<meta property="og:description" content="社会保障ドットコムでは、ビジュアルで見る「社会保障」というテーマで社会保障に関する各種ビジュアルデータを公開しています。">
 	<% end %>
 
 	<% content_for :title do %>
-		<title>社会保障ドットコム|特集</title>
+		<title>社会保障ドットコム|ビジュアルで見る「社会保障」</title>
 	<% end %>
 
 	<%= render 'layouts/header_nav' %>
@@ -26,7 +26,7 @@
 
             <ol class="breadcrumb">
               <li><a href="/">社会保障ドットコム</a></li>
-              <li class="active"><a href="/article/">特集</a></li>
+              <li class="active"><a href="/datavisual/">ビジュアルで見る「社会保障」</a></li>
             </ol>
 
         </div>
@@ -52,18 +52,18 @@
 			<div class="col-lg-12">
 		
 				<div class="row">
-					<% @articles.each do |article| %>		
+					<% @datavisual.each do |datavisual| %>		
 						<li class="article-list col-lg-12 col-md-12 col-sm-12 col-xs-12">
-						<a href="/article/<%= article['url'] %>">
+						<a href="/datavisual/<%= datavisual['url'] %>">
 									<div class="row">	
 										<div class="cut1 col-lg-4 col-md-4 col-sm-6 col-xs-12">
-											<%= image_tag(article['image'], :class => "img-responsive") %>
+											<%= image_tag(datavisual['image'], :class => "img-responsive") %>
 										</div> 
 
 										<div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
-													<h2><span class="vol"><%= article['vol'] %></span><%= article['title'] %><span class="search"></span></h2>
-													<p class="description"><%= article['description'] %></p>
-													<time><%= article['time'] %></time>
+													<h2><span class="vol"><%= datavisual['vol'] %></span><%= datavisual['title'] %><span class="search"></span></h2>
+													<p class="description"><%= datavisual['description'] %></p>
+													<time><%= datavisual['time'] %></time>
 										</div> 
 									</div> 
 						</a>
