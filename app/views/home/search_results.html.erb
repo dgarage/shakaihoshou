@@ -21,9 +21,9 @@
 
   <div class="container">
     <div class="row">
-      <div class="table-nav">
+      
 
-        <table class="table table-striped2">
+        <table class="table-nav table table-striped2">
 
           <tr class="table-header-border_hline" rowspan="3" >
             <th class="table-header-label table-scene" rowspan="3">シーン</th>
@@ -80,19 +80,18 @@
 
         </table>
 
-      </div>
-    </div>
-  </div>
+      
 
-  <div class="container">
-    <div class="row">
+
+
       <% i = 0 %>
       <% @selected_scenes.each do |scene| %>
 
-
-      <h3 class="table-header-title"><span>&nbsp;[&nbsp;−&nbsp;]&nbsp;</span><%= scene %></h3>
-
       <table class="table table-striped2">
+      <tr> 
+        <th class="table-header-title" colspan="22"><span>&nbsp;[&nbsp;−&nbsp;]&nbsp;</span><%= scene %></th>
+      </tr>
+      
 
         <% (0...@shared_info[scene].length).each do |row| %>
           <tr class="">											

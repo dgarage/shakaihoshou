@@ -1,24 +1,24 @@
 # encoding: UTF-8
-class ArticleController < ApplicationController
+class DatavisualController < ApplicationController
   include ApplicationHelper
 
   before_filter :get_header_data
   #before_filter :auth
 
   def index
-  	@articles = get_articles
-    @datavisual = get_datavisual
+  	@datavisual = get_datavisual
+    @articles = get_articles
 
-  	render "article/index"
+  	render "datavisual/index"
   end
 
   def title
+    @articles = get_datavisual
     @articles = get_articles
-    @datavisual = get_datavisual
   	title = params[:title]
   	article_list = Array.new
-  	Dir.glob("#{Rails.root}/app/views/article/*").each do |article|
-  		x = article.split("/")[-1]
+  	Dir.glob("#{Rails.root}/app/views/datavisual/*").each do |datavisual|
+  		x = datavisual.split("/")[-1]
   		y = x.split(".")[0]
   		if y != "index"
   			article_list << y
@@ -26,7 +26,7 @@ class ArticleController < ApplicationController
   	end
 
   	if article_list.include?(title)
-  	    render 'article/' + title
+  	    render 'datavisual/' + title
   	else
   		redirect_to :action => "index"
   	end

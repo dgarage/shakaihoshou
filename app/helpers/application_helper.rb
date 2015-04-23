@@ -231,8 +231,38 @@ module ApplicationHelper
   		"time" => '更新日：2015年3月16日',
   		"image" => "a001_4179217.jpg"
   		},
-      
+      {
+      "number" => "002",
+      "vol" => "Vol.2", 
+      "title" => "出産・育児に優しい金銭的支援23区比較 2015年版", 
+      "url" => "002_ikuji23kuhikaku_1", 
+      "description" => '各自治体が様々な金銭的支援を用意しています。自分が住んでいる地域のサービスをしっかり把握し、賢く活用していきましょう。',
+      "time" => '更新日：2015年4月23日',
+      "image" => "a002_11714360.jpg"
+      },
   	]
   end
 
+  def get_datavisual
+    @datavisual = [
+      {
+      "number" => "001",
+      "vol" => "", 
+      "title" => "東京23区待機児童数ランキング（2014年）", 
+      "url" => "001_taikijidoranking", 
+      "description" => '東京23区待機児童数ランキングを公開しています。',
+      "time" => '更新日：2015年1月21日',
+      "image" => "001_taikijidoranking.jpg"
+      },
+      {
+      "number" => "002",
+      "vol" => "", 
+      "title" => "東京23区出産・育児に優しい金銭的支援一覧（2015年4月）", 
+      "url" => "002_ikuji23kuhikaku", 
+      "description" => '各自治体が様々な金銭的支援を用意しています。一覧で見てみましょう。',
+      "time" => '更新日：2015年4月23日',
+      "image" => "b002_ikuji23kuhikaku.jpg"
+      },
+    ]
+  end
 end

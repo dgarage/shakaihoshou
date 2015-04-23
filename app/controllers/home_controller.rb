@@ -6,6 +6,7 @@ class HomeController < ApplicationController
   #before_filter :auth
 
   def index
+    @datavisual = get_datavisual
     @articles = get_articles
     @targets = Array.new
     (18..26).each{|x| @targets.push get_column_name(x)}
@@ -17,6 +18,7 @@ class HomeController < ApplicationController
   end
 
   def search_by_area
+    @datavisual = get_datavisual
     @articles = get_articles
     query_parameters = params[:selected_city]
     if query_parameters.nil?
@@ -49,6 +51,7 @@ class HomeController < ApplicationController
   end
 
   def comparison_by_area
+    @datavisual = get_datavisual
     @articles = get_articles
     query_parameters = params[:selected_city]
     if query_parameters.nil?
@@ -86,6 +89,7 @@ class HomeController < ApplicationController
   end
 
   def detailed_search
+    @datavisual = get_datavisual
     @articles = get_articles
     if params[:scene].nil? || params[:gender].nil? || params[:situation].nil? || params[:city].nil?
       redirect_to :page_not_found
@@ -122,12 +126,14 @@ class HomeController < ApplicationController
   end
 
   def show_details
+    @datavisual = get_datavisual
     @articles = get_articles
     @incident = Incident.find params[:id]
     render 'incident_details'
   end
 
   def search_by_scene
+    @datavisual = get_datavisual
     @articles = get_articles
     if params[:selected_scene].nil?
       redirect_to :page_not_found
@@ -146,6 +152,7 @@ class HomeController < ApplicationController
   end
 
   def search_by_scene_step2
+    @datavisual = get_datavisual
     @articles = get_articles
     @search_criteria = params[:search_criteria]
     
@@ -161,6 +168,7 @@ class HomeController < ApplicationController
   end
 
   def search_by_scene_step3
+    @datavisual = get_datavisual
     @articles = get_articles
     @cities = [params[:search_criteria][:"0"]]
     @selected_scenes = [params[:search_criteria][:"2"]]
