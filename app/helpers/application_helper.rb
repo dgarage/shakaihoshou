@@ -252,7 +252,7 @@ module ApplicationHelper
       "url" => "001_taikijidoranking", 
       "description" => '東京23区待機児童数ランキングを公開しています。',
       "time" => '更新日：2015年1月21日',
-      "image" => "001_taikijidoranking.jpg"
+      "image" => "b001_taikijidoranking.jpg"
       },
       {
       "number" => "002",
