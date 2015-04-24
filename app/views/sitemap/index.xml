@@ -1,24 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-<!-- generated-on="2015年3月22日 12:00 AM" -->
+<!-- generated-on="2015年4月24日 12:00 AM" -->
 <url>
   <loc>http://www.syakaihosyou.com/</loc>
   <priority>1.0</priority>
   <changefreq>daily</changefreq>
 </url>
+
 <url>
-  <loc>http://www.syakaihosyou.com/ranking</loc>
+  <loc>http://www.syakaihosyou.com/datavisual/</loc>
   <priority>0.9</priority>
   <changefreq>weekly</changefreq>
 </url>
 
+<!-- ビジュアルで見る「社会保障」 -->
+<url>
+  <loc>http://www.syakaihosyou.com/datavisual/001_taikijidoranking</loc>
+  <priority>0.9</priority>
+  <changefreq>weekly</changefreq>
+</url>
+
+<url>
+  <loc>http://www.syakaihosyou.com/datavisual/002_ikuji23kuhikaku</loc>
+  <priority>0.9</priority>
+  <changefreq>weekly</changefreq>
+</url>
+
+<!-- 特集記事 -->
 <url>
   <loc>http://www.syakaihosyou.com/article/</loc>
   <priority>0.9</priority>
   <changefreq>weekly</changefreq>
 </url>
 
+<!-- 特集記事1 -->
 <url>
   <loc>http://www.syakaihosyou.com/article/001_kodomokosodate_1</loc>
   <priority>0.9</priority>
@@ -51,6 +67,25 @@
 
 <url>
   <loc>http://www.syakaihosyou.com/article/001_kodomokosodate_6</loc>
+  <priority>0.9</priority>
+  <changefreq>weekly</changefreq>
+</url>
+
+<!-- 特集記事2 -->
+<url>
+  <loc>http://www.syakaihosyou.com/article/002_ikuji23kuhikaku_1</loc>
+  <priority>0.9</priority>
+  <changefreq>weekly</changefreq>
+</url>
+
+<url>
+  <loc>http://www.syakaihosyou.com/article/002_ikuji23kuhikaku_2</loc>
+  <priority>0.9</priority>
+  <changefreq>weekly</changefreq>
+</url>
+
+<url>
+  <loc>http://www.syakaihosyou.com/article/002_ikuji23kuhikaku_3</loc>
   <priority>0.9</priority>
   <changefreq>weekly</changefreq>
 </url>
