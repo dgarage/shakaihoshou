@@ -9441,29 +9441,33 @@ a.thumbnail.active {
   border-top: 0;
 }
 /* line 1198, ../sass/application.scss */
+.search-results .table > tbody > tr > td > span.red {
+  color: #ff0000;
+}
+/* line 1202, ../sass/application.scss */
 .search-results tr.table-header-label3 > th:first-child {
   border-right: 1px solid #938774;
 }
-/* line 1202, ../sass/application.scss */
+/* line 1206, ../sass/application.scss */
 .search-results .table-striped3 > tbody > tr > td {
   border-left: 0;
   border-right: 2px solid #ebe4d8;
 }
-/* line 1207, ../sass/application.scss */
+/* line 1211, ../sass/application.scss */
 .search-results .table-striped3 > tbody > tr > td > mark {
   background: #ff0;
   color: #000;
 }
-/* line 1212, ../sass/application.scss */
+/* line 1216, ../sass/application.scss */
 .search-results .table-striped3 > tbody > tr > td:last-child {
   border-right: 0;
 }
-/* line 1216, ../sass/application.scss */
+/* line 1220, ../sass/application.scss */
 .search-results .table-striped3 > tbody > tr > td:first-child {
   font-weight: bold;
   border-right: 2px solid #d1c0a5;
 }
-/* line 1226, ../sass/application.scss */
+/* line 1230, ../sass/application.scss */
 .search-results .table-striped3 > tbody > tr > td:nth-of-type(1),
 .search-results .table-striped3 > tbody > tr > td:nth-of-type(2),
 .search-results .table-striped3 > tbody > tr > td:nth-of-type(3),
@@ -9473,14 +9477,14 @@ a.thumbnail.active {
   font-weight: bold;
 }
 
-/* line 1237, ../sass/application.scss */
+/* line 1242, ../sass/application.scss */
 .badge {
   font-size: 11px;
   font-weight: bold;
   background-color: #428bca;
 }
 
-/* line 1243, ../sass/application.scss */
+/* line 1248, ../sass/application.scss */
 .badge a {
   color: white;
 }

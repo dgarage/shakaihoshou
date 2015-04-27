@@ -1195,6 +1195,10 @@ table {
    border-top: 0;
   }
 
+  .table>tbody>tr>td>span.red {
+   color: #ff0000;
+  }
+
   tr.table-header-label3 > th:first-child {
     border-right: 1px solid #938774;
   }
@@ -1226,6 +1230,7 @@ table {
   .table-striped3 > tbody > tr > td:nth-of-type(6) {
     font-weight: bold;
   }
+
 
 }
 
