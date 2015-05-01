@@ -31,4 +31,14 @@ class DatavisualController < ApplicationController
   		redirect_to :action => "index"
   	end
   end
+
+  def test
+    @datavisual = get_datavisual
+    @articles   = get_articles
+
+    @column_names = comparison_column_name.map{|x| x[1]}
+    @data = get_column_data
+
+    render 'datavisual/test'
+  end
 end

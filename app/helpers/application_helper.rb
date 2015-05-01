@@ -325,4 +325,14 @@ module ApplicationHelper
       last_column:"特筆すべき事"
     }
   end
+
+  def get_column_data
+    data = Comparison.all.map{|x| x.attributes.map{|y| y[1]}}
+    data.each do |x|
+      x.pop(2)
+      x.delete_at(0)
+    end
+
+    return data
+  end
 end

@@ -1,0 +1,89 @@
+	<% content_for :meta_contents do %>
+		<meta name="keywords" content="社会保障ドットコム,社会保障.com,子ども子育て支援新制度,待機児童,子ども園,保育園,幼稚園,入園,事故報告,補助金,認可保育園">
+		<meta name="description" content="社会保障ドットコムでは、社会保障に関する各種ビジュアルデータを公開しています。">
+		<meta property="og:title" content="社会保障ドットコム|ビジュアルデータ一覧">
+		<meta property="og:image" content="http://www.syakaihosyou.com/assets/ogi_syakaihosyou_1l.png">
+		<meta property="og:image" content="http://www.syakaihosyou.com/assets/ogi_syakaihosyou_2s.png">
+		<meta property="og:image" content="http://www.syakaihosyou.com/assets/ogi_syakaihosyou_3m.png">
+		<meta property="og:url" content="http://www.syakaihosyou.com/datavisual">
+		<meta property="og:description" content="社会保障ドットコムでは、ビジュアルで見る「社会保障」というテーマで社会保障に関する各種ビジュアルデータを公開しています。">
+	<% end %>
+
+	<% content_for :title do %>
+		<title>社会保障ドットコム|ビジュアルで見る「社会保障」</title>
+	<% end %>
+
+	<%= render 'layouts/header_nav' %>
+
+
+<div class="bread">
+
+    <div class="container">
+
+      <div class="row">
+ 
+        <div class="col-md-12">
+
+            <ol class="breadcrumb">
+              <li><a href="/">社会保障ドットコム</a></li>
+              <li class="active"><a href="/datavisual/">ビジュアルで見る「社会保障」</a></li>
+            </ol>
+
+        </div>
+
+      </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+
+      <div class="col-lg-12 sns">
+        <%= render 'layouts/sns' %>
+      </div>
+      <div class="col-lg-12">
+
+        <div class="row">
+          <table class="table table-striped table-hover table-condensed">
+            <thead>
+              <tr>
+                <% @column_names.each do |column| %>
+                <th><%= column %></th>
+                <% end %>
+              </tr>
+            </thead>
+            <tbody>
+              <% @data.each do |x| %>
+              <tr>
+                <% x.each do |y| %>
+                <td><%= y %></td>
+                <% end %>
+              </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+    </div> 
+
+    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+    <%= render 'layouts/side_nav' %>
+    </div>
+
+  </div> 
+</div> 
+
+
+
+
+
