@@ -447,6 +447,7 @@
 //
 // article-Title new
 // --------------------------------------------------
+.article-title3, 
 .article-title2, 
 .article-title {
   margin: 0 0 ($line-height-computed);
@@ -514,6 +515,27 @@
 }
 
 .article-title2:before {
+  content: "";
+  z-index: -1;
+  -webkit-filter: blur(4px);
+  -ms-filter: blur(4px);
+  filter: blur(4px);
+  position: absolute;
+  width: 100%;
+  height: 220px;
+  margin: -20px 0;
+  padding: 0;
+  opacity: .3;
+}
+
+.article-title3:before {
+  background:url("a003_010.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: scroll;
+}
+
+.article-title3:before {
   content: "";
   z-index: -1;
   -webkit-filter: blur(4px);
