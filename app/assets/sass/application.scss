@@ -594,9 +594,13 @@
     line-height: 1.6em;
   }
 
+　p.item_num {
+   padding: 10px 10px 10px 0;
+  }
 
+  ul.item_num,
   ul.item {
-    padding: 10px 0;
+    padding: 10px 10px 10px 0;
     font-size: 110%;
     display: block;
     -webkit-margin-before: 1em;
@@ -604,6 +608,10 @@
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
     -webkit-padding-start: 40px;
+  }
+  
+  ul.item_num {
+    list-style-type: decimal;
   }
 
   ul.item_s {
