@@ -210,7 +210,12 @@
   }
 }
 
-
+//
+// bg-info　box
+// --------------------------------------------------
+.bg-info_box{
+  padding: 15px;
+}
 
 
 //
@@ -574,12 +579,19 @@
   }
 
   h4,
-  .h4 {
+  .h4,
+  h4 question {
     color: $brand-success;
     font-size: 150%;
     font-weight: bold;
     margin: 50px 0 20px;
   }
+
+  h4.question {
+    font-size: 130%;
+    margin: 15px 0; 
+  }
+
 
   h5,
   .h5 {
@@ -594,9 +606,15 @@
     line-height: 1.6em;
   }
 
+
 　p.item_num {
    padding: 10px 10px 10px 0;
   }
+
+  .img-responsive {
+    margin: 15px 0; 
+  }
+
 
   ul.item_num,
   ul.item {
