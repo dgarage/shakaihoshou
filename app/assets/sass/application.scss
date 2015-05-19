@@ -325,6 +325,7 @@
   padding: ($line-height-computed) 0;
   border-bottom: 1px solid #d8d5d0;
   list-style: none;
+  height: 30em;
 
   a.article-list :hover,
   a.article-list :focus,
@@ -380,7 +381,6 @@
 
   .cut1 {
   position:relative;
-  height: 8em;
   overflow: hidden;
   }
 
