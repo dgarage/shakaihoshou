@@ -8641,7 +8641,7 @@ span.head--city {
   padding: 20px 0;
   border-bottom: 1px solid #d8d5d0;
   list-style: none;
-  height: 30em;
+  height: 32em;
 }
 /* line 332, ../sass/application.scss */
 .article-list a.article-list :hover,
@@ -8810,7 +8810,7 @@ span.head--city {
 
 /* line 495, ../sass/application.scss */
 .article-title:before {
-  background: url("a001_4179217.jpg");
+  background: url("a001_4179217w.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: scroll;
@@ -8833,7 +8833,7 @@ span.head--city {
 
 /* line 516, ../sass/application.scss */
 .article-title2:before {
-  background: url("a002_11714360.jpg");
+  background: url("a002_11714360w.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: scroll;
