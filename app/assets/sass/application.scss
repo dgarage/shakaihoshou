@@ -215,6 +215,7 @@
 // --------------------------------------------------
 .bg-info_box{
   padding: 15px;
+  margin-bottom: 30px;
 }
 
 
@@ -534,7 +535,7 @@
 }
 
 .article-title3:before {
-  background:url("a003_010.jpg");
+  background:url("a003_010w.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: scroll;
@@ -606,6 +607,9 @@
     line-height: 1.6em;
   }
 
+  p.small {
+    font-size: 85%;
+  }
 
 　p.item_num {
    padding: 10px 10px 10px 0;
