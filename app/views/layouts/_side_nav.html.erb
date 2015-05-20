@@ -16,7 +16,7 @@
 	
 			<div class="sidenav col-lg-12">		
 				<div class="row">
-					<h2><span class="glyphicon glyphicon-pencil"></span><span class="city">特集記事</span></h2>
+					<h2><a href="/article/"><span class="glyphicon glyphicon-pencil"></span><span class="city">特集記事</span></a></h2>
 				<% @articles.each do |article| %>
 					<li class="article-list-side col-lg-12 col-md-12 col-sm-12 col-xs-12">
 					<a href="/article/<%= article['url'] %>">
@@ -43,7 +43,7 @@
 	
 			<div class="sidenav col-lg-12">
 				<div class="row">
-					<h2><span class="glyphicon glyphicon-eye-open"></span><span class="city">ビジュアルで見る「社会保障」</span></h2>
+					<h2><a href="/datavisual/"><span class="glyphicon glyphicon-eye-open"></span><span class="city">ビジュアルで見る「社会保障」</span></a></h2>
 				<% @datavisual.each do |datavisual| %>
 					<li class="article-list-side col-lg-12 col-md-12 col-sm-12 col-xs-12">
 					<a href="/datavisual/<%= datavisual['url'] %>">

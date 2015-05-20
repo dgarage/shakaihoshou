@@ -739,6 +739,15 @@
     padding: 5px 0;
   }
 
+  h2 > a {
+    color: $brand-primary;
+  }
+
+  h2 > a:hover {
+    color: #428bca;
+    text-decoration: none;
+  }
+
   p {
   margin-bottom: 15px;
   }
