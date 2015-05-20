@@ -210,7 +210,13 @@
   }
 }
 
-
+//
+// bg-info　box
+// --------------------------------------------------
+.bg-info_box{
+  padding: 15px;
+  margin-bottom: 30px;
+}
 
 
 //
@@ -319,6 +325,7 @@
   padding: ($line-height-computed) 0;
   border-bottom: 1px solid #d8d5d0;
   list-style: none;
+  height: 32em;
 
   a.article-list :hover,
   a.article-list :focus,
@@ -374,7 +381,6 @@
 
   .cut1 {
   position:relative;
-  height: 8em;
   overflow: hidden;
   }
 
@@ -447,6 +453,7 @@
 //
 // article-Title new
 // --------------------------------------------------
+.article-title3, 
 .article-title2, 
 .article-title {
   margin: 0 0 ($line-height-computed);
@@ -486,7 +493,7 @@
 // --------------------------------------------------
 
 .article-title:before {
-  background:url("a001_4179217.jpg");
+  background:url("a001_4179217w.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: scroll;
@@ -507,13 +514,34 @@
 }
 
 .article-title2:before {
-  background:url("a002_11714360.jpg");
+  background:url("a002_11714360w.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: scroll;
 }
 
 .article-title2:before {
+  content: "";
+  z-index: -1;
+  -webkit-filter: blur(4px);
+  -ms-filter: blur(4px);
+  filter: blur(4px);
+  position: absolute;
+  width: 100%;
+  height: 220px;
+  margin: -20px 0;
+  padding: 0;
+  opacity: .3;
+}
+
+.article-title3:before {
+  background:url("a003_010w.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: scroll;
+}
+
+.article-title3:before {
   content: "";
   z-index: -1;
   -webkit-filter: blur(4px);
@@ -552,12 +580,19 @@
   }
 
   h4,
-  .h4 {
+  .h4,
+  h4 question {
     color: $brand-success;
     font-size: 150%;
     font-weight: bold;
     margin: 50px 0 20px;
   }
+
+  h4.question {
+    font-size: 130%;
+    margin: 15px 0; 
+  }
+
 
   h5,
   .h5 {
@@ -572,9 +607,22 @@
     line-height: 1.6em;
   }
 
+  p.small {
+    font-size: 85%;
+  }
 
+　p.item_num {
+   padding: 10px 10px 10px 0;
+  }
+
+  .img-responsive {
+    margin: 15px 0; 
+  }
+
+
+  ul.item_num,
   ul.item {
-    padding: 10px 0;
+    padding: 10px 10px 10px 0;
     font-size: 110%;
     display: block;
     -webkit-margin-before: 1em;
@@ -582,6 +630,10 @@
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
     -webkit-padding-start: 40px;
+  }
+  
+  ul.item_num {
+    list-style-type: decimal;
   }
 
   ul.item_s {
@@ -685,6 +737,15 @@
     font-size: 18px;
     font-weight: bold;
     padding: 5px 0;
+  }
+
+  h2 > a {
+    color: $brand-primary;
+  }
+
+  h2 > a:hover {
+    color: #428bca;
+    text-decoration: none;
   }
 
   p {

@@ -222,15 +222,15 @@ module ApplicationHelper
 
   def get_articles
   	@articles = [
-  		{
-  		"number" => "001",
-      "vol" => "Vol.1", 
-  		"title" => "子ども・子育て支援「新」制度の問題", 
-  		"url" => "001_kodomokosodate_1", 
-  		"description" => '2015年4月より開始される「子ども・子育て支援新制度」。そこにはさまざまな落とし穴があることが分かってきました。',
-  		"time" => '更新日：2015年3月16日',
-  		"image" => "a001_4179217.jpg"
-  		},
+      {
+      "number" => "003",
+      "vol" => "Vol.3", 
+      "title" => "23区初！圧倒的なスピードで「“第二子保育料”無料」にふみきった港区の推進力に迫る", 
+      "url" => "003_minatokuinterview_1", 
+      "description" => '23区で初めて、第二子の保育料無料化に踏み切った港区。他の自治体よりも早く改定料金が発表された理由とは・・・？',
+      "time" => '更新日：2015年5月22日',
+      "image" => "a003_010.jpg"
+      },
       {
       "number" => "002",
       "vol" => "Vol.2", 
@@ -240,20 +240,21 @@ module ApplicationHelper
       "time" => '更新日：2015年4月23日',
       "image" => "a002_11714360.jpg"
       },
+  		{
+  		"number" => "001",
+      "vol" => "Vol.1", 
+  		"title" => "子ども・子育て支援「新」制度の問題", 
+  		"url" => "001_kodomokosodate_1", 
+  		"description" => '2015年4月より開始される「子ども・子育て支援新制度」。そこにはさまざまな落とし穴があることが分かってきました。',
+  		"time" => '更新日：2015年3月16日',
+  		"image" => "a001_4179217.jpg"
+  		},
+
   	]
   end
 
   def get_datavisual
     @datavisual = [
-      {
-      "number" => "001",
-      "vol" => "", 
-      "title" => "東京23区待機児童数ランキング（2014年）", 
-      "url" => "001_taikijidoranking", 
-      "description" => '東京23区待機児童数ランキングを公開しています。',
-      "time" => '更新日：2015年1月21日',
-      "image" => "b001_taikijidoranking.jpg"
-      },
       {
       "number" => "002",
       "vol" => "", 
@@ -263,6 +264,16 @@ module ApplicationHelper
       "time" => '更新日：2015年4月23日',
       "image" => "b002_ikuji23kuhikaku.jpg"
       },
+      {
+      "number" => "001",
+      "vol" => "", 
+      "title" => "東京23区待機児童数ランキング（2014年）", 
+      "url" => "001_taikijidoranking", 
+      "description" => '東京23区待機児童数ランキングを公開しています。',
+      "time" => '更新日：2015年1月21日',
+      "image" => "b001_taikijidoranking.jpg"
+      },
+
     ]
   end
 

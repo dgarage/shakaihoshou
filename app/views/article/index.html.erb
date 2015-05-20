@@ -53,14 +53,14 @@
 		
 				<div class="row">
 					<% @articles.each do |article| %>		
-						<li class="article-list col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<li class="article-list col-lg-6 col-md-6 col-sm-6 col-xs-12">
 						<a href="/article/<%= article['url'] %>">
-									<div class="row">	
-										<div class="cut1 col-lg-4 col-md-4 col-sm-6 col-xs-12">
+									<div class="">	
+										<div class="cut1 col-lg-12 col-md-12 col-sm-12 col-xs-12">
 											<%= image_tag(article['image'], :class => "img-responsive") %>
 										</div> 
 
-										<div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+										<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 													<h2><span class="vol"><%= article['vol'] %></span><%= article['title'] %><span class="search"></span></h2>
 													<p class="description"><%= article['description'] %></p>
 													<time><%= article['time'] %></time>
