@@ -69,6 +69,16 @@ class DatavisualController < ApplicationController
       @data << row
     end
 
+    @data.map! do |row|
+      row.map! do |value|
+        if value.kind_of? Float
+          convert_from_float_to_yen(value)
+        else
+          value
+        end
+      end
+    end
+
     render 'datavisual/test'
   end
 end

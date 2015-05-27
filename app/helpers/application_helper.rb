@@ -346,4 +346,12 @@ module ApplicationHelper
 
     return data
   end
+
+  def convert_from_float_to_yen(number)
+    number = number.to_i.to_s
+    if number.length > 3
+      number = number.insert(-4, ",")
+    end
+    number = number + "円"
+  end
 end
