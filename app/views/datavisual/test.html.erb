@@ -52,8 +52,8 @@
           <table class="table table-striped table-hover table-condensed">
             <thead>
               <tr>
-                <% @column_names.each do |column| %>
-                <th><%= column %></th>
+                <% @column_names.each_with_index do |column, index| %>
+                <th id="column<%= index %>"><%= column %></th>
                 <% end %>
               </tr>
             </thead>
