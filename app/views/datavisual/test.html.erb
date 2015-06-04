@@ -38,32 +38,24 @@
 
 </div>
 
-<div class="search-results">
+<div class="container search-results">
 
-  <div class="container">
+  <div class="sidenav">
     <div class="row">
-      <div class="">
-        <div style="text-align: center">
-          <h1>平成27年度<span class="number">&nbsp;区立認可保育園月額保育料&nbsp;一覧比較&nbsp;東京23区版&nbsp;</span></h1>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <h2>平成27年4月施行の「子ども・子育て支援新制度」に伴い、改正された、標準時間11時間を基本に保育料を掲載しています。</h2>
+          <h2><span class="glyphicon glyphicon-stop"></span>平成27年度<span class="number">&nbsp;区立認可保育園月額保育料&nbsp;一覧比較&nbsp;東京23区版&nbsp;</span></h2>
+      <p>平成27年4月施行の「子ども・子育て支援新制度」に伴い、改正された、標準時間11時間を基本に保育料を掲載しています。</p>
       <p>※&nbsp;自治体×年収別に保育料を比較できるのは「社会保障ドットコム」だけです。</br>
         ※&nbsp;認可保育園でも、一部の保育園では料金が異なる場合があります。</br>
-        ※&nbsp;「推定年収」は夫婦（妻はパートタイム労働を想定（所得税が非課税となる程度の収入））と子供２人世帯の場合のおおまかな目安</p>
-
+        ※&nbsp;第二子割引は、兄弟が在園児、小学○年まで等、自治体によって異なっています。特筆事項をご確認ください。</br>
+        ※「推定年収」は夫婦（妻はパートタイム労働を想定（所得税が非課税となる程度の収入））と子供２人世帯の場合のおおまかな目安</p>
     </div>
   </div>
 
 
-  <div class="container">
+  
     <div class="row">
       
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-
-        <div class="col-lg-12 sns">
+        <div>
           <%= render 'layouts/sns' %>
         </div>
 
@@ -71,140 +63,121 @@
 
           <div class="row">
 
-
-        <table class="table-nav table table-striped2">
-
-          <tr class="table-header-border_hline" rowspan="3" >
-            <th class="table-header-label table-scene" rowspan="3">地域コード</th>
-            <th class="table-header-label table-basicname" rowspan="3">自治体名</th>
-            <th class="table-header-label table-basicname" rowspan="3">年齢</th>
-            <th class="text-center table-header-city" colspan="18">推定年収</th>
-            <th class="text-center table-header-city" rowspan="3">階層数</th>
-            <th class="text-center table-header-city" rowspan="3">割引条件</th>
-            <th class="text-center table-header-city" rowspan="3">特筆すべき事</th>
-
-            <!-- エリア -->
-            <tr class="table-header-border_hline">
-              
-                              
-                <!-- 年収条件 -->
-                <th class="table-header-type" colspan="3">〜330万円</th>
-                <th class="table-header-type" colspan="3">〜470万円</th>
-                <th class="table-header-type" colspan="3">〜640万円</th>
-                <th class="table-header-type table-header-type-s_vline2" colspan="3">〜930万円</th>
-                <th class="table-header-type table-header-type-s_vline2" colspan="3">〜1,130万円</th>
-                <th class="table-header-type table-header-type-s_vline2" colspan="3">〜上限</th>
-            </tr>
-
-            <tr class="table-header-border_hline">
-                    
-
-              <!-- 〜330万円 -->
-              <th class="table-header-type-s">標準時間保育料（11時間）第一子</th>
-              <th class="table-header-type-s">標準時間保育料（11時間）第二子</th>
-              <th class="table-header-type-s table-header-type-s_vline">延長保育料(1時間)</th>
-             <!-- 〜470万円 -->
-              <th class="table-header-type-s">標準時間保育料（11時間）第一子</th>
-              <th class="table-header-type-s">標準時間保育料（11時間）第二子</th>
-              <th class="table-header-type-s table-header-type-s_vline">延長保育料(1時間)</th>
-              <!-- 〜640万円 -->
-              <th class="table-header-type-s">標準時間保育料（11時間）第一子</th>
-              <th class="table-header-type-s" >標準時間保育料（11時間）第二子</th>
-              <th class="table-header-type-s table-header-type-s_vline">延長保育料(1時間)</th>
-              <!-- 〜930万円 -->
-              <th class="table-header-type-s">標準時間保育料（11時間）第一子</th>
-              <th class="table-header-type-s">標準時間保育料（11時間）第二子</th>
-              <th class="table-header-type-s table-header-type-s_vline">延長保育料(1時間)</th>
-              <!-- 〜1,130万円 -->
-              <th class="table-header-type-s">標準時間保育料（11時間）第一子</th>
-              <th class="table-header-type-s">標準時間保育料（11時間）第二子</th>
-              <th class="table-header-type-s table-header-type-s_vline">延長保育料(1時間)</th>
-              <!-- 〜上限 -->
-              <th class="table-header-type-s">標準時間保育料（11時間）第一子</th>
-              <th class="table-header-type-s">標準時間保育料（11時間）第二子</th>
-              <th class="table-header-type-s table-header-type-s_vline">延長保育料(1時間)</th>
-            
-            </tr>
-          </tr>
-
-        </table>
-
-
-
-
-
             <table class="table table-striped2 table-hover table-condensed tablesorter" id="dataTable">
-              <thead>
-                <tr class="table-header-border_hline" rowspan="2">
-                  <th id="column2"><%= @column_names[1] %></th>
-                  <th id="column2"><%= @column_names[2] %></th>
-                  <th id="column3"><%= @column_names[3] %></th>
-                  
-                  <th id="column5"><%= @column_names[5] %></th>
-                  <th id="column6"><%= @column_names[6] %></th>
-                  <th id="column7"><%= @column_names[7] %></th>
-                  
-                  <th id="column9"><%= @column_names[9] %></th>
-                  <th id="column10"><%= @column_names[10] %></th>
-                  <th id="column11"><%= @column_names[11] %></th>
-                  
-                  <th id="column13"><%= @column_names[13] %></th>
-                  <th id="column14"><%= @column_names[14] %></th>
-                  <th id="column15"><%= @column_names[15] %></th>
-                  
-                  <th id="column17"><%= @column_names[17] %></th>
-                  <th id="column18"><%= @column_names[18] %></th>
-                  <th id="column19"><%= @column_names[19] %></th>
-                  
-                  <th id="column21"><%= @column_names[21] %></th>
-                  <th id="column22"><%= @column_names[22] %></th>
-                  <th id="column23"><%= @column_names[23] %></th>
-                  
-                  <th id="column25"><%= @column_names[25] %></th>
-                  <th id="column26"><%= @column_names[26] %></th>
-                  <th id="column27"><%= @column_names[27] %></th>
-                  <th id="column28"><%= @column_names[28] %></th>
-                  
-                  <th id="column30"><%= @column_names[30] %></th>
-                  <th id="column31"><%= @column_names[31] %></th>
-                  <th id="column32"><%= @column_names[32] %></th>
+              <thead class="table-nav">
+              <tr class="table-header-border_hline" colspan="1" rowspan="3" >
+                <th id="column1" class="text-center table-header-type-s" colspan="1" rowspan="3"><%= @column_names[2] %></br></br><span class="glyphicon glyphicon-sort"></span></th>
+                <th id="column3" class="table-header-type-s table-header-type-s_vline" colspan="1" rowspan="3"><%= @column_names[3] %></br></br><span class="glyphicon glyphicon-sort"></th>
+                <th class="text-center table-header-city" colspan="18">推定年収</th>
+                <th class="text-center table-header-type-s" rowspan="3"><%= @column_names[28] %></br></br><span class="glyphicon glyphicon-sort"></span></th>
+                <th class="text-center table-header-city table-header-type" colspan="2" rowspan="1">割引</th>
+                <th class="text-center table-header-type-m" rowspan="3"><%= @column_names[32] %></br></br><span class="glyphicon glyphicon-sort"></span></th>
+
+                <!-- 年収条件 -->
+                <tr class="table-header-border_hline">    
+                    <th class="table-header-type" colspan="3">〜330万円</th>
+                    <th class="table-header-type" colspan="3">〜470万円</th>
+                    <th class="table-header-type" colspan="3">〜640万円</th>
+                    <th class="table-header-type" colspan="3">〜930万円</th>
+                    <th class="table-header-type" colspan="3">〜1,130万円</th>
+                    <th class="table-header-type" colspan="3">〜上限（保育料）</th>
+                    <th class="table-header-type-s" colspan="1" rowspan="3"><%= @column_names[30] %></br></br><span class="glyphicon glyphicon-sort"></span></th>
+                    <th class="table-header-type-s" colspan="1" rowspan="3"><%= @column_names[31] %></br></br><span class="glyphicon glyphicon-sort"></span></th>
+
                 </tr>
+
+                <tr class="table-header-border_hline">    
+                  <!-- 〜330万円 -->
+                  <th id="column5" class="table-header-type-m"><%= @column_names[5] %></br></br><span class="glyphicon glyphicon-sort"></span></th>
+                  <th id="column6" class="table-header-type-m"><%= @column_names[6] %></br></br><span class="glyphicon glyphicon-sort"></span></th>
+                  <th id="column7" class="table-header-type-m table-header-type-s_vline"><%= @column_names[7] %></br></br><span class="glyphicon glyphicon-sort"></span></th>
+                 <!-- 〜470万円 -->
+                  <th id="column9" class="table-header-type-m"><%= @column_names[9] %></br></br><span class="glyphicon glyphicon-sort"></span></th>
+                  <th id="column10" class="table-header-type-m"><%= @column_names[10] %></br></br><span class="glyphicon glyphicon-sort"></span></th>
+                  <th id="column11" class="table-header-type-m table-header-type-s_vline"><%= @column_names[11] %></br></br><span class="glyphicon glyphicon-sort"></span></th>
+                  <!-- 〜640万円 -->
+                  <th id="column13" class="table-header-type-m"><%= @column_names[13] %></br></br><span class="glyphicon glyphicon-sort"></span></th>
+                  <th id="column14" class="table-header-type-m" ><%= @column_names[14] %></br></br><span class="glyphicon glyphicon-sort"></span></th>
+                  <th id="column15" class="table-header-type-m table-header-type-s_vline"><%= @column_names[15] %></br></br><span class="glyphicon glyphicon-sort"></span></th>
+                  <!-- 〜930万円 -->
+                  <th id="column17" class="table-header-type-m"><%= @column_names[17] %></br></br><span class="glyphicon glyphicon-sort"></span></th>
+                  <th id="column18" class="table-header-type-m"><%= @column_names[18] %></br></br><span class="glyphicon glyphicon-sort"></span></th>
+                  <th id="column19" class="table-header-type-m table-header-type-s_vline"><%= @column_names[19] %></br></br><span class="glyphicon glyphicon-sort"></span></th>
+                  <!-- 〜1,130万円 -->
+                  <th id="column21" class="table-header-type-m"><%= @column_names[21] %></br></br><span class="glyphicon glyphicon-sort"></span></th>
+                  <th id="column22" class="table-header-type-m"><%= @column_names[22] %></br></br><span class="glyphicon glyphicon-sort"></span></th>
+                  <th id="column23" class="table-header-type-m table-header-type-s_vline"><%= @column_names[23] %></br></br><span class="glyphicon glyphicon-sort"></span></th>
+                  <!-- 〜上限 -->
+                  <th id="column25" class="table-header-type-m"><%= @column_names[25] %></br></br><span class="glyphicon glyphicon-sort"></span></th>
+                  <th id="column26" class="table-header-type-m "><%= @column_names[26] %></br></br><span class="glyphicon glyphicon-sort"></span></th>
+                  <th id="column27" class="table-header-type-m table-header-type-s_vline"><%= @column_names[27] %></br></br><span class="glyphicon glyphicon-sort"></span></th>
+
+
+                </tr>
+              </tr>
               </thead>
+
               <tbody>
                 <% @data.each do |x| %>
                 <tr>
-                  <td id="" class=""><%= x[1] %></td>
-                  <td id="" class=""><%= x[2] %></td>
-                  <td id="" class=""><%= x[3] %></td>
-                 
-                  <td id="" class=""><%= x[5] %></td>
-                  <td id="" class=""><%= x[6] %></td>
-                  <td id="" class=""><%= x[7] %></td>
-                 
-                  <td id="" class=""><%= x[9] %></td>
-                  <td id="" class=""><%= x[10] %></td>
-                  <td id="" class=""><%= x[11] %></td>
-                  
-                  <td id="" class=""><%= x[13] %></td>
-                  <td id="" class=""><%= x[14] %></td>
-                  <td id="" class=""><%= x[15] %></td>
-                  
-                  <td id="" class=""><%= x[17] %></td>
-                  <td id="" class=""><%= x[18] %></td>
-                  <td id="" class=""><%= x[19] %></td>
-                  
-                  <td id="" class=""><%= x[21] %></td>
-                  <td id="" class=""><%= x[22] %></td>
-                  <td id="" class=""><%= x[23] %></td>
-                 
-                  <td id="" class=""><%= x[25] %></td>
-                  <td id="" class=""><%= x[26] %></td>
-                  <td id="" class=""><%= x[27] %></td>
-                  <td id="" class=""><%= x[28] %></td>
-                  
-                  <td id="" class=""><%= x[30] %></td>
-                  <td id="" class=""><%= x[31] %></td>
-                  <td id="" class=""><%= x[32] %></td>
+                  <!-- 地域コード -->
+                  <td id="" class="table-type-ss"><span class="small"><%= x[1] %></span></br><%= x[2] %></td>
+                  <!-- 年齢 -->
+                  <td id="" class="text-center table-type-ss table-header-type-s_vline"><%= x[3] %></td>
+                  <!-- 推定年収 -->
+                  <!-- 〜330万円 -->
+                  <td id="" class="table-type-s"><%= x[5] %></td>
+                  <td id="" class="table-type-s"><%= x[6] %></td>
+                  <td id="" class="table-type-s table-type-s_vline"><%= x[7] %></td>
+                  <!-- 〜470万円 -->
+                  <td id="" class="table-type-s"><%= x[9] %></td>
+                  <td id="" class="table-type-s"><%= x[10] %></td>
+                  <td id="" class="table-type-s table-type-s_vline"><%= x[11] %></td>
+                  <!-- 〜640万円 -->
+                  <td id="" class="table-type-s"><%= x[13] %></td>
+                  <td id="" class="table-type-s"><%= x[14] %></td>
+                  <td id="" class="table-type-s table-type-s_vline"><%= x[15] %></td>
+                  <!-- 〜930万円 -->
+                  <td id="" class="table-type-s"><%= x[17] %></td>
+                  <td id="" class="table-type-s"><%= x[18] %></td>
+                  <td id="" class="table-type-s table-type-s_vline"><%= x[19] %></td>
+                  <!-- 〜1,130万円 -->
+                  <td id="" class="table-type-s"><%= x[21] %></td>
+                  <td id="" class="table-type-s"><%= x[22] %></td>
+                  <td id="" class="table-type-s table-type-s_vline"><%= x[23] %></td>
+                  <!-- 〜上限 -->
+                  <td id="" class="table-type-s"><%= x[25] %></td>
+                  <td id="" class="table-type-s"><%= x[26] %></td>
+                  <td id="" class="table-type-s table-header-type-s_vline"><%= x[27] %></td>
+                  <!-- 区の階層数 -->
+                  <td id="" class="table-type-s table-header-type-s_vline"><%= x[28] %></td>
+                  <!-- 割引 -->
+                  <td id="" class="text-center table-type-s "><%= x[30] %></td>
+                  <td id="" class="text-center table-type-s table-header-type-s_vline"><%= x[31] %></td>
+                  <!-- 特筆すべき事 -->
+                  <td id="" class="table-type-s">
+                      <!-- Button trigger modal -->
+                      <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#">
+                      詳細</button>
+                      <!-- Modal -->
+                      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+
+                              <h4 class="modal-title" id="myModalLabel"><%= x[32] %></br><%= x[32] %></h4>
+                            </div>
+                            <div class="modal-body">
+                              <%= x[32] %>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-default" Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </td>
                 </tr>
                 <% end %>
               </tbody>
@@ -213,11 +186,11 @@
 
         </div>
 
-      </div> 
+
    
     </div>
 
-  </div>
+
 </div>
 
 
