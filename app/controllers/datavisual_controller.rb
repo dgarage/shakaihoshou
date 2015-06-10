@@ -31,4 +31,54 @@ class DatavisualController < ApplicationController
   		redirect_to :action => "index"
   	end
   end
+
+  def test
+    @datavisual = get_datavisual
+    @articles   = get_articles
+
+    @column_names = comparison_column_name.map{|x| x[1]}
+    @column_names = @column_names - [
+      "通し番号",
+      "賃貸（首都圏賃貸居住用物件の取引動向（2015年01～03月））㎡単価（円）",
+      "賃貸50㎡家賃",
+      "330万円＋家賃",
+      "470万円＋家賃",
+      "640万円＋家賃",
+      "930万円＋家賃",
+      "1,130万円＋家賃",
+      "上限＋家賃",
+      "LR賃貸の50〜60㎡の家賃相場（4人世帯想定）",
+      "330万円＋家賃（園に子ど1人）",
+      "330万円＋家賃（園に子ども２人１歳違いとする）",
+      "470万円＋家賃",
+      "470万円＋家賃（園に子ども２人１歳違いとする）",
+      "640万円＋家賃",
+      "640万円＋家賃（園に子ども２人１歳違いとする）",
+      "930万円＋家賃",
+      "930万円＋家賃（園に子ども２人１歳違いとする）",
+      "1,130万円＋家賃",
+      "1,130万円＋家（園に子ども２人１歳違いとする）",
+      "上限＋家賃",
+      "上限＋家賃（園に子ども２人１歳違いとする）"
+    ] 
+    @data = Array.new
+    raw_data = get_column_data
+    raw_data.each do |row|
+      row.delete_at(0)
+      21.times { row.delete_at(-2) }
+      @data << row
+    end
+
+    @data.map! do |row|
+      row.map! do |value|
+        if value.kind_of? Float
+          convert_from_float_to_yen(value)
+        else
+          value
+        end
+      end
+    end
+
+    render 'datavisual/test'
+  end
 end
