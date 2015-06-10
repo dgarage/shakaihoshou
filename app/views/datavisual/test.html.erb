@@ -121,9 +121,9 @@
                 <% @data.each do |x| %>
                 <tr>
                   <!-- 地域コード -->
-                  <td id="" class="table-type-ss"><span class="small"><%= x[1] %></span></br><%= x[2] %></td>
+                  <td id="" class="table-type-ss text-center"><small><strong><%= x[2] %></br></strong><span class"text-nowrap"><%= x[1] %></span></small></td>
                   <!-- 年齢 -->
-                  <td id="" class="text-center table-type-ss table-header-type-s_vline"><%= x[3] %></td>
+                  <td id="" class="table-type-ss text-center table-header-type-s_vline"><small><%= x[3] %></small></td>
                   <!-- 推定年収 -->
                   <!-- 〜330万円 -->
                   <td id="" class="table-type-s"><%= x[5] %></td>
@@ -150,10 +150,10 @@
                   <td id="" class="table-type-s"><%= x[26] %></td>
                   <td id="" class="table-type-s table-header-type-s_vline"><%= x[27] %></td>
                   <!-- 区の階層数 -->
-                  <td id="" class="table-type-s table-header-type-s_vline"><%= x[28] %></td>
+                  <td id="" class="table-type-s table-header-type-s_vline"><small><%= x[28] %></small></td>
                   <!-- 割引 -->
-                  <td id="" class="text-center table-type-s "><%= x[30] %></td>
-                  <td id="" class="text-center table-type-s table-header-type-s_vline"><%= x[31] %></td>
+                  <td id="" class="text-center table-type-ss "><small><%= x[30] %></small></td>
+                  <td id="" class="text-center table-type-ss table-header-type-s_vline"><small><%= x[31] %></small></td>
                   <!-- 特筆すべき事 -->
                   <td id="" class="table-type-s">
                       <!-- Button trigger modal -->

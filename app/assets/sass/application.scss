@@ -1180,7 +1180,8 @@ table {
   }
 
   .table-type-ss {
-  width: 10px;
+  width: 1em;
+  word-break: break-all;
   }
 
   .table-header-type-m {

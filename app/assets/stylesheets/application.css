@@ -9866,54 +9866,55 @@ a.thumbnail.active {
 }
 /* line 1182, ../sass/application.scss */
 .search-results table .table-type-ss {
-  width: 10px;
+  width: 1em;
+  word-break: break-all;
 }
-/* line 1186, ../sass/application.scss */
+/* line 1187, ../sass/application.scss */
 .search-results table .table-header-type-m {
   width: 56px;
 }
-/* line 1191, ../sass/application.scss */
+/* line 1192, ../sass/application.scss */
 .search-results table .table-header-type-s:last-child,
 .search-results table .table-header-type-s:first-child {
   border-left: 0;
   border-right: 0;
 }
-/* line 1196, ../sass/application.scss */
+/* line 1197, ../sass/application.scss */
 .search-results table .table-type-s_vline {
   border-right: 2px solid #ebe4d8;
 }
-/* line 1200, ../sass/application.scss */
+/* line 1201, ../sass/application.scss */
 .search-results table .table-header-type-s_vline {
   border-right: 2px solid #d1c0a5;
 }
-/* line 1204, ../sass/application.scss */
+/* line 1205, ../sass/application.scss */
 .search-results table .table-header-type-s_vline2 {
   border-right: 2px solid #938774;
 }
-/* line 1208, ../sass/application.scss */
+/* line 1209, ../sass/application.scss */
 .search-results table .table-header-type-s_vline2:last-child {
   border-right: 0;
 }
-/* line 1212, ../sass/application.scss */
+/* line 1213, ../sass/application.scss */
 .search-results table .table-header-border_hline {
   border-bottom: 2px solid #d1c0a5;
 }
-/* line 1218, ../sass/application.scss */
+/* line 1219, ../sass/application.scss */
 .search-results table tr.table-header-label2 {
   border-bottom: 2px solid #d1c0a5;
 }
-/* line 1222, ../sass/application.scss */
+/* line 1223, ../sass/application.scss */
 .search-results table tr.table-header-label2 > th {
   border-left: 2px solid #d1c0a5;
   border-right: 2px solid #d1c0a5;
   background: #e8dfd1;
   font-size: 100%;
 }
-/* line 1229, ../sass/application.scss */
+/* line 1230, ../sass/application.scss */
 .search-results table thead {
   border-bottom: 2px solid #d1c0a5;
 }
-/* line 1236, ../sass/application.scss */
+/* line 1237, ../sass/application.scss */
 .search-results th.table-header-title {
   background-color: #938774;
   border-top: 2px solid #938774;
@@ -9927,52 +9928,52 @@ a.thumbnail.active {
   margin-bottom: 0;
   padding: 10px;
 }
-/* line 1256, ../sass/application.scss */
+/* line 1257, ../sass/application.scss */
 .search-results .table-striped2 > tbody > tr:nth-child(odd) > td,
 .search-results .table-striped3 > tbody > tr:nth-child(odd) > td {
   background-color: #f2f1f1;
   border-top: 0;
   border-bottom: 0;
 }
-/* line 1263, ../sass/application.scss */
+/* line 1264, ../sass/application.scss */
 .search-results .table-striped2 > tbody > tr:nth-child(odd) > td,
 .search-results .table-striped3 > tbody > tr:nth-child(odd) > th {
   border-top: 0;
   border-bottom: 0;
 }
-/* line 1269, ../sass/application.scss */
+/* line 1270, ../sass/application.scss */
 .search-results .table > tbody > tr > th,
 .search-results .table > tbody > tr > td {
   border-top: 0;
 }
-/* line 1273, ../sass/application.scss */
+/* line 1274, ../sass/application.scss */
 .search-results .table > tbody > tr > td > span.red {
   color: #ff0000;
 }
-/* line 1277, ../sass/application.scss */
+/* line 1278, ../sass/application.scss */
 .search-results tr.table-header-label3 > th:first-child {
   border-right: 1px solid #938774;
 }
-/* line 1281, ../sass/application.scss */
+/* line 1282, ../sass/application.scss */
 .search-results .table-striped3 > tbody > tr > td {
   border-left: 0;
   border-right: 2px solid #ebe4d8;
 }
-/* line 1286, ../sass/application.scss */
+/* line 1287, ../sass/application.scss */
 .search-results .table-striped3 > tbody > tr > td > mark {
   background: #ff0;
   color: #000;
 }
-/* line 1291, ../sass/application.scss */
+/* line 1292, ../sass/application.scss */
 .search-results .table-striped3 > tbody > tr > td:last-child {
   border-right: 0;
 }
-/* line 1295, ../sass/application.scss */
+/* line 1296, ../sass/application.scss */
 .search-results .table-striped3 > tbody > tr > td:first-child {
   font-weight: bold;
   border-right: 2px solid #d1c0a5;
 }
-/* line 1305, ../sass/application.scss */
+/* line 1306, ../sass/application.scss */
 .search-results .table-striped3 > tbody > tr > td:nth-of-type(1),
 .search-results .table-striped3 > tbody > tr > td:nth-of-type(2),
 .search-results .table-striped3 > tbody > tr > td:nth-of-type(3),
@@ -9982,14 +9983,14 @@ a.thumbnail.active {
   font-weight: bold;
 }
 
-/* line 1317, ../sass/application.scss */
+/* line 1318, ../sass/application.scss */
 .badge {
   font-size: 11px;
   font-weight: bold;
   background-color: #428bca;
 }
 
-/* line 1323, ../sass/application.scss */
+/* line 1324, ../sass/application.scss */
 .badge a {
   color: white;
 }
