@@ -9859,19 +9859,18 @@ a.thumbnail.active {
   padding-left: 4px;
   padding-right: 4px;
 }
-/* line 1178, ../sass/application.scss */
-.search-results table .table-type-s,
-.search-results table .table-header-type-s {
+/* line 1177, ../sass/application.scss */
+.search-results table .table-type-s {
   width: 22px;
 }
-/* line 1182, ../sass/application.scss */
+/* line 1181, ../sass/application.scss */
+.search-results table .table-hoiku-Area {
+  width: 56px;
+}
+/* line 1185, ../sass/application.scss */
 .search-results table .table-type-ss {
   width: 1em;
   word-break: break-all;
-}
-/* line 1187, ../sass/application.scss */
-.search-results table .table-header-type-m {
-  width: 56px;
 }
 /* line 1192, ../sass/application.scss */
 .search-results table .table-header-type-s:last-child,

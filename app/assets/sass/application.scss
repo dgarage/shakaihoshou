@@ -1174,19 +1174,19 @@ table {
   padding-right: 4px;
   }
 
-  .table-type-s,
-  .table-header-type-s {
+  .table-type-s, {
   width: 22px;
   }
+
+  .table-hoiku-Area {
+    width: 56px;
+   }
 
   .table-type-ss {
   width: 1em;
   word-break: break-all;
   }
 
-  .table-header-type-m {
-  width: 56px;
-  }
 
   .table-header-type-s:last-child,
   .table-header-type-s:first-child {

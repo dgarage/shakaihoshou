@@ -282,36 +282,36 @@ module ApplicationHelper
       column_1:"通し番号",
       column_2:"エリア",
       column_3:"地域コード",
-      column_4:"自治体名",
+      column_4:"地域",
       column_5:"年齢",
       block_1_1:"区の階層",
-      block_1_2:"標準時間保育料（11時間）第一子",
-      block_1_3:"標準時間（11時間）第二子",
-      block_1_4:"延長保育料（1時間）",
+      block_1_2:"第一子",
+      block_1_3:"第二子",
+      block_1_4:"延長保育料　１時間",
       block_2_1:"区の階層",
-      block_2_2:"標準時間保育料（11時間）第一子",
-      block_2_3:"標準時間（11時間）第二子",
-      block_2_4:"延長保育料（1時間）",
+      block_2_2:"第一子",
+      block_2_3:"第二子",
+      block_2_4:"延長保育料　１時間",
       block_3_1:"区の階層",
-      block_3_2:"標準時間保育料（11時間）第一子",
-      block_3_3:"標準時間（11時間）第二子",
-      block_3_4:"延長保育料（1時間）",
+      block_3_2:"第一子",
+      block_3_3:"標第二子",
+      block_3_4:"延長保育料　１時間",
       block_4_1:"区の階層",
-      block_4_2:"標準時間保育料（11時間）第一子",
-      block_4_3:"標準時間（11時間）第二子",
-      block_4_4:"延長保育料（1時間）",
+      block_4_2:"第一子",
+      block_4_3:"第二子",
+      block_4_4:"延長保育料　１時間",
       block_5_1:"区の階層",
-      block_5_2:"標準時間保育料（11時間）第一子",
-      block_5_3:"標準時間（11時間）第二子",
-      block_5_4:"延長保育料（1時間）",
+      block_5_2:"第一子",
+      block_5_3:"第二子",
+      block_5_4:"延長保育料　１時間",
       block_6_1:"区の階層",
-      block_6_2:"標準時間保育料（11時間）第一子",
-      block_6_3:"標準時間（11時間）第二子",
-      block_6_4:"延長保育料（1時間）",
+      block_6_2:"第一子",
+      block_6_3:"第二子",
+      block_6_4:"延長保育料　１時間",
       endcolumn_1:"区の階層数",
       endcolumn_2:"低所得と上限の差",
-      endcolumn_3:"第二子割引条件あり",
-      endcolumn_4:"第三子割引条件あり",
+      endcolumn_3:"第二子割引条件",
+      endcolumn_4:"第三子割引条件",
       extracolumn_1:"賃貸（首都圏賃貸居住用物件の取引動向（2015年01～03月））㎡単価（円）",
       extracolumn_2:"賃貸50㎡家賃",
       extracolumn_3:"330万円＋家賃",
@@ -333,7 +333,7 @@ module ApplicationHelper
       extracolumn_19:"1,130万円＋家（園に子ども２人１歳違いとする）",
       extracolumn_20:"上限＋家賃",
       extracolumn_21:"上限＋家賃（園に子ども２人１歳違いとする）",
-      last_column:"特筆すべき事"
+      last_column:"特筆事項"
     }
   end
 
@@ -352,6 +352,6 @@ module ApplicationHelper
     if number.length > 3
       number = number.insert(-4, ",")
     end
-    number = number + "円"
+    number = "¥" + number
   end
 end
