@@ -1170,16 +1170,24 @@ table {
   .table-type-ss,
   .table-header-type-s,
   .table-header-type-m {
-  padding-left: 4px;
-  padding-right: 4px;
+  padding-left: 3px;
+  padding-right: 3px;
   }
 
-  .table-type-s, {
-  width: 22px;
-  }
+  .table-hoiku-1em {
+    width: 1em;
+   }
 
-  .table-hoiku-Area {
-    width: 56px;
+  .table-hoiku-2em {
+    width: 38px;
+   }
+
+  .table-hoiku-area {
+    width: 60px;
+   }
+
+  .table-hoiku-ryokin {
+    width: 55px;
    }
 
   .table-type-ss {
