@@ -10,6 +10,7 @@ task :transfer_comparison_data => :environment do
     new_data = Comparison.new
 
     new_data.column_1 = row[0].to_i
+    p new_data.column_1
     new_data.column_2 = row[1]
     new_data.column_3 = row[2].to_i
     new_data.column_4 = row[3]
@@ -73,7 +74,7 @@ task :transfer_comparison_data => :environment do
     new_data.extracolumn_21 = row[53]
 
     new_data.last_column = row[54]
-    if !Comparison.find_by column_1: row[0].to_i
+    if (!Comparison.find_by column_1: row[0].to_i) && (new_data.column_1 != 0)
       new_data.save
     end
   end
