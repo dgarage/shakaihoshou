@@ -9861,19 +9861,19 @@ a.thumbnail.active {
 }
 /* line 1177, ../sass/application.scss */
 .search-results table .table-hoiku-1em {
-  width: 1em;
+  width: 22px;
 }
 /* line 1181, ../sass/application.scss */
 .search-results table .table-hoiku-2em {
-  width: 38px;
+  width: 50px;
 }
 /* line 1185, ../sass/application.scss */
 .search-results table .table-hoiku-area {
-  width: 60px;
+  width: 58px;
 }
 /* line 1189, ../sass/application.scss */
 .search-results table .table-hoiku-ryokin {
-  width: 55px;
+  width: 54px;
 }
 /* line 1193, ../sass/application.scss */
 .search-results table .table-type-ss {
