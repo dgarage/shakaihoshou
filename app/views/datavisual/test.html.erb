@@ -118,6 +118,7 @@
               </thead>
 
               <tbody>
+                <% i = 0 %>
                 <% @data.each do |x| %>
                 <tr>
                   <!-- 地域コード -->
@@ -157,28 +158,29 @@
                   <!-- 特筆すべき事 -->
                   <td id="" class="table-type table-hoiku-2em">
                       <!-- Button trigger modal -->
-                      <button type="button" class="btn btn-primary btn-xs text-center" data-toggle="modal" data-target="#">
+                      <button type="button" class="btn btn-primary btn-xs text-center" data-toggle="modal" data-target="#myModal<%= i %>">
                       詳細</button>
                       <!-- Modal -->
-                      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                      <div class="modal fade" id="myModal<%= i %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel<%= i %>" aria-hidden="true">
                         <div class="modal-dialog">
                           <div class="modal-content">
                             <div class="modal-header">
                               <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
 
-                              <h4 class="modal-title" id="myModalLabel"><%= x[32] %></br><%= x[32] %></h4>
+                              <h4 class="modal-title" id="myModalLabel<%= i %>"><%= x[32] %></br><%= x[32] %></h4>
                             </div>
                             <div class="modal-body">
                               <%= x[32] %>
                             </div>
                             <div class="modal-footer">
-                              <button type="button" class="btn btn-default" Close</button>
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                             </div>
                           </div>
                         </div>
                       </div>
                 </td>
                 </tr>
+                <% i+=1 %>
                 <% end %>
               </tbody>
             </table>
