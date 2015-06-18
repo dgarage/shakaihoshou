@@ -1,5 +1,4 @@
 Blog::Application.routes.draw do
-  get '/datavisual/test/data' => 'datavisual#test'
   get '/datavisual/:title' => 'datavisual#title'
   get '/datavisual' => 'datavisual#index'
   get '/article' => 'article#index'

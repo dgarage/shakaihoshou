@@ -225,7 +225,7 @@ module ApplicationHelper
       {
       "number" => "003",
       "vol" => "Vol.3", 
-      "title" => "23区初！圧倒的なスピードで「“第二子保育料”無料」にふみきった港区の推進力に迫る", 
+      "title" => "平成27年度 区立認可保育園 月額保育料 一覧比較 東京23区版", 
       "url" => "003_minatokuinterview_1", 
       "description" => '23区で初めて、第二子の保育料無料化に踏み切った港区。他の自治体よりも早く改定料金が発表された理由とは・・・？',
       "time" => '更新日：2015年6月10日',
@@ -255,6 +255,15 @@ module ApplicationHelper
 
   def get_datavisual
     @datavisual = [
+      {
+      "number" => "003",
+      "vol" => "", 
+      "title" => "東京23区出産・育児に優しい金銭的支援一覧（2015年4月）", 
+      "url" => "002_ikuji23kuhikaku", 
+      "description" => '各自治体が様々な金銭的支援を用意しています。一覧で見てみましょう。',
+      "time" => '更新日：2015年4月23日',
+      "image" => "b002_ikuji23kuhikaku.jpg"
+      },
       {
       "number" => "002",
       "vol" => "", 
