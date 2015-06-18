@@ -36,9 +36,6 @@ class DatavisualController < ApplicationController
     end
   end
 
-  def test
-  end
-
   private
 
   def hoikuryo
@@ -88,6 +85,6 @@ class DatavisualController < ApplicationController
       end
     end
 
-    render 'datavisual/test'
+    render 'datavisual/003_tokyo23hoikuryo'
   end
 end
