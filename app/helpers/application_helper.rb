@@ -262,7 +262,7 @@ module ApplicationHelper
       "url" => "003_tokyo23hoikuryo", 
       "description" => '平成27年4月施行の「子ども・子育て支援新制度」に伴い、改正された標準時間11時間を基本に保育料を掲載しています。',
       "time" => '更新日：2015年6月18日',
-      "image" => "b003_tokyo23hoikuryo.jpg"
+      "image" => "b003_tokyo23hoikuryo2.jpg"
       },
       {
       "number" => "002",
