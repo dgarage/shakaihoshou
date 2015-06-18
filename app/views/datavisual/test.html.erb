@@ -1,53 +1,18 @@
-<% content_for :meta_contents do %>
-  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-  <meta name="keywords" content="社会保障ドットコム,社会保障.com,子ども子育て支援新制度,待機児童,子ども園,保育園,幼稚園,入園,事故報告,補助金,認可保育園">
-  <meta name="description" content="社会保障ドットコムでは、社会保障に関する各種ビジュアルデータを公開しています。">
-  <meta property="og:title" content="社会保障ドットコム|ビジュアルデータ一覧">
-  <meta property="og:image" content="http://www.syakaihosyou.com/assets/ogi_syakaihosyou_1l.png">
-  <meta property="og:image" content="http://www.syakaihosyou.com/assets/ogi_syakaihosyou_2s.png">
-  <meta property="og:image" content="http://www.syakaihosyou.com/assets/ogi_syakaihosyou_3m.png">
-  <meta property="og:url" content="http://www.syakaihosyou.com/datavisual">
-  <meta property="og:description" content="社会保障ドットコムでは、ビジュアルで見る「社会保障」というテーマで社会保障に関する各種ビジュアルデータを公開しています。">
-<% end %>
-
-<% content_for :title do %>
-  <title>社会保障ドットコム|ビジュアルで見る「社会保障」</title>
-<% end %>
-
-<%= render 'layouts/header_nav' %>
-
-
-<div class="bread">
-
-    <div class="container">
-
-      <div class="row">
- 
-        <div class="col-md-12">
-
-            <ol class="breadcrumb">
-              <li><a href="/">社会保障ドットコム</a></li>
-              <li class="active"><a href="/datavisual/">ビジュアルで見る「社会保障」</a></li>
-            </ol>
-
-        </div>
-
-      </div>
-
-    </div>
-
-</div>
+<%= render 'layouts/header_datavisual_003' %>
 
 <div class="container search-results">
 
   <div class="sidenav">
     <div class="row">
-          <h2><span class="glyphicon glyphicon-stop"></span>平成27年度<span class="number">&nbsp;区立認可保育園&nbsp;月額保育料&nbsp;一覧比較&nbsp;東京23区版&nbsp;</span></h2>
-      <p>平成27年4月施行の「子ども・子育て支援新制度」に伴い、改正された、標準時間11時間を基本に保育料を掲載しています。</p>
-      <p>※&nbsp;自治体×年収別に保育料を比較できるのは「社会保障ドットコム」だけです。</br>
-        ※&nbsp;認可保育園でも、一部の保育園では料金が異なる場合があります。</br>
+      <h2><span class="glyphicon glyphicon-stop"></span>東京23区<span class="number">&nbsp;区立認可保育園&nbsp;月額保育料&nbsp;一覧&nbsp;(2015年)&nbsp;</span></h2>
+
+      <h3>平成27年4月施行の「子ども・子育て支援新制度」に伴い、改正された標準時間11時間を基本に年収と保育料の組み合わせを掲載しています。</h3>
+      <p>※&nbsp;自治体×年収別に最新の保育料を比較できるのは「社会保障ドットコム」だけです。</br>
+        ※&nbsp;認可保育園でも、一部の保育園や私立園では料金が異なる場合があります。</br>
         ※&nbsp;第二子割引は、兄弟が在園児、小学○年まで等、自治体によって異なっています。特筆事項をご確認ください。</br>
-        ※「推定年収」は文部科学省が定める夫婦（妻はパートタイム労働を想定（所得税が非課税となる程度の収入））と子供２人世帯の場合のおおまかな目安</p>
+        ※&nbsp;ここでは、年収 330万円、470万円、640万円、930万円、1130万円、上限の６段階で表示しています。</br>
+        ※&nbsp;区の階層数は、自治体毎に異なります。数値が多い程、年収別に細かく金額が設定されています。特筆事項内のリンクで詳細な金額をご確認頂けます。</br>
+        ※「推定年収」は文部科学省が定める夫婦（妻はパートタイム労働を想定（所得税が非課税となる程度の収入））と子供２人世帯の場合のおおまかな目安です。</p>
     </div>
   </div>
 
