@@ -14,7 +14,59 @@
         ※&nbsp;区の階層数は、自治体毎に異なります。数値が多い程、年収別に細かく金額が設定されています。特筆事項内のリンクで詳細な金額をご確認頂けます。</br>
         ※「推定年収」は文部科学省が定める夫婦（妻はパートタイム労働を想定（所得税が非課税となる程度の収入））と子供２人世帯の場合のおおまかな目安です。</p>
 
+    
+
+
+    <!-- おすすめ記事 -->
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">   
+          <div class="row">
+            <h2><a href="/article/"><span class="glyphicon glyphicon-pencil"></span><span class="city">おすすめ記事</span></a></h2>
+          <% @articles.each do |article| %>
+            <li class="article-list-side col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <a href="/article/<%= article['url'] %>">
+                  <div class="row"> 
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                      <%= image_tag(article['image'], :class => "img-responsive") %>
+                    </div> 
+
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                          <h3><span class="vol"><%= article['vol'] %></span><%= article['title'] %><span class="search"></span></h3>
+                        
+                          <time><%= article['time'] %></time>
+                    </div> 
+                  </div> 
+            </a>
+            </li>
+          <% end %>
+        </div>
     </div>
+
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">  
+          <div class="row">
+            <h2><a href="/article/"><span class="glyphicon glyphicon-pencil"></span><span class="city">おすすめデータ</span></a></h2>
+          <% @datavisual.each do |datavisual| %>
+            <li class="article-list-side col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <a href="/datavisual/<%= datavisual['url'] %>">
+                  <div class="row"> 
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                      <%= image_tag(datavisual['image'], :class => "img-responsive") %>
+                    </div> 
+
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                          <h3><span class="vol"><%= datavisual['vol'] %></span><%= datavisual['title'] %><span class="search"></span></h3>
+                        
+                          <time><%= datavisual['time'] %></time>
+                    </div> 
+                  </div> 
+            </a>
+            </li>
+          <% end %>
+        </div>
+    </div>
+
+
+    </div>
+
   </div>
 
 
@@ -152,46 +204,44 @@
             </table>
           </div>
 
-    <div class="">
-    <p class="small">出典 東京23区自治体の公式ページにて調査しています</a>（2015/6/18アクセス） | 
-    <a href="http://www.city.chiyoda.lg.jp/">千代田区</a> | 
-    <a href="http://www.city.chuo.lg.jp/">中央区</a> | 
-    <a href="http://www.city.minato.tokyo.jp/">港区</a> | 
-    <a href="http://www.city.shinjuku.lg.jp/">新宿区</a> | 
-    <a href="http://www.city.bunkyo.lg.jp/index.html">文京区</a> | 
-    <a href="http://www.city.taito.lg.jp/">台東区</a> | 
-    <a href="http://www.city.sumida.lg.jp/">墨田区</a> | 
-    <a href="http://www.city.koto.lg.jp/">江東区</a> | 
-    <a href="http://www.city.shinagawa.tokyo.jp/">品川区</a> | 
-    <a href="http://www.city.meguro.tokyo.jp/">目黒区</a> | 
-    <a href="http://www.city.ota.tokyo.jp/">大田区</a> | 
-    <a href="http://www.city.setagaya.lg.jp/index.html">世田谷区</a> | 
-    <a href="http://www.city.shibuya.tokyo.jp/">渋谷区</a> | 
-    <a href="http://www.city.tokyo-nakano.lg.jp/">中野区</a> | 
-    <a href="http://www.city.suginami.tokyo.jp/">杉並区</a> | 
-    <a href="http://www.city.toshima.lg.jp/">豊島区</a> | 
-    <a href="http://www.city.kita.tokyo.jp/">北区</a> | 
-    <a href="http://www.city.arakawa.tokyo.jp/">荒川区</a> | 
-    <a href="http://www.city.itabashi.tokyo.jp/">板橋区</a> | 
-    <a href="http://www.city.nerima.tokyo.jp/">練馬区</a> | 
-    <a href="http://www.city.adachi.tokyo.jp/">足立区</a> | 
-    <a href="http://www.city.katsushika.lg.jp/">葛飾区</a> | 
-    <a href="http://www.city.edogawa.tokyo.jp/">江戸川区</a> | 
-
-
-</p>
-    </div>
+          <div>
+            <p class="small">出典 東京23区自治体の公式ページにて調査しています</a>（2015/6/18アクセス） | 
+            <a href="http://www.city.chiyoda.lg.jp/">千代田区</a> | 
+            <a href="http://www.city.chuo.lg.jp/">中央区</a> | 
+            <a href="http://www.city.minato.tokyo.jp/">港区</a> | 
+            <a href="http://www.city.shinjuku.lg.jp/">新宿区</a> | 
+            <a href="http://www.city.bunkyo.lg.jp/index.html">文京区</a> | 
+            <a href="http://www.city.taito.lg.jp/">台東区</a> | 
+            <a href="http://www.city.sumida.lg.jp/">墨田区</a> | 
+            <a href="http://www.city.koto.lg.jp/">江東区</a> | 
+            <a href="http://www.city.shinagawa.tokyo.jp/">品川区</a> | 
+            <a href="http://www.city.meguro.tokyo.jp/">目黒区</a> | 
+            <a href="http://www.city.ota.tokyo.jp/">大田区</a> | 
+            <a href="http://www.city.setagaya.lg.jp/index.html">世田谷区</a> | 
+            <a href="http://www.city.shibuya.tokyo.jp/">渋谷区</a> | 
+            <a href="http://www.city.tokyo-nakano.lg.jp/">中野区</a> | 
+            <a href="http://www.city.suginami.tokyo.jp/">杉並区</a> | 
+            <a href="http://www.city.toshima.lg.jp/">豊島区</a> | 
+            <a href="http://www.city.kita.tokyo.jp/">北区</a> | 
+            <a href="http://www.city.arakawa.tokyo.jp/">荒川区</a> | 
+            <a href="http://www.city.itabashi.tokyo.jp/">板橋区</a> | 
+            <a href="http://www.city.nerima.tokyo.jp/">練馬区</a> | 
+            <a href="http://www.city.adachi.tokyo.jp/">足立区</a> | 
+            <a href="http://www.city.katsushika.lg.jp/">葛飾区</a> | 
+            <a href="http://www.city.edogawa.tokyo.jp/">江戸川区</a> | 
+            </p>
+          </div>
 
 
         </div>
-
 
    
     </div>
 
 
-
 </div>
+
+
 
 
 
