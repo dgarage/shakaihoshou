@@ -20,9 +20,9 @@
     <!-- おすすめ記事 -->
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">   
           <div class="row">
-            <h2><a href="/article/"><span class="glyphicon glyphicon-pencil"></span><span class="city">おすすめ記事</span></a></h2>
+            <h2><a href="/article/"><span class="glyphicon glyphicon-pencil"></span>おすすめ記事</a></h2>
           <% @articles.each do |article| %>
-            <li class="article-list-side col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <li class="article-list-mini col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <a href="/article/<%= article['url'] %>">
                   <div class="row"> 
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
@@ -30,7 +30,7 @@
                     </div> 
 
                     <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
-                          <h3><span class="vol"><%= article['vol'] %></span><%= article['title'] %><span class="search"></span></h3>
+                          <h3><span class="vol"><%= article['vol'] %></span><%= article['title'] %><span class="search"></h3>
                         
                           <time><%= article['time'] %></time>
                     </div> 
@@ -41,9 +41,9 @@
         </div>
     </div>
 
-    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">  
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
           <div class="row">
-            <h2><a href="/article/"><span class="glyphicon glyphicon-pencil"></span><span class="city">おすすめデータ</span></a></h2>
+            <h2><a href="/article/"><span class="glyphicon glyphicon-pencil"></span>おすすめデータ</span></a></h2>
           <% @datavisual.each do |datavisual| %>
             <li class="article-list-side col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <a href="/datavisual/<%= datavisual['url'] %>">
