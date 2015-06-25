@@ -391,10 +391,13 @@
 // --------------------------------------------------
 
 .article-list-side {
+
+  li {
   padding: 5px 0;
   border-bottom: 1px solid #d8d5d0;
   list-style: none;
   padding-bottom: 20px;
+  }
 
   a.article-list :hover,
   a.article-list :focus,
@@ -416,7 +419,7 @@
     font-size: 1em;
     font-weight: bold;
     padding: 0;
-    margin-top: 0.5em;
+    margin-top: 0;
     margin-bottom: 5px;
   }
 
@@ -455,10 +458,12 @@
 // --------------------------------------------------
 
 .article-list-mini {
+
+  li {
   padding: 5px 0;
   border-bottom: 1px solid #d8d5d0;
   list-style: none;
-  padding-bottom: 20px;
+  }
 
   a.article-list :hover,
   a.article-list :focus,
@@ -471,7 +476,7 @@
   .h1 {
     color: $brand-primary;
     font-size: 150%;
-    font-weight: bold;
+    fotn-weight: bold;
   }
   
   h3,
@@ -480,8 +485,8 @@
     font-size: 1em;
     font-weight: bold;
     padding: 0;
-    margin-top: 0.5em;
-    margin-bottom: 5px;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   p {
@@ -493,6 +498,11 @@
   font-size: 0.9em;
   margin: 15px 0;
   color: #9197a3;
+  }
+
+  span.title {
+    font-size: 90%;
+    font-weight: bold;
   }
 
   span.city {
@@ -801,6 +811,7 @@
 // sidenav new
 // -------------------------
 
+.nav,
 .sidenav{
   padding-bottom: (($line-height-computed / 2));
   margin: ($line-height-computed / 2) 0 0;
@@ -1101,22 +1112,28 @@ a.thumbnail.active {
     font-size: 22px;
   }
 
+
   h2,
   .h2 {
     color: $brand-primary;
-    font-size: 18px;
+    font-size: 130%;
   }
 
-  h2 .title-s,
-  .h2 .title-s{
-    color: $brand-primary;
-    font-size: 18px;
+  h2.title-s,
+  .h2.title-s {
+    font-size: 100%;
   }
 
   h3,
   .h3 {
     color: $brand-primary;
-    font-size: 18px;
+    font-size: 100%;
+  }
+
+  h3.title-s,
+  .h3.title-s {
+    color: $brand-primary;
+    font-size: 130%;
   }
 
   p {
