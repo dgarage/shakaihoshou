@@ -224,6 +224,15 @@ module ApplicationHelper
   	@articles = [
       {
       "number" => "003",
+      "vol" => "Vol.4", 
+      "title" => "新制度後、保活の現状はどう変わった？「保育園ふやし隊@杉並」インタビュー", 
+      "url" => "004_suginamifuyashitai_1", 
+      "description" => '23区で初めて、第二子の保育料無料化に踏み切った港区。他の自治体よりも早く改定料金が発表された理由とは・・・？',
+      "time" => '更新日：2015年6月26日',
+      "image" => "a003_010.jpg"
+      },
+      {
+      "number" => "003",
       "vol" => "Vol.3", 
       "title" => "23区初！圧倒的なスピードで「“第二子保育料”無料」にふみきった港区の推進力に迫る", 
       "url" => "003_minatokuinterview_1", 
