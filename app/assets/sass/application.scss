@@ -537,6 +537,7 @@
 //
 // article-Title new
 // --------------------------------------------------
+.article-title4, 
 .article-title3, 
 .article-title2, 
 .article-title {
@@ -638,6 +639,28 @@
   padding: 0;
   opacity: .3;
 }
+
+.article-title4:before {
+  background:url("a004_010.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: scroll;
+}
+
+.article-title4:before {
+  content: "";
+  z-index: -1;
+  -webkit-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px);
+  position: absolute;
+  width: 100%;
+  height: 220px;
+  margin: -20px 0;
+  padding: 0;
+  opacity: .3;
+}
+
 
 //
 // article new
