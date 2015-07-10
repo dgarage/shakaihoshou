@@ -1,3 +1,3 @@
 python -m SimpleHTTPServer 8080
 
-file:///Users/steve-rife/Downloads/tokyo-d3/tokyo_map.html
+http://localhost:8080/tokyo_map_test.html
