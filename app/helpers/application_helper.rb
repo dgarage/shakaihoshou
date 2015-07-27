@@ -223,7 +223,16 @@ module ApplicationHelper
   def get_articles
   	@articles = [
       {
-      "number" => "003",
+      "number" => "005",
+      "vol" => "Vol.5", 
+      "title" => "年収・子供の年齢ごとに違う! 東京23区保育料を徹底比較!", 
+      "url" => "005_tokyo23hoikuryo_1", 
+      "description" => '今年4月から子育て支援新制度がスタートし、さまざまな自治体で保育料の見直しが行われました。今回の制度改革によって、どのような選択をすることで、保育料をよりお得に、低価格におさえることができるのでしょうか。',
+      "time" => '更新日：2015年7月28日',
+      "image" => "pr.png"
+      }, 
+      {
+      "number" => "004",
       "vol" => "Vol.4", 
       "title" => "新制度後、保活の現状はどう変わった？「保育園ふやし隊@杉並」インタビュー", 
       "url" => "004_suginamifuyashitai_1", 
